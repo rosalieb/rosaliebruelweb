@@ -1,0 +1,26 @@
+name: "Rosalie Bruel"
+output_dir: "."
+navbar:
+  title: "Rosalie Bruel"
+  left:
+    - text: "Writing"
+      href: research.html
+    - text: "Speaking"
+      href: talks.html
+    - text: "Programming"
+      href: software.html
+    - text: "Teaching"
+      href: teaching.html
+  right:
+    - icon: fa-envelope fa-lg
+      href: contact.html
+    - icon: fa-github fa-lg
+      href: http://github.com/rosalieb
+    - icon: fa-twitter fa-lg
+      href: https://twitter.com/RosalieBruel
+    - icon: fa-linkedin fa-lg
+      href: https://www.linkedin.com/in/rosalie-bruel-748b5861/
+output:
+  html_document:
+    theme: paper
+    css: 'styles.css'
