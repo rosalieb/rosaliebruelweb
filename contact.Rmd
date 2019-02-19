@@ -1,8 +1,13 @@
 ---
-title: "contact"
-author: "Rosalie Bruel"
-date: "19/02/2019"
+#title: "contact"
+#author: "Rosalie Bruel"
+#date: "19/02/2019"
 output: html_document
 ---
+
+
+__Contact__
+
+Email on UVM page https://www.uvm.edu/rsenr/profiles/rosalie-bruel 
 
 Site in construction.
