@@ -1,8 +1,8 @@
 ---
-title: "about"
+title: "contact"
 author: "Rosalie Bruel"
 date: "19/02/2019"
 output: html_document
 ---
 
-Site in construction
+Site in construction.
