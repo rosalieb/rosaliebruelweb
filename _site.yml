@@ -13,6 +13,8 @@ navbar:
       href: teaching.html
     - text: "CV"
       href: CV.html
+    - text: "Blog"
+      href: blog.html
   right:
     - icon: fa-envelope fa-lg
       href: contact.html
