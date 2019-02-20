@@ -13,7 +13,7 @@ output: html_document
   text-align: left;
 }
 .column-left2{
-  float: left;
+  display: inline-block;
   width: 5%;
   vertical-align: top;
   text-align: left;
@@ -56,8 +56,11 @@ __My first paper!__
 
 </div>
 
+<div class="column-celeft2
+<h2/div>
+
 <div class="column-center">
-<h2>Fieldwork </h2>
+<>Fieldwork </h2>
 \n
 __Helping Ben Block (UVM-RESL Graduate student)__
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Went this morning with some folks from <a href="https://twitter.com/UVM_RSENR?ref_src=twsrc%5Etfw">@UVM_RSENR</a> to try out the ice jigger <a href="https://twitter.com/BentheEcologist?ref_src=twsrc%5Etfw">@BentheEcologist</a> will use to catch fish and study their diets over the winter.<br>Clever adaptations of the equipment and thick ice were involved. <a href="https://t.co/410wyi49ra">pic.twitter.com/410wyi49ra</a></p>&mdash; Rosalie Bruel (@RosalieBruel) <a href="https://twitter.com/RosalieBruel/status/1085668742271508487?ref_src=twsrc%5Etfw">January 16, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -65,7 +68,11 @@ __Helping Ben Block (UVM-RESL Graduate student)__
 \n
 __Helping Natalie Flores (UVM-RESL Graduate student)__
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">This morning, Kerry (an undergrad student) and I woke up early to go help <a href="https://twitter.com/NatalieMFlo?ref_src=twsrc%5Etfw">@NatalieMFlo</a> on the field, at Shelburne Pond, VT. <a href="https://t.co/YlK6ukOHkZ">pic.twitter.com/YlK6ukOHkZ</a></p>&mdash; Rosalie Bruel (@RosalieBruel) <a href="https://twitter.com/RosalieBruel/status/1038781427842789376?ref_src=twsrc%5Etfw">September 9, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</
 </div>
+
+<div class="column-center2">
+div>
 
 <div class="column-right">
 <h2>Public outreach </h2>
