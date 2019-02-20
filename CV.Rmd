@@ -5,8 +5,8 @@
 output: html_document
 ---
 
-
-**Curriculum Vitae**
+\n
+<h2>Curriculum Vitae</h2>
 
 I graduated from the University of Grenoble in 2018 with a PhD in Ecology (supervisor: [Prof. Marie-Elodie Perga](http://wp.unil.ch/lakes/marie-elodie-perga/)). I am currently a Postdoctoral Associate at the University of Vermont, working with [Prof. Ellen Marsden](https://www.uvm.edu/rsenr/profiles/ellen_marsden) and [Prof. Jason Stockwell](http://stockwelllaboratory.com).
 

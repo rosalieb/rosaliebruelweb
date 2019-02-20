@@ -5,18 +5,10 @@
 output: html_document
 ---
 
-Site in construction.
-
 <style>
 .column-left{
-  display: inline-block;
+  float: left;
   width: 30%;
-  vertical-align: top;
-  text-align: left;
-}
-.column-left2{
-  display: inline-block;
-  width: 5%;
   vertical-align: top;
   text-align: left;
 }
@@ -26,19 +18,15 @@ Site in construction.
   vertical-align: top;
   text-align: left;
 }
-.column-center2{
-  display: inline-block;
-  width: 5%;
-  vertical-align: top;
-  text-align: left;
-}
 .column-right{
   float: right;
   width: 30%;
   vertical-align: top;
-  text-align: right;
+  text-align: left;
 }
 </style>
+
+\n
 
 <div class="column-left">
 <h2>Science </h2>
@@ -56,9 +44,6 @@ __My first paper!__
 
 </div>
 
-<div class="column-left2">
-</div>
-
 <div class="column-center">
 <h2>Fieldwork </h2>
 \n
@@ -68,9 +53,6 @@ __Helping Ben Block (UVM-RESL Graduate student)__
 \n
 __Helping Natalie Flores (UVM-RESL Graduate student)__
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">This morning, Kerry (an undergrad student) and I woke up early to go help <a href="https://twitter.com/NatalieMFlo?ref_src=twsrc%5Etfw">@NatalieMFlo</a> on the field, at Shelburne Pond, VT. <a href="https://t.co/YlK6ukOHkZ">pic.twitter.com/YlK6ukOHkZ</a></p>&mdash; Rosalie Bruel (@RosalieBruel) <a href="https://twitter.com/RosalieBruel/status/1038781427842789376?ref_src=twsrc%5Etfw">September 9, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
-
-<div class="column-center2">
 </div>
 
 <div class="column-right">
