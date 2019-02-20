@@ -7,3 +7,6 @@ output: html_document
 
 
 Site in construction.
+
+Upcoming conference:
+[IAGLR 2019](http://iaglr.org/iaglr2019/), Brockport, New York, US
