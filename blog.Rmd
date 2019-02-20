@@ -51,7 +51,10 @@ __My first paper!__
 
 </div>
 
-<div class="column-left">
+<div class="column-left2">
+</div>
+
+<div class="column-center">
 <h2>Fieldwork </h2>
 \n
 __Helping Ben Block (UVM-RESL Graduate student)__
@@ -62,8 +65,10 @@ __Helping Natalie Flores (UVM-RESL Graduate student)__
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">This morning, Kerry (an undergrad student) and I woke up early to go help <a href="https://twitter.com/NatalieMFlo?ref_src=twsrc%5Etfw">@NatalieMFlo</a> on the field, at Shelburne Pond, VT. <a href="https://t.co/YlK6ukOHkZ">pic.twitter.com/YlK6ukOHkZ</a></p>&mdash; Rosalie Bruel (@RosalieBruel) <a href="https://twitter.com/RosalieBruel/status/1038781427842789376?ref_src=twsrc%5Etfw">September 9, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
+<div class="column-center2">
+</div>
 
-<div class="column-left">
+<div class="column-right">
 <h2>Public outreach </h2>
 \n
 __Host for @LaBioauLabo during one week__
