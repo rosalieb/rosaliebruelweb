@@ -11,26 +11,31 @@ Site in construction.
 .column-left{
   display: inline-block;
   width: 30%;
+  vertical-align: top;
   text-align: left;
 }
 .column-left2{
   display: inline-block;
   width: 5%;
+  vertical-align: top;
   text-align: left;
 }
 .column-center{
   display: inline-block;
   width: 30%;
+  vertical-align: top;
   text-align: left;
 }
 .column-center2{
   display: inline-block;
   width: 5%;
+  vertical-align: top;
   text-align: left;
 }
 .column-right{
   float: right;
   width: 30%;
+  vertical-align: top;
   text-align: right;
 }
 </style>
