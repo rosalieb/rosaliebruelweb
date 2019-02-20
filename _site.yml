@@ -15,6 +15,8 @@ navbar:
       href: CV.html
     - text: "Blog"
       href: blog.html
+    - text: "Gallery"
+      href: gallery.html
   right:
     - icon: fa-envelope fa-lg
       href: contact.html
