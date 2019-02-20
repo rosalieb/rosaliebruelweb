@@ -1,67 +1,6 @@
----
-# title: "index"
-# author: "Rosalie Bruel"
-# date: "19/02/2019"
-output: html_document
----
+#Code not used
+#Slide show
 
----
----
-
-<link rel="stylesheet" href="styles.css" type="text/css">
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134870808-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-134870808-1');
-</script>
-
-<style>
-.no-column{
-  float: left;
-  width: 100%;
-  text-align: left;
-}
-.column-left{
-  float: left;
-  width: 60%;
-  text-align: left;
-}
-.column-center{
-  display: inline-block;
-  width: 7%;
-  text-align: left;
-}
-.column-right{
-  float: right;
-  width: 33%;
-  text-align: right;
-}
-.row-top{
-
-}
-.row-bottom{
-
-}
-</style>
-
-<div class="no-column">
-
-<img src="images/pumpkinseed.JPG" style="width:25%; border:6px solid; margin-right: 20px; margin-bottom: 20px" align="left">
-
-My research initially focused on how heavily anthropogenised ecosystems respond to climatic perturbations. I have worked on lowland and high-altitude lakes at different temporal scales (millennial to sub-hourly resolution) on different responses (physical, chemical, biological). Currently, I am developing a food web model for Lake Champlain. The objective is to quantify how changes in food web structure affect the system functioning. Specific questions include spatial and temporal aspects: (1) Does the heterogeneity of Lake Champlain promote various equilibria? (2) Does the spatiality reflect several thresholds in environmental parameters? (3) What changes in environmental conditions allowed the natural recruitment of lake trout to start in the 2010s after decades of no recruits? (4) How might possible changes in fish stocking policies  impact the Lake Champlain food web?
-
-\n
-\n
-
-</div>
-
-
-<div class="column-left">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
@@ -105,7 +44,7 @@ img {vertical-align: middle;}
   background-color: #bbb;
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 1s ease;
+  transition: background-color 0.6s ease;
 }
 
 .active {
@@ -115,9 +54,9 @@ img {vertical-align: middle;}
 /* Fading animation */
 .fade {
   -webkit-animation-name: fade;
-  -webkit-animation-duration: 8.1s;
+  -webkit-animation-duration: 3.5s;
   animation-name: fade;
-  animation-duration: 8.1s;
+  animation-duration: 3.5s;
 }
 
 @-webkit-keyframes fade {
@@ -159,7 +98,7 @@ img {vertical-align: middle;}
 </div>
 
 <div class="mySlides fade">
-  <div class="numbertext">4 / 4</div>
+  <div class="numbertext">3 / 4</div>
   <img src="images/indexpage/2018_shelburne_pond_frog.JPG" style="width:100%">
   <div class="text">Shelburne Pond, VT</div>
 </div>
@@ -192,31 +131,6 @@ function showSlides() {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 8000); // Change image every 8 seconds
+  setTimeout(showSlides, 4000); // Change image every 4 seconds
 }
 </script>
-
-</body>
-
-\n
-Base website following [Emily C. Zabor's tutorial](https://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html).\n 
-[Tutorial](https://www.w3schools.com/howto/howto_js_slideshow.asp) for slideshow animation.
-\n
-\n
-</div>
-</div>
-
-<div class="column-center">
-</div>
-
-<div class="column-right">
-<a class="twitter-timeline" href="https://twitter.com/RosalieBruel">Tweets by Rosalie</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-</div>
-
-
-
-\n
-\n
-
-
-
