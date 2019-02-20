@@ -28,17 +28,17 @@ output: html_document
 }
 .column-left{
   float: left;
-  width: 60%;
+  width: 50%;
   text-align: left;
 }
 .column-center{
   display: inline-block;
-  width: 7%;
+  width: 10%;
   text-align: left;
 }
 .column-right{
   float: right;
-  width: 33%;
+  width: 40%;
   text-align: right;
 }
 .row-top{

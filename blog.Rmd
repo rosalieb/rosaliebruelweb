@@ -43,6 +43,7 @@ output: html_document
 <div class="column-left">
 <h2>Science </h2>
 \n
+
 __GLEON20, Student workshop, Rottnest Island, Western Australia__
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Kicking off the <a href="https://twitter.com/hashtag/GLEON20?src=hash&amp;ref_src=twsrc%5Etfw">#GLEON20</a> Student Association workshop with <a href="https://twitter.com/MEL_Phytos?ref_src=twsrc%5Etfw">@MEL_Phytos</a> and Sami Khan. <a href="https://twitter.com/RosalieBruel?ref_src=twsrc%5Etfw">@RosalieBruel</a> giving an excellent introduction to <a href="https://twitter.com/github?ref_src=twsrc%5Etfw">@github</a> <a href="https://twitter.com/GLEONetwork?ref_src=twsrc%5Etfw">@GLEONetwork</a> <a href="https://t.co/XDD9uX9OFk">pic.twitter.com/XDD9uX9OFk</a></p>&mdash; Jonathan Doubek (@jondoubek) <a href="https://twitter.com/jondoubek/status/1069441559744065536?ref_src=twsrc%5Etfw">December 3, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
