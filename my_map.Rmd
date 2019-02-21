@@ -16,5 +16,7 @@ output: html_document
 </script>
 
 \n
-Playing with leaflet:
-<img src="${resourcesFolderName}/map.html" width="100%" height="70%" preload="auto">
+Playing with leaflet (in construction):
+```{r, echo=FALSE}
+htmltools::includeHTML("map.html")
+```
