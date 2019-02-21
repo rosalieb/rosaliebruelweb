@@ -16,7 +16,7 @@ my.loc <- as.data.frame(rbind(c(5.447427, 43.529742, 3), #Aix-en-Provence
                               c(6.58793,46.40111, 4), #Evian Summer school
                               c(6.143158,46.204391,4), #Geneva CH
                               c(105.071858, 51.903210, 4), #Bolshiye Koty,
-                              c(45.564601, 5.917781, 4), #Chambéry
+                              c(5.917781, 45.564601, 4), #Chambéry
                               c(11.30427, 46.01217, 4), #Levico Terme IT
                               c(-0.87734,41.65606 ,4), #Zaragoza ES
                               c(17.25175, 49.59552, 4), #Olomouc CZ
@@ -29,8 +29,13 @@ my.loc <- as.data.frame(rbind(c(5.447427, 43.529742, 3), #Aix-en-Provence
 )
 colnames(my.loc) <- c("lat","long","code")
 
+my.loc.1 <- my.loc[my.loc$code==1,]
+my.loc.2 <- my.loc[my.loc$code==2,]
+my.loc.3 <- my.loc[my.loc$code==3,]
+my.loc.4 <- my.loc[my.loc$code==4,]
+
 getColor <- function(my.loc) {
-  sapply(my.loc$code, function(code) {
+  sapply(~code, function(code) {
     if(code == 1) {
       "green"
     } else if(code == 2) {
@@ -40,12 +45,12 @@ getColor <- function(my.loc) {
     } })
 }
 
-# icons <- awesomeIcons(
-#   icon = 'ios-close',
-#   iconColor = 'black',
-#   library = 'ion',
-#   markerColor = getColor(my.loc)
-# )
+icons <- awesomeIcons(
+  icon = 'ios-close',
+  iconColor = 'black',
+  library = 'ion',
+  markerColor = getColor(my.loc)
+)
 
 # Pop up markers ####
 
@@ -54,22 +59,35 @@ mymap <-
   # leaflet() %>%
   #   leaflet(my.loc) %>% addTiles() %>%
   #   addAwesomeMarkers(my.loc$lat, my.loc$long, icon=icons, label=as.character(my.loc$code))
-  leaflet(my.loc) %>% addTiles() %>% addMarkers(~lat, ~long,
-                                                clusterOptions = markerClusterOptions(),
-                                                popup = ~as.character(htmlEscape(code))
-                                                ) %>%
-  # # Base groups
-  # addTiles(group = "OSM (default)") %>%
-  # addProviderTiles(providers$Stamen.Toner, group = "Toner") %>%
-  # addProviderTiles(providers$Stamen.TonerLite, group = "Toner Lite") %>%
+  leaflet() %>% addTiles() %>% 
+  addMarkers(my.loc.1$lat, my.loc.1$long,
+             clusterOptions = markerClusterOptions(),
+             popup = as.character(htmlEscape(my.loc.1$code)), group="Work locations"
+  ) %>%
+  addMarkers(my.loc.2$lat, my.loc.2$long,
+             clusterOptions = markerClusterOptions(),
+             popup = as.character(htmlEscape(my.loc.2$code)), group="Education"
+  ) %>%
+  addMarkers(my.loc.3$lat, my.loc.3$long,
+             clusterOptions = markerClusterOptions(),
+             popup = as.character(htmlEscape(my.loc.3$code)), group="Personnal"
+  ) %>%
+  addMarkers(my.loc.4$lat, my.loc.4$long,
+             clusterOptions = markerClusterOptions(),
+             popup = as.character(htmlEscape(my.loc.4$code)), group="Conferences and workshops"
+  ) %>%
+  # Base groups
+  addTiles(group = "OSM (default)") %>%
+  addProviderTiles(providers$Stamen.Toner, group = "Toner") %>%
+  addProviderTiles(providers$Stamen.TonerLite, group = "Toner Lite") %>%
   # Overlay groups
-  addCircles(~long, ~lat, ~code, stroke = F, group = "code") %>%
+  # addCircles(~long, ~lat, 300, stroke = F, group = "code", color = getColor() ) %>%
   # addPolygons(data = outline, lng = ~long, lat = ~lat,
   #             fill = F, weight = 2, color = "#FFFFCC", group = "Outline") %>%
   # Layers control
   addLayersControl(
-    baseGroups = c("OSM (default)", "code"),
-    #overlayGroups = c("Quakes", "Outline"),
+    baseGroups = c("OSM (default)", "Toner", "Toner Lite"),
+    overlayGroups = c("Work locations", "Education","Personnal", "Conferences and workshops"),
     options = layersControlOptions(collapsed = FALSE)
   )
    
