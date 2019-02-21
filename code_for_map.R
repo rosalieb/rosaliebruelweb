@@ -1,81 +1,111 @@
 library(leaflet)
 library(mapview)
 library(htmltools)
+library(dplyr)
 
-#codes use: 1-work, 2-training, 3-personnal, 4-conferences
-my.loc <- as.data.frame(rbind(c(5.447427, 43.529742, 3), #Aix-en-Provence
-                              c(6.2333, 44.1, 2), #Digne
-                              c(-3.188267, 55.953252, 2), #Edinburgh
-                              c(-1.514699, 43.481402, 2), #Anglet
-                              c(5.8667, 45.65, 1), #Bourget-du-lac 
-                              c(6.477635, 46.373565, 1), #Thonon
-                              c(8.555371, 45.928306, 1), #Verbania
-                              c(-73.212072, 44.475882, 1), #Burlington
-                              #conferences
-                              c(18.063240,59.334591,4), #Erken - Stockholm coordinates
-                              c(6.58793,46.40111, 4), #Evian Summer school
-                              c(6.143158,46.204391,4), #Geneva CH
-                              c(105.071858, 51.903210, 4), #Bolshiye Koty,
-                              c(5.917781, 45.564601, 4), #Chambéry
-                              c(11.30427, 46.01217, 4), #Levico Terme IT
-                              c(-0.87734,41.65606 ,4), #Zaragoza ES
-                              c(17.25175, 49.59552, 4), #Olomouc CZ
-                              c(-111.876183, 40.758701, 4), #Salt Lake City, UT
-                              c(115.8614,-31.95224, 4), #Perth WA
-                              c(115.517,-32.002,4), #Rottnest Island WA
-                              c(-73.92097, 41.70037 , 4), #Poughkeepsie
-                              c(-77.9391797,43.2136713,4) #Brockport NY
+
+#codes use: 1-work, 2-training, 3-personnal, 4-conferences, 5-systems I studied
+my.loc <- as.data.frame(rbind(c(5.447427, 43.529742, 3, "My hometown"), #Aix-en-Provence
+                              c(6.2333, 44.1, 2, "'IUT' Environmental Biology 2009-11"), #Digne
+                              c(-3.188267, 55.953252, 2, "Bachelor in Environmental Science 2011-12"), #Edinburgh
+                               c(-1.514699, 43.481402, 2, "Master in Aquatic Ecology 2012-14"), #Anglet
+                               c(5.8667, 45.65, 1, "Research Associate 2018"), #Bourget-du-lac 
+                               c(5.917781, 45.564601, 2, "PhD student 2014-18"), #Chambéry USMB
+                               c(6.477635, 46.373565, 1, "PhD student 2014-18"), #Thonon
+                               c(8.555371, 45.928306, 1, "7 months in 2016 during PhD"), #Verbania
+                               c(-73.212072, 44.475882, 1, "postdoc 2018-current"), #Burlington
+                               #conferences
+                               c(18.063240,59.334591,4, "NETLAKE workshop 2014"), #Erken - Stockholm coordinates
+                              c(6.58793,46.40111, 4, "Summer school in limnology 2014"), #Evian Summer school
+                              c(6.143158,46.204391,4, "SEFS9 2015"), #Geneva CH
+                              c(105.071858, 51.903210, 4, "Summer school in limnology 2015"), #Bolshiye Koty,
+                              c(5.917781, 45.564601, 4, "Meeting AFS 2015"), #Chambéry
+                              c(11.30427, 46.01217, 4, "Cladoceran subfossils workshop 2016"), #Levico Terme IT
+                              c(-0.87734,41.65606 ,4, "PAGES 2017"), #Zaragoza ES
+                              c(17.25175, 49.59552, 4, "SEFS10 2017"), #Olomouc CZ
+                              c(-111.876183, 40.758701, 4, "PAGES Ecore3 workshop 2018"), #Salt Lake City, UT
+                              c(115.8614,-31.95224, 4, "AEMON-J workshop 2018"), #Perth WA
+                              c(115.517,-32.002,4, "GLEON20 All hands' meeting 2018"), #Rottnest Island WA
+                              c(-73.92097, 41.70037 , 4, "NYNEDAFS 2019"), #Poughkeepsie
+                              c(-77.9391797,43.2136713,4, "IAGLR 2019"), #Brockport NY
+                              #mylakes
+                              c(-1.16667, 44.65, 5, "Master thesis Year 1"),#Bassin d'Arcachon
+                              c(6.7916635,45.98832938 ,5, "Master thesis Year 2"),#Lac d'Anterne
+                              c(6.0975, 44.9505556,5, "Master thesis Year 2"),#Lac de la Muzelle
+                              c(6.16442,45.86858,5, "PhD thesis work"),#LakeAnnecy
+                              c(5.86257,45.73662,5, "PhD thesis work"),#LakeBourget
+                              c(6.51742,46.44267,5, "PhD thesis work"),#LakeGeneva
+                              c(5.53530,45.45492,5, "PhD thesis work"),#LakeAiguebelette
+                              #c(9.266111,45.994444,5),#LakeComo
+                              c(8.5825,45.905,5, "PhD thesis work"),#LakeMaggiore
+                              c(10.725,45.981944,5, "PhD thesis work"),#LakeLedro
+                              c(10.625,45.555278,5, "PhD thesis work"),#LakeGarda
+                              c(8.96,45.981944,5, "PhD thesis work"),#LakeLugano
+                              c(8.733333,45.816667,5, "PhD thesis work"),#LakeVarese
+                              c(6.285833,46.639444,5, "PhD thesis work"),#LakeJoux (de)
+                              c(8.6833306, 47.249999 ,5, "PhD thesis work"),#Lake Zurich
+                              c(6.90249639, 45.45916483, 5, "Research associate work"),#Lac de Tignes
+                              c(-73.333332, 44.5333312, 5, "postdoc work")#Lake Champlain
+ )
 )
-)
-colnames(my.loc) <- c("lat","long","code")
+colnames(my.loc) <- c("lat","long","code","description")
 
-my.loc.1 <- my.loc[my.loc$code==1,]
-my.loc.2 <- my.loc[my.loc$code==2,]
-my.loc.3 <- my.loc[my.loc$code==3,]
-my.loc.4 <- my.loc[my.loc$code==4,]
+# create the categories
+my.loc <- mutate(my.loc, group = cut(as.numeric(code), breaks = c(0, 1,2,3,4, Inf), labels = c("work", "education", "personnal", "conferences", "mysystems")))
+my.loc$lat <- as.numeric(paste(my.loc$lat))
+my.loc$long <- as.numeric(paste(my.loc$long))
 
-getColor <- function(my.loc) {
-  sapply(~code, function(code) {
-    if(code == 1) {
-      "green"
-    } else if(code == 2) {
-      "orange"
-    } else {
-      "red"
-    } })
+# create separate dataframes
+for (i in unique(my.loc$code)) {
+  nam <- paste("my.loc", i, sep = ".")
+  assign(nam, my.loc[my.loc$code==i,])
 }
 
-icons <- awesomeIcons(
-  icon = 'ios-close',
-  iconColor = 'black',
-  library = 'ion',
-  markerColor = getColor(my.loc)
-)
+#the html file
+my.loc.html <- as.data.frame(rbind(c(5.447427, 43.529742, 3, "<b><a href='images/map/Beaurecueil.JPG'>Sainte Victoire</a></b><br/>Beaurecueil, France")))
+colnames(my.loc.html) <- c("lat","long","code","description")
+my.loc.html$lat <- as.numeric(paste(my.loc.html$lat))
+my.loc.html$long <- as.numeric(paste(my.loc.html$long))
+
+### I downloaded markers from Google Images
+### https://raw.githubusercontent.com/lvoogdt/Leaflet.awesome-markers/master/dist/images/markers-soft.png
+myIcons <- iconList(work = makeIcon(paste0(getwd(),"/images/icons/work.png"), iconWidth = 24, iconHeight =24),
+                    education = makeIcon(paste0(getwd(),"/images/icons/education.png"), iconWidth = 24, iconHeight =24),
+                    personnal = makeIcon(paste0(getwd(),"/images/icons/home.png"), iconWidth = 24, iconHeight =24),
+                    conferences = makeIcon(paste0(getwd(),"/images/icons/conference.png"), iconWidth = 24, iconHeight =24),
+                    mysystems = makeIcon(paste0(getwd(),"/images/icons/waves.png"), iconWidth = 24, iconHeight =24)
+                    )
+
 
 # Pop up markers ####
 
 # Map #####
 mymap <-
-  # leaflet() %>%
-  #   leaflet(my.loc) %>% addTiles() %>%
-  #   addAwesomeMarkers(my.loc$lat, my.loc$long, icon=icons, label=as.character(my.loc$code))
   leaflet() %>% addTiles() %>% 
   addMarkers(my.loc.1$lat, my.loc.1$long,
-             clusterOptions = markerClusterOptions(),
-             popup = as.character(htmlEscape(my.loc.1$code)), group="Work locations"
+             #clusterOptions = markerClusterOptions(),
+             group="Workplaces",icon = myIcons[my.loc.1$group],
+             popup = htmlEscape(my.loc.1$description)
   ) %>%
   addMarkers(my.loc.2$lat, my.loc.2$long,
-             clusterOptions = markerClusterOptions(),
-             popup = as.character(htmlEscape(my.loc.2$code)), group="Education"
+             group="Education",icon = myIcons[my.loc.2$group],
+             popup = htmlEscape(my.loc.2$description)
   ) %>%
   addMarkers(my.loc.3$lat, my.loc.3$long,
-             clusterOptions = markerClusterOptions(),
-             popup = as.character(htmlEscape(my.loc.3$code)), group="Personnal"
+             group="Personnal",icon = myIcons[my.loc.3$group],
+             popup = htmlEscape(my.loc.3$description)
   ) %>%
   addMarkers(my.loc.4$lat, my.loc.4$long,
-             clusterOptions = markerClusterOptions(),
-             popup = as.character(htmlEscape(my.loc.4$code)), group="Conferences and workshops"
+             group="Conferences and workshops",icon = myIcons[my.loc.4$group],
+             popup = htmlEscape(my.loc.4$description)
   ) %>%
+  addMarkers(my.loc.5$lat, my.loc.5$long,
+             group="Systems I study/studied",icon = myIcons[my.loc.5$group],
+             popup = htmlEscape(my.loc.5$description)
+  ) %>%
+  #to add multimedia
+  addPopups(my.loc.html$lat, my.loc.html$long, my.loc.html$description,options = popupOptions(closeButton = FALSE ), group="photos!"
+  ) %>%                   
   # Base groups
   addTiles(group = "OSM (default)") %>%
   addProviderTiles(providers$Stamen.Toner, group = "Toner") %>%
@@ -87,9 +117,10 @@ mymap <-
   # Layers control
   addLayersControl(
     baseGroups = c("OSM (default)", "Toner", "Toner Lite"),
-    overlayGroups = c("Work locations", "Education","Personnal", "Conferences and workshops"),
-    options = layersControlOptions(collapsed = FALSE)
-  )
+    overlayGroups = c("Work locations", "Education","Personnal", "Conferences and workshops","Systems I study/studied", "photos!"),
+    options = layersControlOptions(collapsed = FALSE),
+    position = "bottomright"
+  )  %>% hideGroup(c("Personnal", "Conferences and workshops","Systems I study/studied", "photos!"))
    
 mymap
 

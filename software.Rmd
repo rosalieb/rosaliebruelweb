@@ -20,5 +20,5 @@ output: html_document
 Site in construction -- I will think of a good way of organising the projects I work on.
 In the meantime...
 
-* Our package [SERAC](https://github.com/rosalieb/serac) is currently under review.
-* The code to reproduce this website is on my GitHub too, [here](https://github.com/rosalieb/rosaliebruelweb)
+* Our package <a href="https://github.com/rosalieb/serac" target="_blank">SERAC</a> is currently under review.
+* The code to reproduce this website is on my GitHub too, <a href="https://github.com/rosalieb/rosaliebruelweb" target="_blank">here</a>.

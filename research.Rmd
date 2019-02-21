@@ -18,4 +18,4 @@ output: html_document
 \n
 Site in construction.
 
-In the meantime, here is a link to my [ORCID profile](https://orcid.org/0000-0001-8351-7539).
+In the meantime, here is a link to my <a href="https://orcid.org/0000-0001-8351-7539" target="_blank">ORCID profile</a>.
