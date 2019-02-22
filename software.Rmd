@@ -17,8 +17,10 @@ output: html_document
 
 
 \n
-Site in construction -- I will think of a good way of organising the projects I work on.
-In the meantime...
+\n
+When I first used R, I would have never thought I would like it that much (heard that before?). I do most of my work in R because I don't have any limitation in term of analyses, and it grants reproducibility of my results. I am also very reluctant to use any software that is not freely available, because it limits potential collaboration.
+My GitHub gathers some of my past and current projects. While you're here, have a look at:
 
-* Our package <a href="https://github.com/rosalieb/serac" target="_blank">SERAC</a> is currently under review.
-* The code to reproduce this website is on my GitHub too, <a href="https://github.com/rosalieb/rosaliebruelweb" target="_blank">here</a>.
+* The code to reproduce the analyses from our paper <a href="https://www.researchgate.net/publication/323394346_Seeking_alternative_stable_states_in_a_deep_lake" target="_blank">'Seeking alternative stable states in a deep lake'</a> is available <a href="https://github.com/rosalieb/AltStableStates" target="_blank">here</a>.
+* Our package <a href="https://github.com/rosalieb/serac" target="_blank">SERAC</a>,  currently under review.
+* The code to reproduce this website is on my GitHub as well, <a href="https://github.com/rosalieb/rosaliebruelweb" target="_blank">here</a>.

@@ -55,13 +55,14 @@ output: html_document
 
 My research initially focused on how heavily anthropogenised ecosystems respond to climatic perturbations. I have worked on lowland and high-altitude lakes at different temporal scales (millennial to sub-hourly resolution) on different responses (physical, chemical, biological). Currently, I am developing a food web model for Lake Champlain. The objective is to quantify how changes in food web structure affect the system functioning. Specific questions include spatial and temporal aspects: (1) Does the heterogeneity of Lake Champlain promote various equilibria? (2) Does the spatiality reflect several thresholds in environmental parameters? (3) What changes in environmental conditions allowed the natural recruitment of lake trout to start in the 2010s after decades of no recruits? (4) How might possible changes in fish stocking policies  impact the Lake Champlain food web?
 
-\n
+<br/>
+I graduated from the University of Grenoble (FR) in 2018 with a PhD in Ecology (supervisor: <a href="http://wp.unil.ch/lakes/marie-elodie-perga/" target="_blank">Dr. Marie-Elodie Perga</a>). I am currently a Postdoctoral Associate at the University of Vermont (US), working with <a href="https://www.uvm.edu/rsenr/profiles/ellen_marsden" target="_blank">Dr. Ellen Marsden</a> and <a href="http://stockwelllaboratory.com" target="_blank">Dr. Jason Stockwell</a>.
+
+My full CV is available <a href="files/CV_Rosalie_Bruel.pdf" target="_blank">here</a>.
+
 \n
 
 </div>
-
-
-
 
 <div class="column-center">
 </div>

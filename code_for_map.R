@@ -15,9 +15,11 @@ my.loc <- as.data.frame(rbind(c(5.447427, 43.529742, 3, "My hometown"), #Aix-en-
                                c(8.555371, 45.928306, 1, "7 months in 2016 during PhD"), #Verbania
                                c(-73.212072, 44.475882, 1, "postdoc 2018-current"), #Burlington
                                #conferences
-                               c(18.063240,59.334591,4, "NETLAKE workshop 2014"), #Erken - Stockholm coordinates
-                              c(6.58793,46.40111, 4, "Summer school in limnology 2014"), #Evian Summer school
+                              c(18.063240,59.334591,4, "NETLAKE workshop 2014"), #Erken - Stockholm coordinates
+                              c(6.60793,46.40111, 4, "Summer school in limnology 2014"), #Evian Summer school
+                              c(5.447427, 43.529742, 4, "Rencontres Lacs Sentinelles 2014"), #Aix-en-Provence
                               c(6.143158,46.204391,4, "SEFS9 2015"), #Geneva CH
+                              c(6.58793,46.40111, 4, "NETLAKE meeting 2015"), #Evian Summer school
                               c(105.071858, 51.903210, 4, "Summer school in limnology 2015"), #Bolshiye Koty,
                               c(5.917781, 45.564601, 4, "Meeting AFS 2015"), #Chambéry
                               c(11.30427, 46.01217, 4, "Cladoceran subfossils workshop 2016"), #Levico Terme IT
@@ -62,8 +64,16 @@ for (i in unique(my.loc$code)) {
 }
 
 #the html file
-my.loc.html <- as.data.frame(rbind(c(5.447427, 43.529742, 3, "<b><a href='images/map/Beaurecueil.JPG'>Sainte Victoire</a></b><br/>Beaurecueil, France")))
-colnames(my.loc.html) <- c("lat","long","code","description")
+my.loc.html <- as.data.frame(rbind(c(5.447427, 43.529742, "<b><a href='images/map/Beaurecueil.JPG' target='_blank'>Sainte Victoire</a></b><br/>Beaurecueil, France"),
+                                   c(-1.514699, 43.481402,"<b><a href='images/map/anglet.jpg' target='_blank'>Plage de la Marinella</a></b><br/>Anglet, France"),
+                                   c(7.641618, 45.980537,"<b><a href='images/map/zermatt.jpg' target='_blank'>Matterhorn</a></b><br/>Zermatt, Switzerland"),
+                                   c(-72.928829618, 44.159832694,"<b><a href='images/map/mount_ellen.JPG' target='_blank'>Mount Ellen</a></b><br/>Green Mountains, VT"),
+                                   c(-112.9513500, 37.2594333,"<b><a href='images/map/angelslanding.JPG' target='_blank'>Angel's landing</a></b><br/>Zion National Park, UT"),
+                                   c(6.701810,46.3384, "<b><a href='images/map/tetedesfieux.JPG' target='_blank'>Tête des fieux</a></b><br/>Chablais, France"),
+                                   c(115.517,-32.002,"<b><a href='images/map/smokingceremony.JPG' target='_blank'>Smoking ceremony</a></b><br/>Rottnest Island, WA")
+                                    
+                                   ))
+colnames(my.loc.html) <- c("lat","long","description")
 my.loc.html$lat <- as.numeric(paste(my.loc.html$lat))
 my.loc.html$long <- as.numeric(paste(my.loc.html$long))
 
@@ -117,7 +127,7 @@ mymap <-
   # Layers control
   addLayersControl(
     baseGroups = c("OSM (default)", "Toner", "Toner Lite"),
-    overlayGroups = c("Work locations", "Education","Personnal", "Conferences and workshops","Systems I study/studied", "photos!"),
+    overlayGroups = c("Workplaces", "Education","Personnal", "Conferences and workshops","Systems I study/studied", "photos!"),
     options = layersControlOptions(collapsed = FALSE),
     position = "bottomright"
   )  %>% hideGroup(c("Personnal", "Conferences and workshops","Systems I study/studied", "photos!"))

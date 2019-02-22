@@ -9,10 +9,10 @@ navbar:
     #  href: talks.html
     - text: "Programming"
       href: software.html
-    - text: "Teaching"
-      href: teaching.html
-    - text: "CV"
-      href: CV.html
+    #- text: "Teaching"
+    #  href: teaching.html
+    #- text: "CV"
+    #  href: CV.html
     - text: "Blog"
       href: blog.html
     - text: "Gallery"
