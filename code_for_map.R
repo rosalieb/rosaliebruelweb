@@ -69,7 +69,7 @@ my.loc.html <- as.data.frame(rbind(c(5.447427, 43.529742, "<b><a href='images/ma
                                    c(7.641618, 45.980537,"<b><a href='images/map/zermatt.jpg' target='_blank'>Matterhorn</a></b><br/>Zermatt, Switzerland"),
                                    c(-72.928829618, 44.159832694,"<b><a href='images/map/mount_ellen.JPG' target='_blank'>Mount Ellen</a></b><br/>Green Mountains, VT"),
                                    c(-112.9513500, 37.2594333,"<b><a href='images/map/angelslanding.JPG' target='_blank'>Angel's landing</a></b><br/>Zion National Park, UT"),
-                                   c(6.701810,46.3384, "<b><a href='images/map/tetedesfieux.JPG' target='_blank'>Tête des fieux</a></b><br/>Chablais, France"),
+                                   c(6.701810,46.3384, "<b><a href='images/map/tetedesfieux.jpg' target='_blank'>Tête des fieux</a></b><br/>Chablais, France"),
                                    c(115.517,-32.002,"<b><a href='images/map/smokingceremony.JPG' target='_blank'>Smoking ceremony</a></b><br/>Rottnest Island, WA")
                                     
                                    ))
