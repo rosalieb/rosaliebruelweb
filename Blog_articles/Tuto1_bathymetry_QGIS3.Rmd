@@ -1,0 +1,80 @@
+---
+#title: "Interpolating point data to create a bathymetry map"
+#author: "Rosalie Bruel"
+#date: "23/03/2019"
+output: html_document
+---
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134870808-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-134870808-1');
+</script>
+
+<style>
+.full-page{
+  float: left;
+  width: 70%;
+  vertical-align: top;
+  text-align: left;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+</style
+
+<a href="../blog.html" target="_blank"> Back </a>
+
+<div class="full-page">
+
+## Interpolating point data to create a bathymetry map
+<div style="text-align:right">
+Rosalie Bruel  
+*March 23^th^, 2019*
+</div>
+
+Every 1.5 years or so, I need to get the bathymetry for a lake. While these files probably exist somewhere, it's sometimes hard to find them, while  XYZ files are commonly shared.
+My thanks to Raul Serbán who showed me how to do it in 2014, seeing someone else doing it gave me the confidence to try on my own. And I promise -- it's not that bad.  
+
+I had the steps on how to do it on QGIS v2 documented in a .doc file, but I recently upgraded to QGIS v3, and I could no longer follow my instructions. As I went trhough on how to do it, I used a combination of help online (I'm listing some sources at the end of this post), but did not find a comprehensive Tutorial.
+
+#### Get QGIS
+* <a href="https://qgis.org/en/site/forusers/download.html" target="_blank"> Download QGIS 3 </a>  
+* Depending on your use, I recommend chosing the long-term release. The latest release is richer in features, but might be less stable.  
+* You'll have to <a href="https://www.python.org" target="_blank">download Python</a> as well.
+
+### 1. Get your data
+This tutorial allow you to generate a bathymetry using XYZ data. Have them saved in a .csv file. If you don't have any data, you can follow these steps using Lake Champlain data. Download the spreadsheet data <a href="http://geodata.vermont.gov/datasets/7f451335fc6644e7a7376adbcd6282df_2" target="_blank">from here</a>.
+
+Lake Champlain bathymetry dataset follows this format:  
+
+X	        | Y	         | OBJECTID	 | DEPTH_FT
+--------- | ---------- | --------- | --------
+432477.13	| 277957.69  | 1	       | -1
+432661.78	| 277955.88  | 2	       | -1
+432784.13	| 277910.97	 | 3	       | -10
+432965.75	| 277910.31  | 4	       | -23
+433294.03	| 277635.31	 | 5	       | -9
+433180.28	| 277624.09	 | 6	       | -6
+
+You can leave the depth in feet, but I want to convert them in meters ~~because the system makes so much more sense~~ so the data can be directly used in future publications. 1 foot = 0.3048 meter.
+
+You'll also need the lake contour. There are some databases region specific. I'll update this if I learned about a global database.
+
+### 2. Read your data into QGIS
+
+### 3. Interpolation
+
+
+
+
+
+<!-- begin wwww.htmlcommentbox.com -->
+ <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com"></a> is loading comments...</div>
+ <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+ <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&opts=16862&num=10&ts=1553273262432");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+<!-- end www.htmlcommentbox.com -->
+</div>

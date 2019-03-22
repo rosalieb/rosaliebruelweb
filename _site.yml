@@ -30,5 +30,5 @@ navbar:
       href: https://www.linkedin.com/in/rosalie-bruel-748b5861/
 output:
   html_document:
-    theme: paper
+    theme: sandstone
     css: 'styles.css'

@@ -16,6 +16,13 @@ output: html_document
 </script>
 
 <style>
+.full-page{
+  float: left;
+  width: 100%;
+  vertical-align: top;
+  text-align: left;
+  margin-right: 5%;
+}
 .column-left{
   float: left;
   width: 30%;
@@ -40,8 +47,27 @@ output: html_document
 
 \n
 
+<div class="full-page">
+\n
+
+<div style="text-align:center">
+### Tutorial
+***
+</div>
+\n
+
+* <a href="Blog_articles/Tuto1_bathymetry_QGIS3.html" target="_blank">Generate a bathymetry map on QGIS 3 from a XYZ csv file</a>
+
+
+\n
+\n
+
+<div style="text-align:center">
+### On Twitter
+***
+</div>
 <div class="column-left">
-<h2>Science </h2>
+## Science
 \n
 
 __GLEON20, Student workshop, Rottnest Island, Western Australia__
@@ -58,7 +84,7 @@ __My first paper!__
 </div>
 
 <div class="column-center">
-<h2>Fieldwork </h2>
+## Fieldwork
 \n
 __Helping Ben Block (UVM-RESL Graduate student)__
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Went this morning with some folks from <a href="https://twitter.com/UVM_RSENR?ref_src=twsrc%5Etfw">@UVM_RSENR</a> to try out the ice jigger <a href="https://twitter.com/BentheEcologist?ref_src=twsrc%5Etfw">@BentheEcologist</a> will use to catch fish and study their diets over the winter.<br>Clever adaptations of the equipment and thick ice were involved. <a href="https://t.co/410wyi49ra">pic.twitter.com/410wyi49ra</a></p>&mdash; Rosalie Bruel (@RosalieBruel) <a href="https://twitter.com/RosalieBruel/status/1085668742271508487?ref_src=twsrc%5Etfw">January 16, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
@@ -70,7 +96,7 @@ __Helping Natalie Flores (UVM-RESL Graduate student)__
 </div>
 
 <div class="column-right">
-<h2>Public outreach </h2>
+##Public outreach
 \n
 __Host for @LaBioauLabo during one week__
 <blockquote class="twitter-tweet"><p lang="fr" dir="ltr">[admin] Bonjour à tous ! Cette semaine c’est <a href="https://twitter.com/RosalieBruel?ref_src=twsrc%5Etfw">@RosalieBruel</a>, doctorante <a href="https://twitter.com/Inra_France?ref_src=twsrc%5Etfw">@Inra_France</a> <a href="https://twitter.com/Univ_Savoie?ref_src=twsrc%5Etfw">@Univ_Savoie</a> <a href="https://twitter.com/UmrCarrtel?ref_src=twsrc%5Etfw">@UmrCarrtel</a> qui sera avec nous. <br>Retrouvez sa bio sur le site<a href="https://t.co/qG5GkBcFqf">https://t.co/qG5GkBcFqf</a>… <a href="https://t.co/pfMXpAzRiK">pic.twitter.com/pfMXpAzRiK</a></p>&mdash; La Bio au Labo (@laBioauLabo) <a href="https://twitter.com/laBioauLabo/status/980716083685584896?ref_src=twsrc%5Etfw">April 2, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

@@ -15,7 +15,7 @@
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/paper.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/spacelab.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -108,33 +108,33 @@ summary {
 <style type="text/css">
 /* padding for bootstrap navbar */
 body {
-  padding-top: 64px;
+  padding-top: 52px;
   padding-bottom: 40px;
 }
 /* offset scroll position for anchor links (for fixed navbar)  */
 .section h1 {
-  padding-top: 69px;
-  margin-top: -69px;
+  padding-top: 57px;
+  margin-top: -57px;
 }
 .section h2 {
-  padding-top: 69px;
-  margin-top: -69px;
+  padding-top: 57px;
+  margin-top: -57px;
 }
 .section h3 {
-  padding-top: 69px;
-  margin-top: -69px;
+  padding-top: 57px;
+  margin-top: -57px;
 }
 .section h4 {
-  padding-top: 69px;
-  margin-top: -69px;
+  padding-top: 57px;
+  margin-top: -57px;
 }
 .section h5 {
-  padding-top: 69px;
-  margin-top: -69px;
+  padding-top: 57px;
+  margin-top: -57px;
 }
 .section h6 {
-  padding-top: 69px;
-  margin-top: -69px;
+  padding-top: 57px;
+  margin-top: -57px;
 }
 .dropdown-submenu {
   position: relative;
@@ -345,6 +345,13 @@ $(document).ready(function () {
   gtag('config', 'UA-134870808-1');
 </script>
 <style>
+.full-page{
+  float: left;
+  width: 100%;
+  vertical-align: top;
+  text-align: left;
+  margin-right: 5%;
+}
 .column-left{
   float: left;
   width: 30%;
@@ -367,10 +374,23 @@ $(document).ready(function () {
 }
 </style>
 
+<div class="full-page">
+
+<div style="text-align:center">
+<h3 id="tutorial">Tutorial</h3>
+<hr />
+</div>
+
+<ul>
+<li><a href="Blog_articles/Tuto1_bathymetry_QGIS3.html" target="_blank">Generate a bathymetry map on QGIS 3 from a XYZ csv file</a></li>
+</ul>
+<p></p>
+<div style="text-align:center">
+<h3 id="on-twitter">On Twitter</h3>
+<hr />
+</div>
 <div class="column-left">
-<h2>
-Science
-</h2>
+<h2 id="science">Science</h2>
 
 <strong>GLEON20, Student workshop, Rottnest Island, Western Australia</strong>
 <blockquote class="twitter-tweet">
@@ -398,9 +418,7 @@ Our paper “Seeking alternative stable states in a deep lake” published in <a
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 <div class="column-center">
-<h2>
-Fieldwork
-</h2>
+<h2 id="fieldwork">Fieldwork</h2>
 <strong>Helping Ben Block (UVM-RESL Graduate student)</strong>
 <blockquote class="twitter-tweet">
 <p lang="en" dir="ltr">
@@ -419,9 +437,7 @@ This morning, Kerry (an undergrad student) and I woke up early to go help <a hre
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 <div class="column-right">
-<h2>
-Public outreach
-</h2>
+<h2 id="public-outreach">Public outreach</h2>
 <strong>Host for <span class="citation">@LaBioauLabo</span> during one week</strong>
 <blockquote class="twitter-tweet">
 <p lang="fr" dir="ltr">
