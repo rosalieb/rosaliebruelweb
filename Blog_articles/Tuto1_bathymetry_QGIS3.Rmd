@@ -41,7 +41,7 @@ output: html_document
 }
 </style>
 
-<a href="../blog.html" target="_blank"> Back </a>
+<a href="../blog.html"> Back </a>
 
 <div class="body">
 
