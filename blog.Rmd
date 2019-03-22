@@ -55,9 +55,10 @@ output: html_document
 ***
 </div>
 \n
-
+Tutorial in prep :)
+<!-- In prep 
 * <a href="Blog_articles/Tuto1_bathymetry_QGIS3.html" target="_blank">Generate a bathymetry map on QGIS 3 from a XYZ csv file</a>
-
+-->
 
 \n
 \n
