@@ -15,6 +15,7 @@ output: html_document
   gtag('config', 'UA-134870808-1');
 </script>
 
+
 <style>
 .full-page{
   float: left;
@@ -24,11 +25,27 @@ output: html_document
   margin-left: 15%;
   margin-right: 15%;
 }
-</style
+.body {
+  background-image: url("images/Tuto1/LC_Bathy.JPG");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: center;
+}
+.content {
+    padding:20px;
+    width:710px;
+    position:relative;
+    background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+    background: rgba(255,255,255, 0.85);
+}
+</style>
 
 <a href="../blog.html" target="_blank"> Back </a>
 
-<div class="full-page">
+<div class="body">
+
+<div class="full-page content">
 
 ## Interpolating point data to create a bathymetry map
 <div style="text-align:right">
@@ -39,14 +56,18 @@ Rosalie Bruel
 Every 1.5 years or so, I need to get the bathymetry for a lake. While these files probably exist somewhere, it's sometimes hard to find them, while  XYZ files are commonly shared.
 My thanks to Raul Serbán who showed me how to do it in 2014, seeing someone else doing it gave me the confidence to try on my own. And I promise -- it's not that bad.  
 
-I had the steps on how to do it on QGIS v2 documented in a .doc file, but I recently upgraded to QGIS v3, and I could no longer follow my instructions. As I went trhough on how to do it, I used a combination of help online (I'm listing some sources at the end of this post), but did not find a comprehensive Tutorial.
+I had the steps on how to do it on QGIS v2 documented in a .doc file, but I recently upgraded to QGIS v3, and I could no longer follow my instructions. As I went through on how to do it, I used a combination of help online (I'm listing some sources at the end of this post), but did not find a comprehensive Tutorial.
+
+This tutorial is for QGIS 3.4.5-Madeira, Python 3.6, using macOS 10.14.3.
+
 
 #### Get QGIS
 * <a href="https://qgis.org/en/site/forusers/download.html" target="_blank"> Download QGIS 3 </a>  
-* Depending on your use, I recommend chosing the long-term release. The latest release is richer in features, but might be less stable.  
+* Depending on your use, I recommend choosing the long-term release. The latest release is richer in features, but might be less stable.  
 * You'll have to <a href="https://www.python.org" target="_blank">download Python</a> as well.
 
-### 1. Get your data
+
+#### 1. Get your data
 This tutorial allow you to generate a bathymetry using XYZ data. Have them saved in a .csv file. If you don't have any data, you can follow these steps using Lake Champlain data. Download the spreadsheet data <a href="http://geodata.vermont.gov/datasets/7f451335fc6644e7a7376adbcd6282df_2" target="_blank">from here</a>.
 
 Lake Champlain bathymetry dataset follows this format:  
@@ -60,15 +81,100 @@ X	        | Y	         | OBJECTID	 | DEPTH_FT
 433294.03	| 277635.31	 | 5	       | -9
 433180.28	| 277624.09	 | 6	       | -6
 
-You can leave the depth in feet, but I want to convert them in meters ~~because the system makes so much more sense~~ so the data can be directly used in future publications. 1 foot = 0.3048 meter.
 
 You'll also need the lake contour. There are some databases region specific. I'll update this if I learned about a global database.
 
-### 2. Read your data into QGIS
 
-### 3. Interpolation
+#### 2. Upload your data to QGIS
+Click <img src="images/Tuto1/Tuto1_1_addlayer.JPG" style="width:5%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" > then in the top-left corner of the QGIS window to open the data source manager.  
+We'll be using 'Delimited Text' to import our data.  
+<img src="images/Tuto1/Tuto1_2_addlayer.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
+
+Select the path to your file in the 'File name' field. You may customize the name of the new layer you're about to create in the field below. QGIS 3 support several input format -- choose yours in the 'File Format' section. Select which column cary your longitude and latitude (X and Y) information in the 'Geometry Definition'. Make sure the projection (Geometry CRS) correspond to those of your data.
+
+At all time, you can use the 'Sample Data' preview to make sure your imported data look good.
+When you're done, click 'Add'.
+
+You created a new layer. If you zoom in, you'll see it's made of several points. You can get more information on each point by using the Identify Features option <img src="images/Tuto1/Tuto1_3_getinfo.png" style="width:5%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" >.  
+<img src="images/Tuto1/Tuto1_4_getinfo.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
 
 
+#### 3. *(Optional)* Transform your data
+
+Remember, our depth are given in feet. I want to convert them in meters ~~because the system makes so much more sense~~ so the data can be directly used in future publications. We can do that in QGIS.
+
+Open the field calculator by clicking on the following icon: <img src="images/Tuto1/Tuto1_5_calcul.png" style="width:5%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" >. Here, we want to create a new field, so we're filling out the left side. We will call our depth in meters Z. In order to be sure we write the equation correctly, we can use the drop-down menu in the middle. In the 'Fields and values' category, you'll find the existing fields. Double-click on the current depth, and it will appear in the left window. We then  only have to convert it in meters using the relation 1 foot = 0.3048 meter.  
+<img src="images/Tuto1/Tuto1_6_calcul.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
+
+If you use the 'Identify Features' option described in the previous section, you will see that a new value is available for each point. Another way to visualise is to open the attribute table, using <img src="images/Tuto1/Tuto1_7_table.png" style="width:5%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" >.
+
+#### 4. TIN Interpolation
+
+Before anything, unzoom to cover the extent of your data -- this will be useful in a minute. You can do that by clicking on <img src="images/Tuto1/Tuto1_9_extent.png" style="width:5%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" >.
+
+In order to create a bathymetry, we need to interpolate between each discrete data to get a continuous information. This is one of the big differences between QGIS v2, where the interpolation was accessible through a plugin, and QGIS v3, where interpolations methods are implemented.  
+
+Select Processing/Toolbox/Interpolation/TIN Interpolation.
+<img src="images/Tuto1/Tuto1_8_interpolation.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
+
+Here, you need to select the layer you just uploaded (the .csv file). In the 'Interpolation attribute', select the column where depth is given. Make sure to add this layer by clicking on the + sign.
+For the extent of your interpolation, select 'Use Canvas Entent' (this is why we unzoomed earlier).
+Choose a pixel resolution. My default is 0.10000 (shown in the print screen below), but this would take way too long for a large lake such as Lake Champlain (and I don't need that precision). I change this value to 10, but feel free to change this value depending on your system / your computer power.
+Finally, name and give a location to save your output in the 'Interpolated' field.
+Click 'Run'.
+
+<img src="images/Tuto1/Tuto1_10_interpol_param.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
+
+Congrats, you just created your new tin layer.
+
+<img src="images/Tuto1/Tuto1_11_tin_interpol_1.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
+
+#### 5. Delimitation to the correct area
+__When trying to do the next step, I got an error. Apparently, it's an issue with QGIS 3 on Macs, and I found the solution to the problem <a href="https://gis.stackexchange.com/questions/276853/gdal-scripts-not-found-in-qgis-3-on-osx" target="_blank">here</a>. Basically, you need to add a path to your system environment.___
+
+Pasting here the solution in case the discussion disappear...
+Go to Settings ... Options... System ... Environment Enable "Use Custom Variables "
+First select "Prepend", under variable enter "PATH", under value enter
+"/Library/Frameworks/GDAL.framework/Programs:/Library/Frameworks/Python.framework/Versions/3.6/bin:"
+(all these without the quotes)
+
+<img src="images/Tuto1/Tuto1_pb_GDAL.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
+
+__Back to the interpolation.__
+
+Interpolation does not give accurate results outside the collection area. You need toclip the surface with the lake boundary. Go to Raster/Extraction/Clip raster by mask layer. Here, you have to select your shape file contour of the lake for the Mask layer. Again, make sure to save your output to your files.
+Click 'Run'.
+
+<img src="images/Tuto1/Tuto1_12_tin_interpol_2.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
+
+#### 6. Visualise the different elevations
+A new layer was created. Right-click on it, and got to properties.  
+<img src="images/Tuto1/Tuto1_13_tin_interpol_3.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
+
+In there, select 'Singleband pseudocolor), and choose a Color ramp. With the 'Mode' dropdown menu, you can select the number of classes. Click 'OK', to get your new visual
+
+<img src="images/Tuto1/Tuto1_14_tin_interpol_4.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
+
+
+#### 7. Generate contour lines
+Select the clipped layer (the one we just created), and go to Raster > Extraction > Contour. This window allows you to chose the interval between contour lines (here I have it set to 10) and save your output.
+
+<img src="images/Tuto1/Tuto1_15_contour.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
+
+A new layer is created. I did it as well for a 20 interval, and here is the output, zooming in onto the Main Lake and Mallet's Bay.
+
+<img src="images/Tuto1/Tuto1_16_contour_result.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
+
+#### 8. Add the labels
+I was about to stop this tutorial here, but went back to the one I've been using for QGIS 2 and noticed the author included the label as well -- good point!
+In QGIS 3, the procedure stays the same. Select your contour layer, click right, Properties. Go to Labels, select 'Single labels', in the 'Label with', select ELEV, and change the placement to curved. Click 'OK'. Each contour line will be labeled with its depth
+
+<img src="images/Tuto1/Tuto1_17_label.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
+
+#### Source  
+This tutorial is totally based on the <a href=http://www.qgistutorials.com/en/docs/interpolating_point_data.html target="_blank"> tutorial by Ujaval Gandhi, for previous versions of QGIS</a>. I documented these steps for me at first, and thought I might as well share them, but I'm definitely not a Geograph.
+
+</div>
 
 
 
@@ -77,4 +183,4 @@ You'll also need the lake contour. There are some databases region specific. I'l
  <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
  <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&opts=16862&num=10&ts=1553273262432");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
 <!-- end www.htmlcommentbox.com -->
-</div>
+
