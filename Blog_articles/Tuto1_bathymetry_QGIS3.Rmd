@@ -1,7 +1,4 @@
 ---
-#title: "Interpolating point data to create a bathymetry map"
-#author: "Rosalie Bruel"
-#date: "23/03/2019"
 output: html_document
 ---
 
@@ -14,6 +11,10 @@ output: html_document
 
   gtag('config', 'UA-134870808-1');
 </script>
+
+```{r include=FALSE}
+source("render_toc.R")
+```
 
 
 <style>
@@ -53,10 +54,17 @@ Rosalie Bruel
 *March 23^th^, 2019*
 </div>
 
+__Content__
+```{r toc, echo=FALSE} 
+render_toc("Tuto1_bathymetry_QGIS3.Rmd")
+```
+***  
+
+
 Every 1.5 years or so, I need to get the bathymetry for a lake. While these files probably exist somewhere, it's sometimes hard to find them, while  XYZ files are commonly shared.
 My thanks to Raul Serbán who showed me how to do it in 2014, seeing someone else doing it gave me the confidence to try on my own. And I promise -- it's not that bad.  
 
-I had the steps on how to do it on QGIS v2 documented in a .doc file, but I recently upgraded to QGIS v3, and I could no longer follow my instructions. As I went through on how to do it, I used a combination of help online (I'm listing some sources at the end of this post), but did not find a comprehensive Tutorial.
+I had the steps on how to do it on QGIS v2 documented in a .doc file, but I recently upgraded to QGIS v3, and I could no longer follow my instructions. As I went through on how to do it, I used a combination of help online (mainly <a href=http://www.qgistutorials.com/en/docs/interpolating_point_data.html target="_blank">this</a> for previous QGIS versions), but did not find a comprehensive Tutorial.
 
 This tutorial is for QGIS 3.4.5-Madeira, Python 3.6, using macOS 10.14.3.
 
@@ -172,7 +180,10 @@ In QGIS 3, the procedure stays the same. Select your contour layer, click right,
 <img src="images/Tuto1/Tuto1_17_label.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
 
 #### Source  
-This tutorial is totally based on the <a href=http://www.qgistutorials.com/en/docs/interpolating_point_data.html target="_blank"> tutorial by Ujaval Gandhi, for previous versions of QGIS</a>. I documented these steps for me at first, and thought I might as well share them, but I'm definitely not a Geograph.
+At the moment, this tutorial is totally based on the <a href=http://www.qgistutorials.com/en/docs/interpolating_point_data.html target="_blank"> tutorial by Ujaval Gandhi, for previous versions of QGIS</a>. I documented these steps for me at first, and thought I might as well share them, but I'm definitely not a Geograph.
+
+Table of content created using <a href=https://www.garrickadenbuie.com/blog/add-a-generated-table-of-contents-anywhere-in-rmarkdown/ target="_blank">this method</a>.
+
 
 </div>
 
