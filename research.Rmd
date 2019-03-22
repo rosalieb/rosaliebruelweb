@@ -22,5 +22,5 @@ I chose a cursus in Marine Biology thanks to a course I took at Napier Universit
 
 I could list my publications, but I might as well link my <a href="https://orcid.org/0000-0001-8351-7539" target="_blank">ORCID profile</a>, that is guaranteed to be up to date.
 
-<img src="images/research_interests.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
+<img src="images/research_interests.png" style="width:80%; margin-left: 10%; margin-right: 10%; margin-bottom: 20px; margin-top: 20px" align="center">
 
