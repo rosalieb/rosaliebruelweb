@@ -63,7 +63,7 @@ render_toc("Tuto1_bathymetry_QGIS3.Rmd")
 
 
 Every 1.5 years or so, I need to get the bathymetry for a lake. While these files probably exist somewhere, it's sometimes hard to find them, while  XYZ files are commonly shared.
-My thanks to Raul Serbán who showed me how to do it in 2014, seeing someone else doing it gave me the confidence to try on my own. And I promise -- it's not that bad.  
+Instead of chasing the bathymetry file, I rather then create it. My thanks to Raul Serbán who showed me how to do it for the first time in 2014. Seeing someone else doing it gave me the confidence to try on my own. And I promise -- it's not that bad.  
 
 I had the steps on how to do it on QGIS v2 documented in a .doc file, but I recently upgraded to QGIS v3, and I could no longer follow my instructions. As I went through on how to do it, I used a combination of help online (mainly <a href=http://www.qgistutorials.com/en/docs/interpolating_point_data.html target="_blank">this</a> for previous QGIS versions), but did not find a comprehensive Tutorial.
 
