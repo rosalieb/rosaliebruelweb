@@ -91,7 +91,7 @@ X	        | Y	         | OBJECTID	 | DEPTH_FT
 433180.28	| 277624.09	 | 6	       | -6
 
 
-You'll also need the lake contour. There are some databases region specific. I'll update this if I learned about a global database.
+You'll also need the lake contour (a .shp file). There are some data bases by regions (e.g., CORINE Land Cover for Europe). I'll update this section if I learned about a global database.
 
 
 #### 2. Upload your data to QGIS
@@ -104,13 +104,13 @@ Select the path to your file in the 'File name' field. You may customize the nam
 At all time, you can use the 'Sample Data' preview to make sure your imported data look good.
 When you're done, click 'Add'.
 
-You created a new layer. If you zoom in, you'll see it's made of several points. You can get more information on each point by using the Identify Features option <img src="images/Tuto1/Tuto1_3_getinfo.png" style="width:5%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" >.  
+You created a new layer, that appears in the bottom left pannel. If you zoom in, you'll see it's made of several points. You can get more information on each point by using the Identify Features option <img src="images/Tuto1/Tuto1_3_getinfo.png" style="width:5%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" >.  
 <img src="images/Tuto1/Tuto1_4_getinfo.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
 
 
 #### 3. *(Optional)* Transform your data
 
-Remember, our depth are given in feet. I want to convert them in meters ~~because the system makes so much more sense~~ so the data can be directly used in future publications. We can do that in QGIS.
+Remember, our depth are given in feet. I want to convert them in meters ~~because the system makes so much more sense~~ so the data can be directly used in future publications. We can do that directly in QGIS.
 
 Open the field calculator by clicking on the following icon: <img src="images/Tuto1/Tuto1_5_calcul.png" style="width:5%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" >. Here, we want to create a new field, so we're filling out the left side. We will call our depth in meters Z. In order to be sure we write the equation correctly, we can use the drop-down menu in the middle. In the 'Fields and values' category, you'll find the existing fields. Double-click on the current depth, and it will appear in the left window. We then  only have to convert it in meters using the relation 1 foot = 0.3048 meter.  
 <img src="images/Tuto1/Tuto1_6_calcul.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
@@ -119,11 +119,13 @@ If you use the 'Identify Features' option described in the previous section, you
 
 #### 4. TIN Interpolation
 
+<p style="border:3px; border-style:solid; border-color:#287EC7;; padding: 1em;"> <a href=http://www.qgistutorials.com/en/docs/interpolating_point_data.html target="_blank">From Ujaval Gandhi post</a>: <br> Interpolation results can vary significantly based on the method and parameters you choose. QGIS interpolation supports Triagulated Irregular Network (TIN) and Inverse Distance Weighting (IDW) methods for interpolation. TIN method is commonly used for elevation data whereas IDW method is used for interpolating other types of data such as mineral concentrations, populations etc. </p>
+
 Before anything, unzoom to cover the extent of your data -- this will be useful in a minute. You can do that by clicking on <img src="images/Tuto1/Tuto1_9_extent.png" style="width:5%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" >.
 
 In order to create a bathymetry, we need to interpolate between each discrete data to get a continuous information. This is one of the big differences between QGIS v2, where the interpolation was accessible through a plugin, and QGIS v3, where interpolations methods are implemented.  
 
-Select Processing/Toolbox/Interpolation/TIN Interpolation.
+Select Processing / Toolbox / Interpolation / TIN Interpolation.
 <img src="images/Tuto1/Tuto1_8_interpolation.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
 
 Here, you need to select the layer you just uploaded (the .csv file). In the 'Interpolation attribute', select the column where depth is given. Make sure to add this layer by clicking on the + sign.
@@ -134,12 +136,12 @@ Click 'Run'.
 
 <img src="images/Tuto1/Tuto1_10_interpol_param.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
 
-Congrats, you just created your new tin layer.
+You just created your new TIN layer.
 
 <img src="images/Tuto1/Tuto1_11_tin_interpol_1.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
 
 #### 5. Delimitation to the correct area
-__When trying to do the next step, I got an error. Apparently, it's an issue with QGIS 3 on Macs, and I found the solution to the problem <a href="https://gis.stackexchange.com/questions/276853/gdal-scripts-not-found-in-qgis-3-on-osx" target="_blank">here</a>. Basically, you need to add a path to your system environment.___
+__When trying to do this next step for the message, I got an error. Apparently, it's an issue with QGIS 3 on Macs, and I found the solution to the problem <a href="https://gis.stackexchange.com/questions/276853/gdal-scripts-not-found-in-qgis-3-on-osx" target="_blank">here</a>. Basically, you need to add a path to your system environment.__  
 
 Pasting here the solution in case the discussion disappear...
 Go to Settings ... Options... System ... Environment Enable "Use Custom Variables "
@@ -151,7 +153,7 @@ First select "Prepend", under variable enter "PATH", under value enter
 
 __Back to the interpolation.__
 
-Interpolation does not give accurate results outside the collection area. You need toclip the surface with the lake boundary. Go to Raster/Extraction/Clip raster by mask layer. Here, you have to select your shape file contour of the lake for the Mask layer. Again, make sure to save your output to your files.
+Interpolation does not give accurate results outside the collection area. You need to clip the surface with the lake boundary. Go to Raster / Extraction / Clip raster by mask layer. Here, you have to select your shape file contour of the lake for the Mask layer. Again, make sure to save your output to your files.
 Click 'Run'.
 
 <img src="images/Tuto1/Tuto1_12_tin_interpol_2.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
@@ -170,7 +172,7 @@ Select the clipped layer (the one we just created), and go to Raster > Extractio
 
 <img src="images/Tuto1/Tuto1_15_contour.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
 
-A new layer is created. I did it as well for a 20 interval, and here is the output, zooming in onto the Main Lake and Mallet's Bay.
+A new layer is created. I did it as well for a 20 interval; the output is shown below, zoomed in onto the Main Lake and Mallet's Bay.
 
 <img src="images/Tuto1/Tuto1_16_contour_result.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
 
