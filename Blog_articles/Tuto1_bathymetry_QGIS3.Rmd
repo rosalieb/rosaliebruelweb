@@ -129,7 +129,7 @@ Select Processing / Toolbox / Interpolation / TIN Interpolation.
 <img src="images/Tuto1/Tuto1_8_interpolation.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
 
 Here, you need to select the layer you just uploaded (the .csv file). In the 'Interpolation attribute', select the column where depth is given. Make sure to add this layer by clicking on the + sign.
-For the extent of your interpolation, select 'Use Canvas Entent' (this is why we unzoomed earlier).
+For the extent of your interpolation, select 'Use Canvas Extent' (this is why we unzoomed earlier).
 Choose a pixel resolution. My default is 0.10000 (shown in the print screen below), but this would take way too long for a large lake such as Lake Champlain (and I don't need that precision). I change this value to 10, but feel free to change this value depending on your system / your computer power.
 Finally, name and give a location to save your output in the 'Interpolated' field.
 Click 'Run'.
@@ -162,7 +162,7 @@ Click 'Run'.
 A new layer was created. Right-click on it, and got to properties.  
 <img src="images/Tuto1/Tuto1_13_tin_interpol_3.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
 
-In there, select 'Singleband pseudocolor), and choose a Color ramp. With the 'Mode' dropdown menu, you can select the number of classes. Click 'OK', to get your new visual
+In there, select 'Singleband pseudocolor), and choose a Color ramp. With the 'Mode' drop-down menu, you can select the number of classes. Click 'OK', to get your new visual
 
 <img src="images/Tuto1/Tuto1_14_tin_interpol_4.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
 
