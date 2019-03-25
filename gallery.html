@@ -288,7 +288,7 @@ $(document).ready(function () {
   <a href="software.html">Programming</a>
 </li>
 <li>
-  <a href="blog.html">Blog</a>
+  <a href="blog.html">Blog / Tutorial</a>
 </li>
 <li>
   <a href="gallery.html">Gallery</a>
@@ -342,18 +342,20 @@ $(document).ready(function () {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 * {box-sizing: border-box;}
-body {font-family: Verdana, sans-serif;}
+
 .mySlides {display: none;}
 img {vertical-align: middle;}
 
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
 
-/* Caption text */
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+/* Caption text - no longer used */
 .text {
   color: #f2f2f2;
   font-size: 15px;
@@ -362,6 +364,66 @@ img {vertical-align: middle;}
   bottom: 8px;
   width: 100%;
   text-align: center;
+}
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active {
+  background-color: #717171;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 3.5s;
+  animation-name: fade;
+  animation-duration: 3.5s;
+}
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* Number text (1/3 etc) */
@@ -373,39 +435,44 @@ img {vertical-align: middle;}
   top: 0;
 }
 
-/* The dots/bullets/indicators */
-.dot {
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #696969;
+  padding: 2px 16px;
+  color: white;
 }
 
-.active {
-  background-color: #717171;
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 3.5s;
-  animation-name: fade;
-  animation-duration: 3.5s;
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: .8;
 }
 
 @-webkit-keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
 }
-
 @keyframes fade {
   from {opacity: .4} 
   to {opacity: 1}
 }
-
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
@@ -416,78 +483,98 @@ img {vertical-align: middle;}
 <h2>
 A few snapshots
 </h2>
-<p>
+<div class="container">
+<div class="mySlides">
+<div class="numbertext">
+1 / 6
+</div>
+<p><img src="images/gallery/2018_WFB161_electroshocking.JPG" style="width:100%"></p>
+</div>
+<div class="mySlides">
+<div class="numbertext">
+2 / 6
+</div>
+<p><img src="images/gallery/2018_WFB161_salmon_hole.JPG" style="width:100%"></p>
+</div>
+<div class="mySlides">
+<div class="numbertext">
+3 / 6
+</div>
+<p><img src="images/gallery/2018_WFB161_seining.JPG" style="width:100%"></p>
+</div>
+<div class="mySlides">
+<div class="numbertext">
+4 / 6
+</div>
+<p><img src="images/gallery/2018_shelburne_pond_frog.JPG" style="width:100%"></p>
+</div>
+<div class="mySlides">
+<div class="numbertext">
+5 / 6
+</div>
+<p><img src="images/gallery/2019_pumpkinseed.JPG" style="width:100%"></p>
+</div>
+<div class="mySlides">
+<div class="numbertext">
+6 / 6
+</div>
+<p><img src="images/gallery/2016_Como16_Sampling.JPG" style="width:100%"></p>
+</div>
+<p><a class="prev" onclick="plusSlides(-1)">❮</a> <a class="next" onclick="plusSlides(1)">❯</a></p>
+<div class="caption-container">
+<p id="caption">
 </p>
-<div class="slideshow-container">
-<div class="mySlides fade">
-<div class="numbertext">
-1 / 5
 </div>
-<img src="images/gallery/2018_WFB161_electroshocking.JPG" style="width:100%">
-<div class="text">
-Electroshocking in Lewis Creek, Charlotte, VT, with WFB 161 students (UVM)
+<div class="row">
+<div class="column">
+<img class="demo cursor" src="images/gallery/2018_WFB161_electroshocking.JPG" style="width:100%" onclick="currentSlide(1)" alt="Electroshocking in Lewis Creek, Charlotte, VT, with WFB 161 students (UVM)">
 </div>
+<div class="column">
+<img class="demo cursor" src="images/gallery/2018_WFB161_salmon_hole.JPG" style="width:100%" onclick="currentSlide(2)" alt="Salmon Hole, Burlington, VT">
 </div>
-<div class="mySlides fade">
-<div class="numbertext">
-2 / 5
+<div class="column">
+<img class="demo cursor" src="images/gallery/2018_WFB161_seining.JPG" style="width:100%" onclick="currentSlide(3)" alt="Seining in Shelburne Bay, VT, with WFB 161 students (UVM)">
 </div>
-<img src="images/gallery/2018_WFB161_salmon_hole.JPG" style="width:100%">
-<div class="text">
-Salmon Hole, Burlington, VT
+<div class="column">
+<img class="demo cursor" src="images/gallery/2018_shelburne_pond_frog.JPG" style="width:100%" onclick="currentSlide(4)" alt="Shelburne Pond, VT">
 </div>
+<div class="column">
+<img class="demo cursor" src="images/gallery/2019_pumpkinseed.JPG" style="width:100%" onclick="currentSlide(5)" alt="Pumkinseed, Shelburne Pond, VT">
 </div>
-<div class="mySlides fade">
-<div class="numbertext">
-3 / 5
-</div>
-<img src="images/gallery/2018_WFB161_seining.JPG" style="width:100%">
-<div class="text">
-Seining in Shelburne Bay, VT, with WFB 161 students (UVM)
+<div class="column">
+<img class="demo cursor" src="images/gallery/2016_Como16_Sampling.JPG" style="width:100%" onclick="currentSlide(6)" alt="Sampling Lake Como core, Verbania, IT">
 </div>
 </div>
-<div class="mySlides fade">
-<div class="numbertext">
-4 / 5
-</div>
-<img src="images/gallery/2018_shelburne_pond_frog.JPG" style="width:100%">
-<div class="text">
-Shelburne Pond, VT
-</div>
-</div>
-<div class="mySlides fade">
-<div class="numbertext">
-5 / 5
-</div>
-<img src="images/gallery/2019_pumpkinseed.JPG" style="width:100%">
-<div class="text">
-Pumkinseed, Shelburne Pond, VT
-</div>
-</div>
-</div>
-<p><br></p>
-<div style="text-align:center">
-<p><span class="dot"></span> <span class="dot"></span> <span class="dot"></span> <span class="dot"></span> <span class="dot"></span></p>
 </div>
 <script>
-var slideIndex = 0;
-showSlides();
+var slideIndex = 1;
+showSlides(slideIndex);
 
-function showSlides() {
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
   var i;
   var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+      slides[i].style.display = "none";
   }
-  slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}    
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+      dots[i].className = dots[i].className.replace(" active", "");
   }
-  slides[slideIndex-1].style.display = "block";  
+  slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
-  setTimeout(showSlides, 4000); // Change image every 4 seconds
+  captionText.innerHTML = dots[slideIndex-1].alt;
+  //setTimeout(showSlides, 4000); // Change image every 4 seconds
 }
 </script>
 </body>
