@@ -117,7 +117,12 @@ h1 {
 
 <div style="text-align:center">
 
-### Tutorial  
+
+***  
+***  
+
+
+### Blog post  
 ***
 </div>
 \n
