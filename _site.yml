@@ -13,7 +13,7 @@ navbar:
     #  href: teaching.html
     #- text: "CV"
     #  href: CV.html
-    - text: "Blog"
+    - text: "Blog / Tutorial"
       href: blog.html
     - text: "Gallery"
       href: gallery.html

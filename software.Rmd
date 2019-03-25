@@ -18,6 +18,7 @@ output: html_document
 
 \n
 \n
+
 When I first used R, I would have never thought I would like it that much (heard that before?). I do most of my work in R because I don't have any limitation in term of analyses, and it grants reproducibility of my results. I am also very reluctant to use any software that is not freely available, because it limits potential collaboration.
 My GitHub gathers some of my past and current projects. While you're here, have a look at:
 
