@@ -67,7 +67,7 @@ img {vertical-align: middle;}
 
 /* Position the "next button" to the right */
 .next {
-  right: 0;
+  right: 13%;
   border-radius: 3px 0 0 3px;
 }
 
@@ -129,6 +129,9 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+
 </style>
 </head>
 
