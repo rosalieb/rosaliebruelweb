@@ -156,7 +156,7 @@ img {vertical-align: middle;}
   
 <div class="mySlides">
   <div class="numbertext">4 / 6</div>
-  <img src="images/gallery/2018_shelburne_pond_frog.JPG" class="responsive">
+  <img src="images/gallery/2019_icejigger.png" class="responsive">
 </div>
 
 <div class="mySlides">
@@ -186,7 +186,7 @@ img {vertical-align: middle;}
   <img class="demo cursor" src="images/gallery/2018_WFB161_seining.JPG" style="width:100%" onclick="currentSlide(3)" alt="Seining in Shelburne Bay, VT, with WFB 161 students (UVM)">
   </div>
   <div class="column">
-  <img class="demo cursor" src="images/gallery/2018_shelburne_pond_frog.JPG" style="width:100%" onclick="currentSlide(4)" alt="Shelburne Pond, VT">
+  <img class="demo cursor" src="images/gallery/2019_icejigger.png" style="width:100%" onclick="currentSlide(4)" alt="Ice jigging, Lake Champlain, VT">
   </div>
   <div class="column">
   <img class="demo cursor" src="images/gallery/2019_pumpkinseed.JPG" style="width:100%" onclick="currentSlide(5)" alt="Pumkinseed, Shelburne Pond, VT">
