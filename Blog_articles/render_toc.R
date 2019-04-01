@@ -65,7 +65,7 @@ render_toc <- function(
     } else {
       header_text <- gsub("#+\\s+?", "", h)
       header_text <- gsub("\\s+?\\{.+\\}\\s*$", "", header_text) # strip { .tabset ... }
-      header_slug <- paste(strsplit(header_text, " ")[[1]], collapse="-")
+      header_slug <- paste(strsplit(gsub("[0-9]\\. ","",header_text), " ")[[1]], collapse="-")
       header_slug <- tolower(header_slug)
     }
     paste0(strrep(" ", level * 4), "- [", header_text, "](#", header_slug, ")")
