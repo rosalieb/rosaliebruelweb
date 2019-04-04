@@ -1,0 +1,202 @@
+---
+output:
+  html_document:
+    df_print: paged
+---
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134870808-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-134870808-1');
+</script>
+
+```{r include=FALSE}
+source("render_toc.R")
+```
+
+
+<style>
+.full-page{
+  float: left;
+  width: 70%;
+  vertical-align: top;
+  text-align: left;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.body {
+  background-image: url("Cores/ALO09P12/ALO09P12.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: 15%;
+}
+.content {
+    padding:20px;
+    width:710px;
+    position:relative;
+    background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+    background: rgba(255,255,255, 0.85);
+}
+.Rchunk {
+  width:80%;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  text-align:left;
+  padding: 5px;
+  font-family: "Courier New", Times, serif;
+}
+</style>
+
+<a href="../blog.html"> Back </a>
+
+<div class="body">
+
+<div class="full-page content">
+
+## serac: a R package for ShortlivEd RAdionuclide Chronology of recent sediment cores
+<div style="text-align:right">
+Rosalie Bruel  
+*April 5^th^, 2019*
+</div>
+
+__Content__
+```{r toc, echo=FALSE} 
+render_toc("Tuto2_serac.Rmd")
+```
+```{r get data camp, message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
+library(tutorial)
+tutorial::go_interactive()
+```
+
+***  
+
+
+I had to produce some age-depth model plot for my PhD thesis. My colleagues working on dating would usually use a spreadsheet, and then a paying photo editor to edit their figures. I do not have the license for either of these, so of course I turned to R.
+My colleague Pierre Sabatier thought it was great and that we should turn the code in something even more automatic.
+
+The steps are documented in our manuscript, but in this blogpost I'm including a way for you to test the potential of the function (go directly to the bototm of this page).
+
+#### 1. Get your data ready
+The input format has to follow some codes, otherwise R will display an error message.
+
+We are sharing within the package some example data from Lake Allos (France). You can use those to follow along, or based the input format on them. The publication by Wilhelm *et al* (2012) is accessible <a href=https://www.sciencedirect.com/science/article/pii/S0033589412000294 target="_blank">here</a>. 
+
+<div style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px; font-size:80%; text-align:center;"><img src="images/Tuto2/1_Allos_Flickr_Wilhelm2012.png" alt="Lake Allos (source: Flickr)"  style="padding-bottom:0.5em;" align:"right"  />__left__: Lake Allos (Source: Flickr); __right__: Location, hydrological, geological and geomorphological characteristics of Lake Allos and its catchment (Fig. 1 in Wilhelm et al 2012)</div>
+
+
+Your dataset should follow a similar format than the one below. Only 4 columns are in fact mandatory:
+* top and bottom section of the sample OR average depth and thickness
+* ^210^Pb~ex~ and error on ^210^Pb~ex~
+
+With these information, you can compute a simple CRS model. Other models require to add the density.
+
+```{r read and visualize data, echo=FALSE}
+alo <- read.table(paste0(getwd(),"/Cores/ALO09P12/ALO09P12.txt"), header=T)
+alo
+```
+
+
+
+#### 2. Download serac
+You can download *serac* from my GitHub repository using the packages devtools.  
+
+<div class="Rchunk">
+library(devtools) </br>
+devtools::install_github("rosalieb/serac") </br> 
+library(serac) 
+</div>
+
+
+
+#### 3. Test your hypotheses
+At the minimum, your function will be:  
+<div class="Rchunk">
+serac(name="serac_example_ALO09P12",coring_yr=2009)
+</div>
+
+
+Several sedimentation hypotheses were tested, and this is what the author chose as the best model:
+
+<div class="Rchunk" >
+serac(name="ALO09P12", coring_yr=2009, model=c("CFCS"), plotphoto=FALSE, minphoto=c(0), maxphoto=c(210), plot_Pb=T, plot_Am=T, plot_Cs=T, Cher=c(30,40), Hemisphere=c("NH"), NWT=c(51,61), sedchange=c(75.5), plot_Pb_inst_deposit=T, inst_deposit=c(20,28,100,107,135,142,158,186), suppdescriptor=TRUE, descriptor_lab=c("Ca/Fe"), historic_d=c(20,28,100,107,135,142,158,186), historic_a=c(1994,1920,1886,1868), historic_n=c("sept1 994 flood","1920 flood","1886 flood","1868 flood ?"), min_yr=c(1750),dmax=c(180), plotpdf=TRUE,preview=F)  
+</div>
+
+
+Here the output plot:
+
+<img src="Cores/ALO09P12/ALO09P12.pdf" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
+
+#### Have fun!
+In this tutorial, I'm using the console powered by DataCamp, so I'm just loading the script (December 2018 version). Using the GitHub version you'll get access to the latest bug fix (whatamIsaying, everything works perfectly fine obviously).
+
+```{r load packages, echo=TRUE}
+mywd <- "https://raw.githubusercontent.com/rosalieb/rosaliebruelweb/master/Blog_articles/"
+pkgTest <- function(x)
+{
+  if (!require(x,character.only = TRUE))
+  {
+    install.packages(x,dep=TRUE)
+    if(!require(x,character.only = TRUE)) stop("Package not found")
+  }
+}
+# note for later: copy a raw version of serac code in the website repository, and include the pkgTest function
+library(httr) # to read data from GitHub
+library(RCurl) # to read script from GitHub
+
+script <- getURL("https://raw.githubusercontent.com/rosalieb/serac/master/R/serac.R", ssl.verifypeer = FALSE)
+
+eval(parse(text = script))
+
+
+## Line below will create the 'Cores' folder if it doesn't exist already
+dir.create(file.path(getwd(), 'Cores'), showWarnings = FALSE)
+
+# Within the 'Cores' folder, user need to create one folder per core
+dir.create(file.path(paste(getwd(),'/Cores',sep=""), 'serac_example_ALO09P12'), showWarnings = FALSE)
+
+## We are writing in this subfolder an example dataset
+## Format your own data following this template, or get help with formatting using
+#    the serac_input_formatting() function
+#?serac_example_ALO09P12
+write.table(x = paste0(mywd,"Cores/serac_example_ALO09P12.txt"), file = paste0(getwd(),'/Cores/serac_example_ALO09P12/serac_example_ALO09P12.txt'),col.names = T, row.names = F,sep="\t")
+## Including proxy data for this core too
+write.table(x = paste0(mywd,"Cores/serac_example_ALO09P12_proxy.txt"), file = paste0(getwd(),'/Cores/serac_example_ALO09P12/serac_example_ALO09P12_proxy.txt'),col.names = T, row.names = F,sep="\t")
+
+list.files()
+list.files("Cores")
+## Now run serac
+## At the minimum, your function will be:
+#serac(name="serac_example_ALO09P12",coring_yr=2009)
+
+## Several sedimentation hypotheses were tested, and this is what the author chose
+#    as the best model
+#serac(name="serac_example_ALO09P12",coring_yr=2009,model=c("CFCS"),plotphoto=FALSE,minphoto=c(0),maxphoto=c(210),plot_Pb=T,plot_Am=T,plot_Cs=T,Cher=c(30,40),Hemisphere=c("NH"),NWT=c(51,61),sedchange=c(75.5),plot_Pb_inst_deposit=T,inst_deposit=c(20,28,100,107,135,142,158,186),suppdescriptor=TRUE,descriptor_lab=c("Ca/Fe"),historic_d=c(20,28,100,107,135,142,158,186),historic_a=c(1994,1920,1886,1868),historic_n=c("sept1 994 flood","1920 flood","1886 flood","1868 flood ?"), min_yr=c(1750),dmax=c(180), plotpdf=TRUE,preview=F)
+## If you want to see the preview, change preview=T in the code
+## Before that, make sure to extend your window in RStudio (large plot!)
+
+
+```
+
+
+#### Source  
+
+Table of content created using <a href=https://www.garrickadenbuie.com/blog/add-a-generated-table-of-contents-anywhere-in-rmarkdown/ target="_blank">this method</a>.
+
+
+</div>
+
+
+
+<!-- begin wwww.htmlcommentbox.com -->
+ <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com"></a> is loading comments...</div>
+ <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+ <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&opts=16862&num=10&ts=1553273262432");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+<!-- end www.htmlcommentbox.com -->
+

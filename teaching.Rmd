@@ -7,3 +7,13 @@ output: html_document
 
 \n
 Site in construction.
+
+Learning is one of my favorite things in the world. Does that automatically makes me a good potential teacher? No. I in fact only like learning when I understand what's going on. If I ever have to teach again, I want to be very vigilent on having every students following where I'm going.
+
+https://www.edx.org/course/the-science-of-learning-what-every-teacher-should-know 
+https://www.brainscape.com/blog/2012/10/breakthroughs-science-of-learning-2/ 
+
+It is more difficult to learn as adults than kids. However, as adults, we may be more driven, and we benefit from past experiences. In other words, we should know by then how to learn, and what works for us.
+I noticed for example that environments were we feel pressured don't favor our learning.
+
+Also, learning takes practice. When I ask people what they are good at, and what they did to become good at it, they often answer it took them practice. E.g., you don't go down a black diamond the first time you ski.
