@@ -125,18 +125,6 @@ h1 {
 ### Blog post  
 ***
 </div>
-\n
-
-<div class="row">
-<div class="column">
-  <div class="content">
-  <img src="images/blog/Tuto2_0_MainPhoto.jpg" alt="Main" style="width:100%">
-  <h3>serac</h3>
-  <a href="Blog_articles/Tuto2_serac.html"><p>serac!</p></a>
-  </div>
-</div>
-</div>
-</div>
 
 \n
 
