@@ -130,6 +130,19 @@ h1 {
 <div class="row">
 <div class="column">
   <div class="content">
+  <img src="images/blog/Tuto2_0_MainPhoto.jpg" alt="Main" style="width:100%">
+  <h3>serac</h3>
+  <a href="Blog_articles/Tuto2_serac.html"><p>serac!</p></a>
+  </div>
+</div>
+</div>
+</div>
+
+\n
+
+<div class="row">
+<div class="column">
+  <div class="content">
   <img src="images/blog/Tuto1_0_MainPhoto.png" alt="Main" style="width:100%">
   <h3>QGIS3 tutorial</h3>
   <a href="Blog_articles/Tuto1_bathymetry_QGIS3.html"><p>Generate a bathymetry map on QGIS 3 from a XYZ csv file</p></a>
