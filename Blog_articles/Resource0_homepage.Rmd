@@ -1,0 +1,133 @@
+---
+output: html_document
+---
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134870808-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-134870808-1');
+</script>
+
+
+<style>
+.full-page{
+  float: left;
+  width: 70%;
+  vertical-align: top;
+  text-align: left;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.content {
+    padding:20px;
+    width:710px;
+    position:relative;
+    background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+    background: rgba(255,255,255, 0.85);
+}
+
+/* The sidebar menu */
+.sidenav {
+  width: 130px;
+  position: fixed;
+  z-index: 1;
+  top: 20px;
+  left: 10px;
+  background: #eee;
+  overflow-x: hidden;
+  padding: 8px 0;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #2196F3;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #064579;
+}
+
+.main {
+  margin-left: 140px; /* Same width as the sidebar + left position in px */
+  font-size: 15px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.zoom {
+  padding: 5px;
+  transition: transform .2s; /* Animation */
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+body {
+    background: #fff;
+    color: #000;
+    margin: 0;
+  }
+
+
+</style>
+
+<!-- Beginning of the HTML -->
+<body>
+
+
+<div class="body">
+
+<!-- Side navigation -->
+<div class="sidenav">
+  <a class="zoom" href="../blog.html"> ↩︎ Back </a>
+  <a class="zoom" href="#JPO2015">Open House CARRTEL Lab 2015 🇫🇷 </a>
+  <a class="zoom" href="#Doctoriales2016">Doctoriales 2016 🇫🇷 </a>
+  <a class="zoom" href="#Pages2018">PAGES 2018 🇬🇧 </a>
+</div>
+
+<!-- Page content -->
+
+<div class="full-page main">
+
+
+<h2 id="JPO2015">Open House CARRTEL Lab 2015</h2>  
+Thonon-les-bains, France <br>
+<img src="images/Posters/JPO-paleo-UniGe-CARRTEL.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" >  
+<a href="images/Posters/JPO-paleo-UniGe-CARRTEL.png" target="_blank">Download the poster</a>  
+
+
+***
+
+<h2 id="Doctoriales2016">Doctoriales 2016</h2>  
+Autrans, France <br>
+<img src="images/Posters/Doctoriales2016_Bruel.pdf" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" >  
+<a href="images/Posters/Doctoriales2016_Bruel.pdf" target="_blank"> Download the poster</a>  
+
+
+***
+
+<h2 id="Pages2018">PAGES 2018</h2>  
+Zaragoza, Spain <br>
+<img src="images/Posters/PAGES2017_BRUEL_poster_vf.pdf" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" >  
+<a href="images/Posters/PAGES2017_BRUEL_poster_vf.pdf" target="_blank"> Download the poster</a>  
+
+
+</div>
+
+</div>
+</body>
+
