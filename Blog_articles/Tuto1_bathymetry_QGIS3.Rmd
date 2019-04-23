@@ -20,10 +20,10 @@ source("render_toc.R")
 <style>
 .full-page{
   float: left;
-  width: 70%;
+  width: 60%;
   vertical-align: top;
   text-align: left;
-  margin-left: 15%;
+  margin-left: 25%;
   margin-right: 15%;
 }
 .body {
@@ -40,27 +40,97 @@ source("render_toc.R")
     background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
     background: rgba(255,255,255, 0.85);
 }
+
+/* The sidebar menu */
+.sidenav {
+  position: fixed;
+  padding: 8px 0;
+}
+
+
+/* Style all font awesome icons */
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
 </style>
 
-<a href="../blog.html"> Back </a>
+
 
 <div class="body">
 
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v3.2"></script>
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div class="sidenav" align="center">
+  <a href="../blog.html"> ↩︎ Back </a>  
+  <a href="#top"> ↑ Top </a>  
+  <br>
+  <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="Interpolating point data to create a bathymetry map using #QGIS3 by @RosalieBruel" data-lang="en" data-show-count="true"><a href="#" class="fa fa-twitter"></a></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  
+  <br>  
+  <div class="fb-share-button" data-href="https://rosalieb.github.io/rosaliebruelweb/Blog_articles/Tuto1_bathymetry_QGIS3.html" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Frosalieb.github.io%2Frosaliebruelweb%2FBlog_articles%2FTuto1_bathymetry_QGIS3.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"><a href="#" class="fa fa-facebook"></a></div>
+  
+  <!-- <a href="#getdata"> 1. Get data </a>   -->
+  <!-- <a href="#uploaddata"> 2. Upload data </a>   -->
+  <!-- <a href="#transformdata"> 3. Transform data </a>   -->
+  <!-- <a href="#TIN"> 4. TIN Interpolation </a>   -->
+  <!-- <a href="#area"> 5. Delimitation to the correct area </a>   -->
+  <!-- <a href="#elevation"> 6. Visualise the different elevations </a>   -->
+  <!-- <a href="#contour"> 7. Generate contour lines </a>   -->
+  <!-- <a href="#labels"> 8. Add the labels </a>   -->
+  <!-- <a href="#source"> Sources </a>   -->
+  <!-- <a href="#comments"> Comments box </a>   -->
+</div>
+
+
 <div class="full-page content">
+
+
+
+<a name="top"></a> 
 
 ## Interpolating point data to create a bathymetry map
 <div style="text-align:right">
 Rosalie Bruel  
-*March 23^th^, 2019*
+*March 23^rd^, 2019*
 </div>
+
 
 __Content__
 ```{r toc, echo=FALSE} 
 render_toc("Tuto1_bathymetry_QGIS3.Rmd")
 ```
+
   
 ***  
-
 
 Every 1.5 years or so, I need to get the bathymetry for a lake. While these files probably exist somewhere, it's sometimes hard to find them, while  XYZ files are commonly shared.
 Instead of chasing the bathymetry file, I rather then create it. My thanks to Raul Serbán who showed me how to do it for the first time in 2014. Seeing someone else doing it gave me the confidence to try on my own. And I promise -- it's not that bad.  
@@ -76,6 +146,7 @@ This tutorial is for QGIS 3.4.5-Madeira, Python 3.6, using macOS 10.14.3.
 * You'll have to <a href="https://www.python.org" target="_blank">download Python</a> as well.
 
 
+<a name="getdata"></a> 
 #### 1. Get your data
 This tutorial allow you to generate a bathymetry using XYZ data. Have them saved in a .csv file. If you don't have any data, you can follow these steps using Lake Champlain data. Download the spreadsheet data <a href="http://geodata.vermont.gov/datasets/7f451335fc6644e7a7376adbcd6282df_2" target="_blank">from here</a>.
 
@@ -94,6 +165,8 @@ X	        | Y	         | OBJECTID	 | DEPTH_FT
 You'll also need the lake contour (a .shp file). There are some data bases by regions (e.g., CORINE Land Cover for Europe). I'll update this section if I learned about a global database.
 
 
+<a name="uploaddata"></a> 
+
 #### 2. Upload your data to QGIS
 Click <img src="images/Tuto1/Tuto1_1_addlayer.JPG" style="width:5%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" > then in the top-left corner of the QGIS window to open the data source manager.  
 We'll be using 'Delimited Text' to import our data.  
@@ -108,6 +181,8 @@ You created a new layer, that appears in the bottom left pannel. If you zoom in,
 <img src="images/Tuto1/Tuto1_4_getinfo.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
 
 
+<a name="transformdata"></a> 
+
 #### 3. *(Optional)* Transform your data
 
 Remember, our depth are given in feet. I want to convert them in meters ~~because the system makes so much more sense~~ so the data can be directly used in future publications. We can do that directly in QGIS.
@@ -116,6 +191,9 @@ Open the field calculator by clicking on the following icon: <img src="images/Tu
 <img src="images/Tuto1/Tuto1_6_calcul.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
 
 If you use the 'Identify Features' option described in the previous section, you will see that a new value is available for each point. Another way to visualise is to open the attribute table, using <img src="images/Tuto1/Tuto1_7_table.png" style="width:5%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" >.
+
+
+<a name="TIN"></a> 
 
 #### 4. TIN Interpolation
 
@@ -140,6 +218,9 @@ You just created your new TIN layer.
 
 <img src="images/Tuto1/Tuto1_11_tin_interpol_1.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
 
+
+<a name="area"></a> 
+
 #### 5. Delimitation to the correct area
 __When trying to do this next step for the message, I got an error. Apparently, it's an issue with QGIS 3 on Macs, and I found the solution to the problem <a href="https://gis.stackexchange.com/questions/276853/gdal-scripts-not-found-in-qgis-3-on-osx" target="_blank">here</a>. Basically, you need to add a path to your system environment.__  
 
@@ -158,6 +239,8 @@ Click 'Run'.
 
 <img src="images/Tuto1/Tuto1_12_tin_interpol_2.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
 
+<a name="elevation"></a> 
+
 #### 6. Visualise the different elevations
 A new layer was created. Right-click on it, and got to properties.  
 <img src="images/Tuto1/Tuto1_13_tin_interpol_3.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
@@ -166,6 +249,8 @@ In there, select 'Singleband pseudocolor), and choose a Color ramp. With the 'Mo
 
 <img src="images/Tuto1/Tuto1_14_tin_interpol_4.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
 
+
+<a name="contourlines"></a> 
 
 #### 7. Generate contour lines
 Select the clipped layer (the one we just created), and go to Raster > Extraction > Contour. This window allows you to chose the interval between contour lines (here I have it set to 10) and save your output.
@@ -176,11 +261,15 @@ A new layer is created. I did it as well for a 20 interval; the output is shown 
 
 <img src="images/Tuto1/Tuto1_16_contour_result.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
 
+<a name="labels"></a> 
+
 #### 8. Add the labels
 I was about to stop this tutorial here, but went back to the one I've been using for QGIS 2 and noticed the author included the label as well -- good point!
 In QGIS 3, the procedure stays the same. Select your contour layer, click right, Properties. Go to Labels, select 'Single labels', in the 'Label with', select ELEV, and change the placement to curved. Click 'OK'. Each contour line will be labeled with its depth
 
 <img src="images/Tuto1/Tuto1_17_label.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
+
+<a name="source"></a> 
 
 #### Source  
 At the moment, this tutorial is totally based on the <a href=http://www.qgistutorials.com/en/docs/interpolating_point_data.html target="_blank"> tutorial by Ujaval Gandhi, for previous versions of QGIS</a>. I documented these steps for me at first, and thought I might as well share them, but I'm definitely not a Geograph.
@@ -191,6 +280,8 @@ Table of content created using <a href=https://www.garrickadenbuie.com/blog/add-
 </div>
 
 
+
+<a name="comments"></a> 
 
 <!-- begin wwww.htmlcommentbox.com -->
  <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com"></a> is loading comments...</div>
