@@ -150,19 +150,7 @@ h1 {
 \n
 \n
 
-<div class="row">
-<div class="column">
-  <div class="content">
-  <img src="images/blog/Resource1_0_MainPhoto.pdf" alt="Main" style="width:100%">
-  <h3>Posters</h3>
-  <a href="Blog_articles/Resource0_homepage.html"><p>Some posters presented at conferences or else</p></a>
-  </div>
-</div>
-</div>
-</div>
 
-\n
-\n
 
 
 <div style="text-align:center">
