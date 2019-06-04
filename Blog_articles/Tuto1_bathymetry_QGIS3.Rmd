@@ -77,6 +77,35 @@ source("render_toc.R")
   background: #55ACEE;
   color: white;
 }
+
+/* For sticky header */
+.top-container {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+.header {
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
+}
+
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+
 </style>
 
 
@@ -117,8 +146,12 @@ source("render_toc.R")
 
 <a name="top"></a> 
 
-## Interpolating point data to create a bathymetry map
-<div style="text-align:right">
+<div class="header" id="myHeader">
+  <h2>Interpolating point data to create a bathymetry map using QGIS3</h2>
+</div>
+<div style="text-align:right">  
+
+
 Rosalie Bruel  
 *March 23^rd^, 2019*
 </div>
@@ -279,7 +312,20 @@ Table of content created using <a href=https://www.garrickadenbuie.com/blog/add-
 
 </div>
 
+<script>
+window.onscroll = function() {myFunction()};
 
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
 
 <a name="comments"></a> 
 
@@ -289,3 +335,4 @@ Table of content created using <a href=https://www.garrickadenbuie.com/blog/add-
  <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&opts=16862&num=10&ts=1553273262432");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
 <!-- end www.htmlcommentbox.com -->
 
+</body>
