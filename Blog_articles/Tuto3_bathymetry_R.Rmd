@@ -172,7 +172,7 @@ render_toc("Tuto3_bathymetry_R.Rmd")
   
 ***  
 
-I used QGIS to compute the bathymetry from xyz data I had available for Lake Champlain (<a href="Tuto1_bathymetry_QGIS3.html">tutorial here</a>), but I carry all my analyses in R. I'm gathering here a few lines of code I found really to be useful. 
+I used QGIS to compute the bathymetry from xyz data I had available for Lake Champlain (<a href="Tuto1_bathymetry_QGIS3.html">tutorial here</a>), but I carry all my analyses in R. I'm gathering here a few lines of code I found to be useful, as I may need them later. 
 
 
 #### 1. Working with .tif files in R
