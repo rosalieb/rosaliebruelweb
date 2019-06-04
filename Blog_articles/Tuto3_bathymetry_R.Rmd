@@ -1,0 +1,269 @@
+---
+output: 
+  html_document: 
+    df_print: paged
+    fig_caption: yes
+    editor_options: 
+  chunk_output_type: console
+  df_print: paged
+fontsize: 11pt
+---
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134870808-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-134870808-1');
+</script>
+
+```{r include=FALSE}
+source("render_toc.R")
+```
+
+
+<style>
+.full-page{
+  float: left;
+  width: 70%;
+  vertical-align: top;
+  text-align: left;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.body {
+  background-image: url("images/Tuto1/LC_Bathy.JPG");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: center;
+}
+.content {
+    padding:20px;
+    width:710px;
+    position:relative;
+    background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+    background: rgba(255,255,255, 0.85);
+}
+
+/* The sidebar menu */
+.sidenav {
+  position: fixed;
+  padding: 8px 0;
+}
+
+
+/* Style all font awesome icons */
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+/* Twitter */
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+
+/* For sticky header */
+.top-container {
+  background-color: #f1f1f1;
+  padding: 30px;
+  text-align: center;
+}
+
+.header {
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
+}
+
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the header gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 102px;
+}
+</style>
+
+
+
+<div class="body">
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/fr_FR/sdk.js#xfbml=1&version=v3.2"></script>
+
+<!-- Add icon library -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div class="sidenav" align="center">
+  <a href="../blog.html"> ↩︎ Back </a>  
+  <a href="#top"> ↑ Top </a>  
+  <br>
+  <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="A little bit of code for maps in R by @RosalieBruel" data-lang="en" data-show-count="true"></a></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  
+  <br>  
+  <div class="fb-share-button" data-href="https://rosalieb.github.io/rosaliebruelweb/Blog_articles/Tuto1_bathymetry_QGIS3.html" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Frosalieb.github.io%2Frosaliebruelweb%2FBlog_articles%2FTuto1_bathymetry_QGIS3.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"><a href="#" class="fa fa-facebook"></a></div>
+  
+  <!-- <a href="#getdata"> 1. Get data </a>   -->
+  <!-- <a href="#uploaddata"> 2. Upload data </a>   -->
+  <!-- <a href="#transformdata"> 3. Transform data </a>   -->
+  <!-- <a href="#TIN"> 4. TIN Interpolation </a>   -->
+  <!-- <a href="#area"> 5. Delimitation to the correct area </a>   -->
+  <!-- <a href="#elevation"> 6. Visualise the different elevations </a>   -->
+  <!-- <a href="#contour"> 7. Generate contour lines </a>   -->
+  <!-- <a href="#labels"> 8. Add the labels </a>   -->
+  <!-- <a href="#source"> Sources </a>   -->
+  <!-- <a href="#comments"> Comments box </a>   -->
+</div>
+
+
+<div class="full-page content">
+
+
+
+<a name="top"></a> 
+
+<div class="header" id="myHeader">
+  <h2>Maps in R</h2>
+</div>
+
+<div style="text-align:right">
+Rosalie Bruel  
+*June 1^st^, 2019*
+</div>
+
+
+__Content__
+```{r toc, echo=FALSE} 
+render_toc("Tuto3_bathymetry_R.Rmd")
+```
+
+  
+***  
+
+I used QGIS to compute the bathymetry from xyz data I had available for Lake Champlain (<a href="Tuto1_bathymetry_QGIS3.html">tutorial here</a>), but I carry all my analyses in R. I'm gathering here a few lines of code I found really to be useful. 
+
+
+#### 1. Working with .tif files in R
+
+##### 1.1. Visualization
+Leah A. Wasser came up with<a href="https://nceas.github.io/oss-lessons/spatial-data-gis-law/3-mon-intro-gis-in-r.html"> an excellent tutorial </a>on using the _raster_ and _rasterVis_ libraries.
+
+In QGIS, we created a .tif layer, that we can read into r using the following code.
+
+```{r read raster data, eval=FALSE, message=FALSE, warning=FALSE}
+library(raster)
+# read data
+bathy <- raster("GIS/bathy.tif")
+plot(bathy,
+     main = "Bathymetric map of Lake Champlain",
+     col = grey(1:100/100),
+     axes = FALSE,
+     box = FALSE)
+```
+
+<img src="images/Tuto3/Tuto3_1_LC_bathy_BW.pdf" style="width:40%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
+
+The _rasterVis_ package provides several fancy visualization options. I adapted the code I found <a href="https://stackoverflow.com/questions/33227182/how-to-set-use-ggplot2-to-map-a-raster">here</a>.
+
+```{r eval=FALSE, message=FALSE, warning=FALSE}
+library(rasterVis)
+# Define a colour ramp palette
+colr <- colorRampPalette(brewer.pal(11, 'RdYlBu'))
+
+p <- levelplot(bathy, 
+          margin=TRUE,       # turn to F to suppress marginal graphics
+          colorkey=list(
+            space='bottom',  # where to plot legend
+            labels=list(at=seq(-120,0,20))      # legend ticks and labels
+            ),    
+          par.settings=list(
+            axis.line=list(col='black') # turn to transparent to suppress axes and legend outline
+          ),
+          scales=list(draw=TRUE),    # turn to F to suppress axis labels
+          col.regions=colr,          # colour ramp
+          at=seq(-130, 0, len=130))  # colour ramp breaks
+
+# plot the output
+p
+```
+
+<img src="images/Tuto3/Tuto3_2_LC_bathy.pdf" style="width:30%; align="center">
+<img src="images/Tuto3/Tuto3_2_LG_bathy.pdf" style="width:60%; align="center">
+
+
+'levelplot' creates an object of class 'gg'/'ggplot'. Don't hesitate to look at all of them to custom your plot.
+
+##### 1.2. Histogram plot
+
+The _rasterVis_ library has tons of other cool visuals. For example, I like the one showing an histogram of the object. 
+The basin shape index (Meybeck, 1995) is a metric to characterize lakes shape (shallow or hollow). This histogram function can be a more visual way to compare lakes shapes. To illustrate this, I'm running the same analysis for Lake Geneva. Of course, the comparison would be even more drastic if I had the .tif for Lake Balaton, we would see an even greater difference.
+
+```{r eval=FALSE}
+histogram(bathy, main='a. Lake Champlain depth histogram', xlab='depth (m)')
+histogram(bathy_leman, main='b. Lake Geneva depth histogram', xlab='depth (m)')
+
+```
+
+<img src="images/Tuto3/Tuto3_3_LC_hist.pdf" style="width:45%; align="center">
+<img src="images/Tuto3/Tuto3_4_LG_hist.pdf" style="width:45%;  align="center">
+
+Lake Champlain and Lake Geneva show really different depth profiles. The former has many shallow basins, while the later is very steep and has a large deep pelagic zone (see the high count for depths around 280 m).
+
+
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+
+<a name="comments"></a> 
+
+<!-- begin wwww.htmlcommentbox.com -->
+ <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com"></a> is loading comments...</div>
+ <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+ <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&opts=16862&num=10&ts=1553273262432");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+<!-- end www.htmlcommentbox.com -->
+
+</body>
