@@ -143,6 +143,13 @@ h1 {
 </div> 
 <div class="column">
   <div class="content">
+  <img src="images/blog/Tuto3_0_MainPhoto.png" alt="Main" style="width:100%">
+  <h3>Maps in R</h3>
+  <a href="Blog_articles/Tuto3_bathymetry_R.html"><p>Saving here some useful codes to create maps in R</p></a>
+  </div>
+</div> 
+<div class="column">
+  <div class="content">
   <img src="images/blog/Resource1_0_MainPhoto.pdf" alt="Main" style="width:100%">
   <h3>Posters</h3>
   <a href="Blog_articles/Resource0_homepage.html"><p>Some posters presented at conferences or else</p></a>
@@ -153,6 +160,7 @@ h1 {
 
 \n
 \n
+
 
 
 
