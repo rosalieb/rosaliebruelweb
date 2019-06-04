@@ -145,7 +145,7 @@ h1 {
   <div class="content">
   <img src="images/blog/Tuto3_0_MainPhoto.png" alt="Main" style="width:100%">
   <h3>Maps in R</h3>
-  <a href="Blog_articles/Tuto3_bathymetry_R.html"><p>Saving here some useful codes to create maps in R</p></a>
+  <a href="Blog_articles/Tuto3_bathymetry_R.html"><p>Saving here some useful codes to create maps in R [work in progress]</p></a>
   </div>
 </div> 
 <div class="column">
