@@ -81,7 +81,7 @@ tutorial::go_interactive()
 I had to produce some age-depth model plot for my PhD thesis. My colleagues working on dating would usually use a spreadsheet, and then a paying photo editor to edit their figures. I do not have the license for either of these, so of course I turned to R.
 My colleague Pierre Sabatier thought it was great and that we should turn the code in something even more automatic.
 
-The steps are documented in our manuscript, but in this blogpost I'm including a way for you to test the potential of the function (go directly to the bototm of this page).
+The steps are documented in our manuscript, but in this blogpost I'm including a way for you to test the potential of the function (go directly to the bottom of this page).
 
 #### 1. Get your data ready
 The input format has to follow some codes, otherwise R will display an error message.

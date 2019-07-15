@@ -172,7 +172,7 @@ render_toc("Tuto3_bathymetry_R.Rmd")
   
 ***  
 
-I used QGIS to compute the bathymetry from xyz data I had available for Lake Champlain (<a href="Tuto1_bathymetry_QGIS3.html">tutorial here</a>), but I carry all my analyses in R. I'm gathering here a few lines of code I found to be useful, as I may need them later. 
+I used QGIS to compute the bathymetry from xyz data I had available for Lake Champlain (<a href="Tuto1_bathymetry_QGIS3.html" target="_blank">tutorial here</a>), but I carry all my analyses in R. I'm gathering here a few lines of code I found to be useful, as I may need them later. 
 
 
 #### 1. Working with .tif files in R
@@ -180,7 +180,7 @@ I used QGIS to compute the bathymetry from xyz data I had available for Lake Cha
 ##### 1.1. Visualization
 Leah A. Wasser came up with<a href="https://nceas.github.io/oss-lessons/spatial-data-gis-law/3-mon-intro-gis-in-r.html"> an excellent tutorial </a>on using the _raster_ and _rasterVis_ libraries.
 
-In QGIS, we created a .tif layer, that we can read into r using the following code.
+In QGIS (<a href="Tuto1_bathymetry_QGIS3.html" target="_blank">tutorial here</a>), we created a .tif layer, that we can read into r using the following code.
 
 ```{r read raster data, eval=FALSE, message=FALSE, warning=FALSE}
 library(raster)
@@ -223,23 +223,78 @@ p
 <img src="images/Tuto3/Tuto3_2_LG_bathy.pdf" style="width:60%; align="center">
 
 
-'levelplot' creates an object of class 'gg'/'ggplot'. Don't hesitate to look at all of them to custom your plot.
+'levelplot' creates an object of class _trellis_ (with lattice methods and grid objects). Trellis graphs display a variable or the relationship between variables, conditioned on one or more other variables.  
+Lattice plots include histogram() and dotplot() for example. An interesting feature of the lattice environment it allows to set a particular theme to plots, for instance, if you want to permanently change the background of your plots. The process is very well summarized in <a href="https://www.r-bloggers.com/working-with-themes-in-lattice-graphics/">this blog post</a>.
+
+```{r eval=FALSE, include=TRUE}
+library(lattice)
+# Show the current settings
+# show.settings()
+
+# Current theme
+my.theme = trellis.par.get()
+# Change panel background color
+my.theme$panel.background$col   = grey(.8) # set background to grey
+my.theme$panel.background$alpha = .3       # set transparency
+
+# Change axis line width and axis text size
+my.theme$axis.line$lwd    = 1.5 # default was 1
+my.theme$axis.text$font   = 2
+
+# Update setting
+trellis.par.set(my.theme)
+```
+
+
+```{r for output not run, eval=FALSE, include=FALSE}
+library(lattice)
+library(knitr)
+#Default
+my.theme = trellis.par.get()
+# Back to default theme
+my.theme$panel.background$col   = "transparent" # back to default value
+my.theme$panel.background$alpha = .3             # back to default value
+my.theme$axis.line$lwd    = 1
+my.theme$axis.textfont    = 1
+trellis.par.set(my.theme)
+
+# pdf(paste0(getwd(),"/Blog_articles/images/Tuto3/Tuto3_6_default_theme.pdf"), width=6, height=5)
+# histogram(iris$Sepal.Width, main="default theme")
+# dev.off()
+
+my.theme = trellis.par.get()
+# Back to default theme
+my.theme$panel.background$col   = grey(.8) # back to default value
+my.theme$panel.background$alpha = .3             # back to default value
+my.theme$axis.line$lwd    = 1.5
+my.theme$axis.textfont    = 2
+trellis.par.set(my.theme)
+
+histogram(iris$Sepal.Width, main="custom theme")
+```
+ 
+<img src="images/Tuto3/Tuto3_6_default_theme.pdf" style="width:45%; align="center">
+<img src="images/Tuto3/Tuto3_7_custom_theme.pdf" style="width:45%; align="center">
+
+
+For those more familiar with ggplot2, it's the equivalent of theme_set().
 
 ##### 1.2. Histogram plot
 
-The _rasterVis_ library has tons of other cool visuals. For example, I like the one showing an histogram of the object. 
-The basin shape index (Meybeck, 1995) is a metric to characterize lakes shape (shallow or hollow). This histogram function can be a more visual way to compare lakes shapes. To illustrate this, I'm running the same analysis for Lake Geneva. Of course, the comparison would be even more drastic if I had the .tif for Lake Balaton, we would see an even greater difference.
+The _rasterVis_ library has tons of other cool visuals. For example, I like the one showing an histogram of the object's depths. It provides a visual way to compare lakes shape (shallow vs. hollow, Meybeck, 1995). To illustrate this, here are the histogram I get from the .tif files of Lake Champlain, Lake Ontario, and Lake Geneva. 
 
 ```{r eval=FALSE}
-histogram(bathy, main='a. Lake Champlain depth histogram', xlab='depth (m)')
+histogram(bathy_champlain, main='a. Lake Champlain depth histogram', xlab='depth (m)')
 histogram(bathy_leman, main='b. Lake Geneva depth histogram', xlab='depth (m)')
+histogram(bathy_ontario, main='c. Lake Ontario depth histogram', xlab='depth (m)')
 
 ```
 
 <img src="images/Tuto3/Tuto3_3_LC_hist.pdf" style="width:45%; align="center">
 <img src="images/Tuto3/Tuto3_4_LG_hist.pdf" style="width:45%;  align="center">
+<img src="images/Tuto3/Tuto3_5_LO_hist.pdf" style="width:45%; align="center">
 
-Lake Champlain and Lake Geneva show really different depth profiles. The former has many shallow basins, while the later is very steep and has a large deep pelagic zone (see the high count for depths around 280 m).
+The three lakes have really contrasted depth profiles. Lake Chmplain has many shallow basins, Lake Geneva is very steep and has a large deep pelagic zone (see the high count for depths around 280 m), while Lake Ontario is somewhere between the two.
 
 
 
