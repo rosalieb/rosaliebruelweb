@@ -152,7 +152,7 @@ source("render_toc.R")
 
 
 
-<a name="top"></a> 
+<a name="#top"></a> 
 
 <div class="header" id="myHeader">
   <h2>Maps in R</h2>
