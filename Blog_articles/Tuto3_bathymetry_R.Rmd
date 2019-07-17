@@ -133,7 +133,7 @@ source("render_toc.R")
   <br>
   <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-size="large" data-text="A little bit of code for maps in R by @RosalieBruel" data-lang="en" data-show-count="true"></a></a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>  
   <br>  
-  <div class="fb-share-button" data-href="https://rosalieb.github.io/rosaliebruelweb/Blog_articles/Tuto1_bathymetry_QGIS3.html" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Frosalieb.github.io%2Frosaliebruelweb%2FBlog_articles%2FTuto1_bathymetry_QGIS3.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"><a href="#" class="fa fa-facebook"></a></div>
+  <div class="fb-share-button" data-href="https://rosalieb.github.io/rosaliebruelweb/Blog_articles/Tuto2_bathymetry_R.html" data-layout="button_count" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Frosalieb.github.io%2Frosaliebruelweb%2FBlog_articles%2FTuto3_bathymetry_R.html&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"><a href="#" class="fa fa-facebook"></a></div>
   
   <!-- <a href="#getdata"> 1. Get data </a>   -->
   <!-- <a href="#uploaddata"> 2. Upload data </a>   -->
