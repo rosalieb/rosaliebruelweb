@@ -1,0 +1,416 @@
+---
+output: 
+  html_document: 
+    df_print: paged
+    fig_caption: yes
+    toc: yes
+    toc_depth: 6
+    toc_float: true
+    number_sections: false
+    editor_options: 
+      chunk_output_type: console
+  chunk_output_type: console
+  df_print: paged
+fontsize: 11pt
+---
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134870808-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-134870808-1');
+</script>
+
+```{r load packages,  include=FALSE}
+library(ggplot2)
+library(plotly)
+library(lubridate)
+```
+
+
+<style>
+.full-page{
+  float: left;
+  width: 70%;
+  vertical-align: top;
+  text-align: left;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.body {
+  background-image: url("images/Tuto1/LC_Bathy.JPG");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: center;
+}
+.content {
+    padding:20px;
+    width:710px;
+    position:relative;
+    background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+    background: rgba(255,255,255, 0.85);
+}
+
+/* The sidebar menu */
+.sidenav {
+  position: fixed;
+  padding: 8px 0;
+}
+
+
+/* Style all font awesome icons */
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+</style>
+
+
+<div class="body">
+
+
+<div class="full-page content">
+
+
+
+<a name="#top"></a> 
+
+<div class="header" id="myHeader">
+  <h2>Random but hopefully useful bits of code to deal with large ecological data set</h2>
+</div>
+
+<div style="text-align:right">
+Rosalie Bruel  
+*July 18^th^, 2019*
+</div>
+
+
+  
+***  
+
+During my postdoc at the Rubenstein Ecosystem Science Laboratory, I'm working on building a food web model for Lake Champlain. I deal with some data coming in small to large amount, with one thing in common: the format is often heterogeneous. <br>
+To save time and hopefully increase reproducibility, I try doing most of my QA/QC and all of my data analyses in R.
+
+I'm gathering here some code I find useful for future reference / other people's use.
+
+## 1. Deal with inconsistent names with fuzzy matching
+
+### 1.1. Problem
+I use the <a href="https://dec.vermont.gov">Vermont DEC</a> plankton data, a monitoring that started in 2006.
+
+```{r read data, message=FALSE, warning=FALSE, include=FALSE}
+phyto_summ <- read.delim("Data/DEC_Champlain_phyto_summ.txt", sep = " ")
+#phyto_summ <- read.delim("/Volumes/-/Script R/rosaliebruelweb/blog_articles/Data/DEC_Champlain_phyto_summ.txt", sep = " ")
+
+```
+
+There are `r nrow(phyto_summ)` different names associated to phytoplankton in the database. Some are in fact the same, with different spelling (or lower/upper case). <br>
+For example, searching for the pattern "ougeoti", we find that the database countain 4 elements with _Mougeotia_ spp. The "Frenquency_presence" column gives an information on how many times this name has been used in the database, and how many cells were attributed to that terminology (for the period 2006-2018).
+`r phyto_summ[grep("ougeoti", phyto_summ$Name),]`
+
+### 1.2. Solution
+__Fuzzy matching__ is a method to search approximate matches in a string to a pattern.
+
+I used the <a href="https://www.google.com/search?client=safari&rls=en&ei=PWovXdr5IoXm_QaW57xg&q=fuzzy+matching+r&oq=fuzzy+matching+r&gs_l=psy-ab.3..0i203l5j0i22i10i30j0i22i30l4.15089.18111..18474...0.0..0.96.1227.16....2..0....1..gws-wiz.......0i71j35i39j0j35i39i19j0i67j0i20i263.ZVtwrl7UL6Y"> _agrep_ </a> function.  
+
+> agrep(pattern, x, ignore.case = FALSE, value = FALSE,max.distance = 0.1)
+
+
+* _pattern_ would be the specie name <br>
+* _x_ is the character string in which the function will try to find names that resemble the pattern <br>
+* use of _ignore.case_ to avoid problems with upper/lower case letters <br>
+* use of _max.distance_ input of how many differences we allow - if we put a larger number, could be convenient to match genus? It can be an integrer, a fraction of the pattern length (maybe an interesting option to explore if names are more complicated than the one I'm dealing with), or a list
+    + argument _all_: maximal (overall) distance. If _all_ is missing, it is set to 10%, the other components default to all. The component names can be abbreviated.<br>
+    + argument _costs_: maximum number/fraction of match cost (generalized <a href="https://en.wikipedia.org/wiki/Levenshtein_distance">Levenshtein distance</a>) <br>
+    + argument _insertions_: maximum number/fraction of insertions <br>
+    + argument _deletions_: maximum number/fraction of deletions <br>
+    + argument _substitutions_: maximum number/fraction of substitutions <br>
+
+
+#### 1.2.1 Searching for good function parameters
+
+```{r fuzzy matching phyto name, echo=TRUE, message=FALSE, warning=FALSE}
+# Saving which rows have been matched
+phyto_summ$Row_matched <- rep(NA,nrow(phyto_summ))
+# Saving the name that have been matched
+phyto_summ$Name_matched <- rep(NA,nrow(phyto_summ))
+# Saving the number of matches
+phyto_summ$Number_matched <- rep(NA,nrow(phyto_summ))
+
+unique_name  <-  seq_along(phyto_summ$Name)
+for(i in seq_along(phyto_summ$Name)) {
+  fuzzy_match <- 
+    agrep(phyto_summ$Name[i],phyto_summ$Name,
+          max = 3, ignore.case = TRUE)
+  fuzzy_match <- fuzzy_match[-which(fuzzy_match==i)]
+  unique_name <- unique_name[!unique_name %in% fuzzy_match[fuzzy_match>i]]
+  if(length(fuzzy_match)>0) {
+    phyto_summ$Row_matched[i] <- paste(fuzzy_match,collapse="-")
+    phyto_summ$Name_matched[i] <- paste(phyto_summ$Name[fuzzy_match],collapse=", ")
+    phyto_summ$Number_matched[i] <- length(fuzzy_match)     
+  }
+}
+
+```
+
+Fuzzy matching correctly identified these 4 items countaining the pattern "ougeoti" as possible same elements. So this fuzzy matching is working the same way than the grep function, without me having to specifically ask for the patterns.
+
+`r phyto_summ[grep("ougeoti", phyto_summ$Name),]`
+
+Below are the rows with a lot of matches, and it looks more problematic.
+
+`r phyto_summ[!is.na(phyto_summ$Number_matched)&phyto_summ$Number_matched>5,]`
+phyto_summ[159,]
+ 
+The value we chose for the argument _max_ determines how many differences are allowed. Trying to make the other arguments ( _insertions_, _deletions_, _substitutions_) vary from 1 to 15, I found that the maximum number of match was 272, and that, as soon as all parameters are turned to 2. That makes me wonder whether I'm totally using this correctly, I will update this in the future if I realize / if I'm told I've used the function the wrong way.
+
+The following plot shows the number of match using several values of insertions, deletions, and substitutions: <br>
+  1.  Deletion, insertion and coests vary together
+  2.  Substitution of just 1 character results in not matching 5 names that are otherwise matched for 'substitution ≥ 2'.
+
+
+```{r sensitivity analyses for fuzzy matching, echo=FALSE, message=FALSE, warning=FALSE}
+# Look at basic parameter, using only max
+how_many_match <- data.frame("max_ignore_value" = 1:3,
+                               "costs"     = rep(NA,3),
+                               "insertions"     = rep(NA,3),
+                               "deletions"      = rep(NA,3),
+                               "substitutions"  = rep(NA,3))
+# Create the matrix of choices
+mchoice <- expand.grid("costs" = c(1:3,7,15),
+                       "insertions" = c(1:3,7,15),
+                       "deletions"  = c(1:3,7,15),
+                       "substitutions" = c(1:3,7,15))
+mchoice$max_ignore_value <- rep(NA, nrow(mchoice))
+
+# Bind the two sets we want to try:
+how_many_match <- rbind(how_many_match,mchoice)
+
+# Create the column we will fill in with number of match
+how_many_match$number_match <- rep(NA, nrow(how_many_match))
+
+
+for(i in seq_along(phyto_summ$Name)) {
+  for(j in 1:nrow(how_many_match)) {
+     if(!is.na(how_many_match$max_ignore_value[j])) {
+       fuzzy_match <- 
+     agrep(phyto_summ$Name[i],phyto_summ$Name,
+           max = how_many_match$max_ignore_value[j], ignore.case = TRUE)
+     } else {
+       fuzzy_match <- 
+     agrep(phyto_summ$Name[i],phyto_summ$Name,
+          max = list(insertions    = how_many_match$insertions[j],
+                     deletions     = how_many_match$deletions[j],
+                     substitutions = how_many_match$substitutions[j]), ignore.case = TRUE)
+     }
+    fuzzy_match <- fuzzy_match[-which(fuzzy_match==i)]
+    how_many_match[j,"number_match"] <- ifelse(is.na(how_many_match[j,"number_match"]),
+                                  length(fuzzy_match),
+                                  how_many_match[j,"number_match"] + length(fuzzy_match))
+  }
+}
+
+p <- ggplot(how_many_match,aes(x=as.factor(insertions),
+                          y=number_match,
+                          col=as.factor(costs),
+                          size=substitutions)) + geom_point(alpha = 1/4) + ylim(250,280)
+ggplotly(p)
+
+# Choosing to turn all the parameters to 2 to compare which values are matched.
+# Saving which rows have been matched
+phyto_summ$Row_matched_2 <- rep(NA,nrow(phyto_summ))
+# Saving the name that have been matched
+phyto_summ$Name_matched_2 <- rep(NA,nrow(phyto_summ))
+# Saving the number of matches
+phyto_summ$Number_matched_2 <- rep(NA,nrow(phyto_summ))
+
+unique_name  <-  seq_along(phyto_summ$Name)
+for(i in seq_along(phyto_summ$Name)) {
+  fuzzy_match <- 
+    agrep(phyto_summ$Name[i],phyto_summ$Name,
+          max = list(insertions    = 2,
+                     deletions     = 2,
+                     substitutions = 2), ignore.case = TRUE)
+  fuzzy_match <- fuzzy_match[-which(fuzzy_match==i)]
+  unique_name <- unique_name[!unique_name %in% fuzzy_match[fuzzy_match>i]]
+  if(length(fuzzy_match)>0) {
+    phyto_summ$Row_matched_2[i] <- paste(fuzzy_match,collapse="-")
+    phyto_summ$Name_matched_2[i] <- paste(phyto_summ$Name[fuzzy_match],collapse=", ")
+    phyto_summ$Number_matched_2[i] <- length(fuzzy_match)     
+  }
+}
+
+phyto_summ$Number_matched[is.na(phyto_summ$Number_matched)] <- 0
+phyto_summ$Number_matched_2[is.na(phyto_summ$Number_matched_2)] <- 0
+
+```
+
+With that in mind, I re-run the same loop than above but using this time the flexible _costs/insertions/deletions/substitutions_ arguments:
+
+> agrep(phyto_summ$Name[i],phyto_summ$Name,
+>           max = list(costs         = 2
+>                      insertions    = 2,
+>                      deletions     = 2,
+>                      substitutions = 2), ignore.case = TRUE)
+ 
+
+```{r looking at the different output by fuzzy method,  message=FALSE, warning=FALSE}
+# Creating a new column for the species that generated different match
+phyto_summ$different_match_by_method <-
+  phyto_summ$Number_matched - # species matched with max=2
+  phyto_summ$Number_matched_2 # species matched with max=list(all=2)
+n1 <- length(which(phyto_summ$different_match_by_method>0)) # How many match were different - quantitative appproach
+n2 <- nrow(phyto_summ[phyto_summ$Number_matched != phyto_summ$Number_matched_2,]) # qualitative appproach
+
+n1==n2 # Should be the same value
+```
+
+
+Different match were created by both method for `r length(which(phyto_summ$different_match_by_method>0))` names from our initial dataset. The second method is more strict and I'm struggling to understand why some match are not made (even by allowing increasing values of _costs/substitutions/etc._).
+
+I think it is still better to use this second method and use "only" `r sum(phyto_summ$Number_matched_2)` matches (vs. `r sum(phyto_summ$Number_matched)` matches for the first method) for now.
+
+#### 1.2.2 Merging the phytoplankton count together {.tabset}
+
+#### 1.2.2.1 Using the max = 2
+With this approach, we are matching too many names. An option would be to merge only the names that have been matched in both directions. <br>
+Below is the script for that.
+
+```{r}
+phyto_summ_3 <- NULL
+
+for(i in seq_along(unique_name)) {
+  which_match <- as.numeric(unlist(strsplit(phyto_summ[i,"Row_matched_2"],"-")))
+  i %in% as.numeric(unlist(strsplit(phyto_summ[which_match,"Row_matched_2"],"-")))
+
+  phyto_summ_3 <- c(phyto_summ_3,
+                  as.character(phyto_summ[i,"Name"]),
+                  paste(sum(phyto_summ[c(i, which_match),"Frequency_presence"], na.rm = T)),
+                  paste(sum(phyto_summ[c(i, which_match),"Total_count"], na.rm = T)))
+  unique_name <- unique_name[!unique_name %in% which_match[which_match>i]]
+}
+
+```
+
+
+
+#### 1.2.2.2 Using the max = list(2,2,2,2) 
+
+The whole objective is to be able to match phytoplankton counts belonging to the same species/genus rapidly and systematically. I'm writting down below the code I'm using at the moment:
+
+```{r new phytoplankton count, message=FALSE, warning=FALSE}
+phyto_summ_3 <- NULL
+unique_name  <-  seq_along(phyto_summ$Name)
+for(i in seq_along(unique_name)) {
+  which_match <- as.numeric(unlist(strsplit(phyto_summ[i,"Row_matched_2"],"-")))
+  phyto_summ_3 <- c(phyto_summ_3,
+                  as.character(phyto_summ[i,"Name"]),
+                  paste(sum(phyto_summ[c(i, which_match),"Frequency_presence"], na.rm = T)),
+                  paste(sum(phyto_summ[c(i, which_match),"Total_count"], na.rm = T)))
+  unique_name <- unique_name[!unique_name %in% which_match[which_match>i]]
+}
+phyto_summ_3 <- as.data.frame(matrix(phyto_summ_3,ncol=3,byrow=T))
+phyto_summ_3 <- phyto_summ_3[unique_name,]
+colnames(phyto_summ_3) <- c("Name","Frequency_presence","Total_count")
+
+# Making frenquencies and counts numeric
+phyto_summ_3$Frequency_presence <- as.numeric(paste(phyto_summ_3$Frequency_presence))
+phyto_summ_3$Total_count <- as.numeric(paste(phyto_summ_3$Total_count))
+```
+
+Out of this smaller dataset, there are `r nrow(phyto_summ_3)-nrow(phyto_summ_3[phyto_summ_3$Frequency_presence>0,])` names with no observations over the 2006-2018 period.
+
+```{r delete species with no observations, message=FALSE, warning=FALSE}
+phyto_summ_3 <- phyto_summ_3[phyto_summ_3$Frequency_presence>0,]
+```
+
+
+### 1.3 Conclusions
+
+__Fuzzy matching__ is a rapid and convenient way of working with large datasets with potential small variability in data entry. <br>
+As part of our project on Lake Champlain, we're interested in getting a biomass for each group of the food web. This approach is a first step towards getting the total biomass of phytoplankton.
+
+Some of the code I included is hidden (echo=FALSE in the R Markdown I generated this html from). Don't hesitate to go to my GitHub to get the raw file with all the code, or send me an email and I'll share it with you if you're uncomfortable with GitHub and can't find it.
+
+
+## 2. Handle different date time format
+```{r read dataset for lubridate, message=FALSE, warning=FALSE, include=FALSE}
+plktn <- read.delim("Data/DEC_Champlain_sampling_dates.txt",sep=" ")
+#plktn <- read.delim("/Volumes/-/Script R/rosaliebruelweb/Blog_articles/Data/DEC_Champlain_sampling_dates.txt",sep=" ")
+```
+
+### 2.1 Problem 
+I use the <a href="https://dec.vermont.gov">Vermont DEC</a> plankton data, a monitoring that started in 2006. The 'visit dates' are entered heterogeneously. Not being able to easily access different years of the monitoring is a limitation.
+
+```{r look at visit date format}
+plktn$PlanktonData.VisitDate[seq(1,nrow(plktn),2000)]
+```
+
+There are at least two types of format: <br>
+  * d-b-y, e.g., 05-May-00  <br>
+  * d/m/Y, e.g., 30/08/2010 <br>
+
+### 2.2 Solution 
+The package _lubridate_, and its function *parse_date_time*, are perfect to handle different date time format.
+
+Symbol         | Meaning                | Example
+---------------|------------------------|---------------
+%d             | day as a number (0-31) | 01-31
+%a             | abbreviated weekday    | Mon
+%A             | unabbreviated weekday  | Monday
+%m             | month (00-12)          | 00-12
+%b             | abbreviated month      | Jan
+%B             | unabbreviated month    | January
+%y             | 2-digit year           | 19
+%Y             | 4-digit year           | 2019
+ 
+
+```{r standardize date data with parse_date_time, message=FALSE, warning=FALSE}
+plktn$VisitDate <- parse_date_time(x = plktn$PlanktonData.VisitDate,
+                                   orders = c("d-b-y","d/m/Y"))
+head(plktn$VisitDate)
+```
+
+<a href "https://stackoverflow.com/questions/25463523/convert-variable-with-mixed-date-formats-to-one-format"> Link to good explanation</a>.
+
+
+
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+
+<a name="comments"></a> 
+
+<!-- begin wwww.htmlcommentbox.com -->
+ <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com"></a> is loading comments...</div>
+ <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
+ <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&opts=16862&num=10&ts=1553273262432");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
+<!-- end www.htmlcommentbox.com -->
+
+</body>

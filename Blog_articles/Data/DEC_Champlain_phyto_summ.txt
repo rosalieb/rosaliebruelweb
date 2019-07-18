@@ -1,0 +1,259 @@
+"Name" "Frequency_presence" "Total_count"
+"?Actinastrum" 1 1677569
+"?Aphanizomenon spp" 27 6738164
+"?Aphanocapsa" 56 66703894
+"?Aphanothece" 12 4896837
+"?Arthrospira spp" 0 0
+"?Botryococcus spp" 2 9380
+"?Campylodiscus spp" 0 0
+"?Chrysoamoebae" 0 0
+"?Chrysocapsa" 0 0
+"?Chrysosphaerella" 1 5961
+"?Cymatopleura" 5 74487092
+"?Dactylococcopsis" 1 88
+"?Diatoma" 25 209788956
+"?Diatoma sp 2" 37 90969912
+"?Diatoma sp 3" 15 33161083
+"?Diatoma spp" 54 1361884264
+"?Dictyosphaerium spp" 1 187064
+"?Euglena spp" 0 0
+"?Geminella spp" 1 1108890
+"?Glenodinium spp" 0 0
+"?Golenkinia spp" 0 0
+"?Gonium spp" 2 140639
+"?Hormonogonales" 8 3387965
+"?Lyngbya" 4 3366826
+"?Microcystis" 2 886760
+"?Mougeotia spp" 3 283157
+"?Navicula" 0 0
+"?Neidium spp" 0 0
+"?Nephrocytium" 1 7423738
+"?Oedogonium spp" 33 30870616
+"?Oocystis spp" 0 0
+"?Oscillatoria spp" 0 0
+"?Oscillatoriaceae" 10 47849828
+"?Palmodictyon" 0 0
+"?Pannus spp" 1 89134
+"?Peridinium spp" 0 0
+"?Peridinopsis spp" 0 0
+"?Phormidium spp" 6 1539502
+"?Pseudanabaena" 1 282315
+"?Pseudanabaena " 1 118
+"?Radiocystis spp" 6 555034
+"?Romeria spp" 1 32448
+"?Schroederia spp" 0 0
+"?Snowella" 0 0
+"?Snowella spp" 0 0
+"?Spondylosium spp" 1 1226919
+"?Stigeoclonium" 1 281
+"?Surirella" 3 4251538
+"?Synedra" 1 62
+"?Synedra spp" 2 52716
+"?Trachelomonas spp" 0 0
+"?Ulothrix spp" 1 16717145
+"?Uroglenopsis" 8 3071550
+"Actinastrum spp" 5 15539852
+"Amphiprora" 1 5651670
+"Anabaena ?planctonica - sm" 1 2226974
+"Anabaena circinalis" 53 2396506095
+"Anabaena flos-aquae" 83 539337385
+"Anabaena planctonica" 59 1071152857
+"Anabaena sp 6" 1 164654
+"Anabaena sp 7" 4 7158253
+"Anabaena spp" 254 9450763448
+"Ankistrodesmus convolutus" 0 0
+"Ankistrodesmus falcatus" 3 27448
+"Ankistrodesmus spp" 0 0
+"Ankyra spp" 1 86
+"Aphanizomenon ?gracile" 10 6608179
+"Aphanizomenon flos-aquae" 326 18621396695
+"aphanocapsa" 4 1046218
+"Aphanocapsa" 47 121093467
+"Aphanocapsa sm" 21 4661333
+"Aphanothece" 119 38420520
+"Arthrodesmus sp 1" 5 140865161
+"Arthrodesmus sp 2" 7 35171216
+"Arthrodesmus sp 3" 2 14967588
+"Arthrodesmus spp" 5 14891939
+"Asterionella formosa" 494 8235812661
+"Asterionella sp 2" 18 35424143
+"Attheya spp" 30 778831093
+"Aulocoseira ?granulata" 91 3814234227
+"aulocoseira sp 1" 3 2263923
+"Aulocoseira sp 1" 451 155874181098
+"Aulocoseira sp 2" 162 25833814737
+"Aulocoseira sp 3" 195 1349619324
+"Aulocoseira sp 5" 3 1743937117
+"Botryococcus spp" 4 3228228
+"Bulbochaete" 11 316170599
+"Centrales md" 3 5016663
+"Centrales sm" 0 0
+"Centrales sm - chain" 40 1809740524
+"Ceratium - cyst" 2 9877763
+"Ceratium hirundinella" 179 9521520123
+"Ceratium spp" 4 134821626
+"Chaetophorales" 7 5238061
+"Chaetophorales filament 1" 48 170078174
+"Chlamydocapsa spp" 6 6250028
+"Chlorophyta - spherical cells" 1 2827
+"chlorophyta filament" 2 31899
+"chlorophyta flagellate" 0 0
+"Chlorophyta flagellate" 0 0
+"Chlorophyta flagellate 2" 0 0
+"Chlorophyta flagellate 4" 0 0
+"Chroococcales" 16 625874
+"Chroococcus ?Prescotti" 11 2997478
+"Chroococcus sp 1" 2 4331594
+"Chroococcus sp 2" 2 246007
+"Chroococcus spp" 18 13994430
+"Chroomonas" 0 0
+"Chryso flag" 0 0
+"Chrysophyte flagellate 2" 0 0
+"Closteriopsis spp" 31 37908244
+"Closterium spp" 4 934013
+"Cocconeis spp" 0 0
+"Coelastrum microporum" 3 2673406
+"Coelastrum scabrum" 0 0
+"Coelosphaerium spp" 42 54944132
+"Cosmarium 3" 0 0
+"Cosmarium sm" 0 0
+"Cosmarium sp 1" 0 0
+"Cosmarium sp 2" 1 107
+"Cosmarium sp 3" 0 0
+"Cosmarium spp" 1 254793
+"Crucigenia fenestrata" 0 0
+"Crucigenia Lauterbornii" 0 0
+"Crucigenia spp" 0 0
+"Crypto flag 2" 0 0
+"Cryptomonas" 0 0
+"Cryptomonas 2" 0 0
+"Cryptomonas ovata" 0 0
+"Cyanodictyon ?planctonicum" 0 0
+"Cymatopleura spp" 6 62300283
+"Cymbellaceae" 3 550642
+"Diatoma spp" 75 2087887848
+"Dictyosphaerium spp" 61 49964411
+"dinobryon ?cylindricum" 31 55002343
+"Dinobryon ?cylindricum" 2 233362
+"Dinobryon ?sertularia" 3 4989407
+"Dinobryon ?sociale" 35 173460910
+"Dinobryon bavaricum" 64 169167149
+"dinobryon divergens" 0 0
+"Dinobryon divergens" 206 898417199
+"Dinobryon sertularia" 18 111299090
+"Dinobryon spp" 78 234841900
+"Dinobryon statospore" 0 0
+"Elakatothrix gelatinosa" 0 0
+"Elakatothrix viridis" 4 121693
+"Eudorina spp" 96 491253922
+"Euglena spp" 3 25819024
+"Fragilaria crotonensis" 389 32274768701
+"Fragilaria spp" 219 3625130754
+"Fragilaria spp lg" 92 3142314221
+"Geminella spp" 1 83952
+"Glenodinium" 4 38475173
+"Glenodinium spp" 1 346
+"Gloeocystis gigas" 4 3936840
+"Gloeocystis spp" 20 26835293
+"Gloeotrichia spp" 5 3814309
+"Gomphosphaeria lacustris" 4 477159
+"Gonium spp" 1 124113
+"Gymnodinium fuscum" 2 6439886
+"Gymnodinium spp" 0 0
+"Gyrosigma spp" 5 10485753
+"helical Aulocoseira" 100 5526914100
+"Hormonogonales 1" 4 1744721
+"indeterminate 1" 0 0
+"indeterminate 31" 0 0
+"indeterminate chlorophyta colony" 58 147528983
+"indeterminate Chlorophyta colony" 35 13720781
+"indeterminate flagellate 2" 0 0
+"Kirchneriella ?obtusa" 0 0
+"Kirchneriella spp" 5 4780388
+"Lagerheimia spp" 0 0
+"Limnothrix spp" 13 18223604
+"Lyngbya spp" 2 6345041
+"Mallomonas akrimonas" 0 0
+"Mallomonas pseudocoronata" 0 0
+"Mallomonas sp 5" 14 9598669
+"Mallomonas spp" 0 0
+"Merismopedia spp" 0 0
+"Micractinium pusillum" 12 3361701
+"Microcystis lg" 134 7108641978
+"Microcystis sm" 37 14311641
+"Microcystis wesenbergii" 27 505811388
+"mougeotia spp" 22 89269
+"Mougeotia spp" 23 304419060
+"Mougeotia spp - small" 12 20401496
+"Navicula spp" 0 0
+"Navicula spp md" 1 185037
+"Naviculaceae" 0 0
+"Nephrocytium spp" 1 1466111
+"Oocystis spp" 3 1616235
+"Oscillatoria spp" 4 526572
+"Oscillatoriaceae 1" 6 263508
+"Oscillatoriaceae 2" 3 3874353
+"Oscillatoriaceae 4" 1 105712
+"Oscillatoriaceae 6" 1 9855
+"Pandorina morum" 18 47294911
+"Pediastrum Boryanum" 6 6592254
+"Pediastrum duplex" 56 229252773
+"Pediastrum simplex" 46 89062418
+"Pennales lg" 34 286588683
+"Pennales md" 191 427802109
+"Pennales sm" 0 0
+"Pennales star" 17 28160524
+"Peridinium spp" 26 5458490633
+"Phormidium mucicola" 18 12307384
+"Planktothrix spp" 1 125454
+"Pseudanabaena" 1 84619
+"Pyrrophyta" 0 0
+"Pyrrophyta cyst" 0 0
+"Pyrrophyta cyst 2" 0 0
+"Quadrigula spp" 2 314046
+"Rhizosolenia" 108 832803893
+"Rhizosolenia sp 2" 12 5731908
+"Romeria spp" 2 1024586
+"Scenedesmus arcuatus" 0 0
+"Scenedesmus bijuga" 0 0
+"Scenedesmus dimorphus" 0 0
+"Scenedesmus quadricauda" 2 2160355
+"Scenedesmus sp 1" 0 0
+"Scenedesmus spp" 0 0
+"Schizochlamys spp" 4 2714337
+"Selenastrum ?minutum" 0 0
+"Selenastrum minutum" 0 0
+"Selenastrum spp" 0 0
+"Snowella spp" 4 831999
+"Sphaerocystis spp" 11 9127133
+"Spirogyra spp" 10 228125583
+"Spirulina spp" 0 0
+"Spondylosium spp" 2 2757713
+"Staurastrum sp 1" 123 236185167
+"Staurastrum sp 3" 4 32439685
+"Staurodesmus sp 1" 2 5795380
+"Staurodesmus spp" 1 415
+"Stephanodiscus" 131 3591456756
+"Synedra ulna" 92 677501085
+"Synura spp" 41 134095026
+"Tabellaria flocculosa" 8 14173906
+"Tabellaria sp 3" 1 874800
+"Tabellaria spp" 187 3829280811
+"Tetraedron ?gracile" 0 0
+"Tetraedron ?limneticum" 0 0
+"Tetraedron caudatum" 0 0
+"Tetraedron minimum" 0 0
+"Tetraedron spp" 0 0
+"Tetraspora lamellosa" 5 3139561
+"Tetraspora spp" 24 10059657
+"Tetrasporales" 19 12569962
+"Tetrasporales single cell" 1 282
+"Trachelomonas 4" 0 0
+"Trachelomonas sp 5" 0 0
+"Treubaria spp" 0 0
+"Ulothrix spp" 2 1332623
+"Ulothrix spp - sm" 41 647529928
+"unknown cyanobacteria trichome" 6 1209901
+"Volvox spp" 11 77133987
+"Woronichinia spp" 194 417489747
+"Xanthidium sp 1" 1 3730013
