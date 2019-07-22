@@ -367,6 +367,7 @@ As part of our project on Lake Champlain, we're interested in getting a biomass 
 
 Some of the code I included is hidden (echo=FALSE in the R Markdown I generated this html from). Don't hesitate to go to my GitHub to get the raw file with all the code, or send me an email and I'll share it with you if you're uncomfortable with GitHub and can't find it.
 
+***
 
 ## 2. Handle different date time format
 ```{r read dataset for lubridate, message=FALSE, warning=FALSE, include=FALSE}
@@ -408,6 +409,19 @@ plktn$VisitDate <- parse_date_time(x = plktn$PlanktonData.VisitDate,
                                    orders = c("d-b-y","d/m/Y"))
 head(plktn$VisitDate)
 ```
+
+### 2.3 Other comments
+_lubridate_ also allows to directly extract the year, month, day, or julian day, from a date.
+
+
+Code    | Example                    | Output                
+--------|----------------------------|-----------------------------
+--      | plktn\$VisitDate[1]        | `r plktn$VisitDate[1]`
+year()  | year(plktn\$VisitDate[1])  | `r year(plktn$VisitDate[1])`
+month() | month(plktn\$VisitDate[1]) | `r month(plktn$VisitDate[1])`    
+day()   | day(plktn\$VisitDate[1])   | `r day(plktn$VisitDate[1])`  
+yday()  | yday(plktn\$VisitDate[1])  | `r yday(plktn$VisitDate[1])`          
+
 
 <a href "https://stackoverflow.com/questions/25463523/convert-variable-with-mixed-date-formats-to-one-format"> Link to good explanation</a>.
 
