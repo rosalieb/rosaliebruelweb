@@ -410,8 +410,10 @@ plktn$VisitDate <- parse_date_time(x = plktn$PlanktonData.VisitDate,
 head(plktn$VisitDate)
 ```
 
-### 2.3 Other comments
-_lubridate_ also allows to directly extract the year, month, day, or julian day, from a date.
+I initially found the solution to my problem<a href "https://stackoverflow.com/questions/25463523/convert-variable-with-mixed-date-formats-to-one-format"> here</a>.
+
+### 2.3 Extract year, month, or day of the year
+_lubridate_ also allows to directly extract the year, month, day, or day of the year, from a date.
 
 
 Code    | Example                    | Output                
@@ -423,7 +425,7 @@ day()   | day(plktn\$VisitDate[1])   | `r day(plktn$VisitDate[1])`
 yday()  | yday(plktn\$VisitDate[1])  | `r yday(plktn$VisitDate[1])`          
 
 
-<a href "https://stackoverflow.com/questions/25463523/convert-variable-with-mixed-date-formats-to-one-format"> Link to good explanation</a>.
+
 
 
 
