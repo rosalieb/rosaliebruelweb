@@ -136,6 +136,13 @@ h1 {
 <div class="row">
 <div class="column">
   <div class="content">
+  <img src="images/blog/Tuto6_0_MainPhoto.JPG" alt="Main" style="width:100%">
+  <h3>Less is more</h3>
+  <a href="Blog_articles/Tuto6_lessismore.html"><p>Help identifing unnecessary packages in R</p></a>
+  </div>
+</div> 
+<div class="column">
+  <div class="content">
   <img src="images/blog/Tuto1_0_MainPhoto.png" alt="Main" style="width:100%">
   <h3>QGIS3 tutorial</h3>
   <a href="Blog_articles/Tuto1_bathymetry_QGIS3.html"><p>Generate a bathymetry map on QGIS 3 from a XYZ csv file</p></a>
