@@ -138,7 +138,7 @@ h1 {
   <div class="content">
   <img src="images/blog/Tuto6_0_MainPhoto.JPG" alt="Main" style="width:100%">
   <h3>Less is more</h3>
-  <a href="Blog_articles/Tuto6_lessismore.html"><p>Help identifing unnecessary packages in R</p></a>
+  <a href="Blog_articles/Tuto6_less_is_more.html"><p>Help identifing unnecessary packages in R</p></a>
   </div>
 </div> 
 <div class="column">
