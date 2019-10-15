@@ -110,7 +110,7 @@ Last year I asked twitter for a solution for identifying packages that are no lo
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Is there a way in <a href="https://twitter.com/rstudio?ref_src=twsrc%5Etfw">@rstudio</a> to know which packages are not needed anymore to run a script?<br>I typically install &amp; load many packages when I&#39;m trying out analyses, and sometimes forget why they&#39;re made for initially 😶... Alternatively: how do you manage this issue? <a href="https://twitter.com/hashtag/rstats?src=hash&amp;ref_src=twsrc%5Etfw">#rstats</a></p>&mdash; Rosalie Bruel (@RosalieBruel) <a href="https://twitter.com/RosalieBruel/status/998558472533938176?ref_src=twsrc%5Etfw">May 21, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
 
-User @jmcphers recommended <a href="https://github.com/rstudio/packrat"> *packrat*</a>, which I used for one of my project. *packrat* is great to keep track of the package version needed to run a script, but I don't like that it creates a copy of the package specific to a project: it means I had to re-download all the packages needed for this specific project. It is just too much for my needs.
+User @jmcphers recommended <a href="https://github.com/rstudio/packrat"> *packrat*</a>, which I used for one of my project. *packrat* is great to keep track of the package version needed to run a script, but I don't like that it creates a copy of each package: it means I had to re-download all the packages needed for this specific project. It is just too much for my needs.
 
 
 I re-thought about this issue today, and realized there might be another easy solution.
@@ -125,9 +125,9 @@ I wrote the function *lessismore()* to hopefully tackle this. I don't have time 
 
 The function require the package <a href="https://cran.r-project.org/web/packages/sos/index.html">*sos*</a>.
 
-I edited the code from Nicholas Cooper's package <a href="https://rdrr.io/cran/NCmisc/">NSmisc</a>. He has a lot of great function in there. I didn't reuse his function _"list.functions.in.file()"_ because I wanted to keep the information on how many times each function was used + his code does not work with .Rmd, so I had to edit that anyway.
+I edited the code from Nicholas Cooper's package <a href="https://rdrr.io/cran/NCmisc/">NCmisc</a>. He has a lot of great function in there. I didn't reuse his function _"list.functions.in.file()"_ because I wanted to keep the information on how many times each function was used + his code does not work with .Rmd, so I had to edit that anyway.
 
-For each function that was not associated to a package, I conducted a second search with sos::findFn(), that browse Rsitesearch for matches. This one takes longer, so that's why I did not use that function systematically (and first went through the option coded in base R).
+For each function that was not associated to a package, I conducted a second search with sos::findFn(), that uses <a href="https://www.rdocumentation.org/packages/utils/versions/3.6.1/topics/RSiteSearch">Rsitesearch</a> for matches in vignettes, help pages, or task views. This one takes longer, so that's why I did not use that function systematically (and first went through the option coded in base R).
 
 _lessismore()_ will also return any function that was not matched. It might be because some of the code was uncorrectly identified as functions though.
 
@@ -154,13 +154,17 @@ Here is the result: <br>
 
 I found that 14 packages are loaded and but not used in this script. I am using some of these on other scripts I worked on today, but I don't need *readtext* for example (I loaded it as I was writing the _lessismore()_ function).
 
-Instead of looking at all packages I have loaded, I should in fact use a vector of the packages I load at the beginning of my Rmarkdown.
+However, I am using FSAdata! I call at some point the dataset ```FSAdata::TroutperchLM1```. The function does not work for objects which token is different from "SYMBOL_FUNCTION_CALL". If I or someone else ever want to update the function, that could be an aspect to improve.
+
+## `r (titlenb <- titlenb+1)`. Summing up
+
+Eventually, instead of looking at all packages I have loaded (with .packages()), I should use a vector of the packages I load at the beginning of my Rmarkdown.
 
 Bonus, you can have a look at the most-used functions in your script (I took a screenshot here, but in Rstudio you can hoover over the points to see the functions name associated to each point):
 
 <img src="images/Tuto6/Tuto6_2.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
 
-My most-used function is _c()_, nothing fancy here 😒 --- I just need to create lots of vectors.
+My most-used function is _c()_, used to create vectors --- nothing fancy here 😒.
 
 
 Let me know if you end up using the function, if it's working or not, and if you have ideas to make the function more efficient!
