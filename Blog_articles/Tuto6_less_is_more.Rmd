@@ -150,7 +150,7 @@ I tried the script on a R markdown file I am currently working on. Here, I am tr
 mp <- lessismore(packages = .packages(), 
                 ath2file = "R/EwE_model_param_LakeChamplain.Rmd", 
                 lot_output = T)`
-``
+```
 
 Here is the result: <br>
 
@@ -164,7 +164,20 @@ However, I am using FSAdata! I call at some point the dataset ```FSAdata::Troutp
 
 Eventually, instead of looking at all packages I have loaded (with .packages()), I should use a vector of the packages I load at the beginning of my Rmarkdown.
 
-Bonus, you can have a look at the most-used functions in your script (I took a screenshot here, but in Rstudio you can hoover over the points to see the functions name associated to each point):
+Bonus, you can have a look at the most-used functions in your script:
+
+```{r plot fun, echo=FALSE, message=FALSE, warning=FALSE}
+summ_fun <- read.delim("Data/Tuto6_summ_fn.txt")
+require("ggplot2")
+require("plotly")
+summ_fun$name <- rownames(summ_fun)
+summ_fun$index <- 1:nrow(summ_fun)
+summ_fun <- summ_fun[order(summ_fun$count, decreasing = T),]
+p <- ggplot(summ_fun, aes(index,count, label=summ_fun$name)) + geom_point() + geom_line() +
+            theme_bw() + labs(x="Index", y="Count", title="Occurence of each function in the script \n(Hoover to see name of the functions)")
+ggplotly(p)
+```
+
 
 <img src="images/Tuto6/Tuto6_2.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
 
