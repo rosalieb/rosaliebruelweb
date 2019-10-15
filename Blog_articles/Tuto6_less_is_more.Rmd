@@ -179,8 +179,6 @@ ggplotly(p)
 ```
 
 
-<img src="images/Tuto6/Tuto6_2.png" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
-
 My most-used function is _c()_, used to create vectors --- nothing fancy here 😒.
 
 
