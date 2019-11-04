@@ -29,7 +29,8 @@ my.loc <- as.data.frame(rbind(c(5.447427, 43.529742, 3, "My hometown"), #Aix-en-
                               c(115.8614,-31.95224, 4, "AEMON-J workshop 2018"), #Perth WA
                               c(115.517,-32.002,4, "GLEON20 All hands' meeting 2018"), #Rottnest Island WA
                               c(-73.92097, 41.70037 , 4, "NYNEDAFS 2019"), #Poughkeepsie
-                              c(-77.9391797,43.2136713,4, "IAGLR 2019"), #Brockport NY
+                              #c(-77.9391797,43.2136713,4, "IAGLR 2019"), #Brockport NY
+                              c(-82.639999,27.773056,4, "Ecopath 35 2019"), #St Petersburg FL
                               #mylakes
                               c(-1.16667, 44.65, 5, "Master thesis Year 1"),#Bassin d'Arcachon
                               c(6.7916635,45.98832938 ,5, "Master thesis Year 2"),#Lac d'Anterne
