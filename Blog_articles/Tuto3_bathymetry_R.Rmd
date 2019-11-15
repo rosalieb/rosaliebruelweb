@@ -297,6 +297,29 @@ histogram(bathy_ontario, main='c. Lake Ontario depth histogram', xlab='depth (m)
 The three lakes have really contrasted depth profiles. Lake Chmplain has many shallow basins, Lake Geneva is very steep and has a large deep pelagic zone (see the high count for depths around 280 m), while Lake Ontario is somewhere between the two.
 
 
+#### 2. Different types of visualization.
+
+Leaving here some visuals I like and may re-use.
+
+Package urbanmap (<a href="https://medium.com/@urban_institute/how-to-create-state-and-county-maps-easily-in-r-577d29300bb2">blog post here</a>).
+
+```{r package urbnmapr, eval=FALSE}
+library(devtools)
+devtools::install_github("UrbanInstitute/urbnmapr")
+library(urbnmapr)
+```
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(urbnmapr)
+library(ggplot2)
+ggplot(data = urbnmapr::states, mapping = aes(x = long, y = lat, group = group)) + 
+  geom_polygon(fill = "grey", color = "white") +
+  coord_map(projection = "albers", lat0 = 39, lat1 = 45)
+
+
+```
+
+
 
 <script>
 window.onscroll = function() {myFunction()};
