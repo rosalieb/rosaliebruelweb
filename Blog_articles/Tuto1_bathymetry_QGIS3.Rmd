@@ -180,6 +180,7 @@ This tutorial is for QGIS 3.4.5-Madeira, Python 3.6, using macOS 10.14.3.
 
 
 <a name="getdata"></a> 
+
 #### 1. Get your data
 This tutorial allow you to generate a bathymetry using XYZ data. Have them saved in a .csv file. If you don't have any data, you can follow these steps using Lake Champlain data. Download the spreadsheet data <a href="http://geodata.vermont.gov/datasets/7f451335fc6644e7a7376adbcd6282df_2" target="_blank">from here</a>.
 
