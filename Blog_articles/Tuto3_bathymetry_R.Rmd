@@ -320,6 +320,10 @@ ggplot(data = urbnmapr::states, mapping = aes(x = long, y = lat, group = group))
 ```
 
 
+#### 3. Other interesting resources
+
+<a href="https://www.neonscience.org/raster-data-r">Well made and concise tutorial on getting started with the *raster* and *rgdal* packages.</a>
+
 
 <script>
 window.onscroll = function() {myFunction()};
