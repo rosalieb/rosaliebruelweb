@@ -7,6 +7,7 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 
@@ -72,9 +73,7 @@ h6 {
 
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
-</head>
 
-<body>
 
 <style type = "text/css">
 .main-container {
@@ -193,8 +192,6 @@ $(document).ready(function () {
 });
 </script>
 
-<div class="container-fluid main-container">
-
 <!-- tabsets -->
 
 <style type="text/css">
@@ -251,20 +248,17 @@ $(document).ready(function () {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
 
 
 
@@ -288,7 +282,7 @@ $(document).ready(function () {
   <a href="software.html">Programming</a>
 </li>
 <li>
-  <a href="blog.html">Blog</a>
+  <a href="blog.html">Blog / Tutorial</a>
 </li>
 <li>
   <a href="gallery.html">Gallery</a>
@@ -344,11 +338,27 @@ $(document).ready(function () {
 
   gtag('config', 'UA-134870808-1');
 </script>
-<p></p>
-<p>In 2011, I took a course in Marine Biology at Napier University (Edinburgh), where we learned about deep seas organisms (among other things). I found them fascinating (who wouldn’t…). This is partly what made me choose my Master in Aquatic Ecology. During my first internship, I ended up working relatively far from the deap seas, as I worked on clams in a bay (Arcachon Bay, 10 m bsl). But things got out of control when I studied seasonal dynamics of high-altitude lake (Lake Anterne, 2,063 m asl) during my 2nd year. Of course, these internships were fascinating. While I will forever struggle with the gulf between everything I’d like to study and the average human life expectancy, my research interests now revolve around how systems are responding to local and global perturbations. This general thematic gets my interest because there’s opportunity for both fundamental and applied research.</p>
-<p>For publications, here is a link to my <a href="https://orcid.org/0000-0001-8351-7539" target="_blank">ORCID profile</a>, that is guaranteed to be up to date.</p>
+<style>
+# space between paragraph, small or big
+p.small {
+  line-height: 0.7;
+}
+p.big {
+  line-height: 1.8;
+}
+</style>
+<p> In 2011, I took a course in Marine Biology at Napier University (Edinburgh), where we learned about deep seas organisms (among other things). I found them fascinating (who wouldn’t…). This is partly what made me choose my Master in Aquatic Ecology. During my first internship, I ended up working relatively far from the deap seas, as I worked on clams in a bay (Arcachon Bay, 10 m bsl). But things got out of control when I studied seasonal dynamics of high-altitude lake (Lake Anterne, 2,063 m asl) during my 2nd year. Of course, these internships were fascinating. While I will forever struggle with the gulf between everything I’d like to study and the average human life expectancy, my research interests now revolve around how systems are responding to local and global perturbations. This general thematic gets my interest because there’s opportunity for both fundamental and applied research.</p>
+<head>
+<b>Publications</b> (<a href="https://orcid.org/0000-0001-8351-7539" target="_blank">ORCID profile</a> for the most up-to-date list):
+</head>
+<p>     2. Perga, M.-E., <b>Bruel, R.</b>, Rodriguez, L., Guénand, Y., Bouffard, D., 2018. Storm impacts on alpine lakes: antecedent weather conditions matter more than the event intensity. Glob. Change Biol. <a href="https://doi.org/10.1111/gcb.14384" class="uri">https://doi.org/10.1111/gcb.14384</a> <br>      1. <b>Bruel, R.</b>, Marchetto, A., Bernard, A., Lami, A., Sabatier, P., Frossard, V., Perga, M.-E., 2018. Seeking alternative stable states in a deep lake. Freshwater Biology. <a href="https://doi.org/10.1111/fwb.13093" class="uri">https://doi.org/10.1111/fwb.13093</a> <br></p>
+<head>
+<b>Preprints:</b>
+</head>
+<p>     2. <b>Bruel, R.</b>, Sabatier, P., 2020. serac: a R package for ShortlivEd RAdionuclide Chronology of recent sediment cores. EarthArXiv. <a href="https://eartharxiv.org/f4yma/">DOI: 10.31223/osf.io/f4yma</a><br>      1. <b>Bruel, R.</b>, Girardclos, S., Marchetto, A., Kremer, K., Crouzet, C., Reyss, J.-L., Sabatier, P., Perga, M.-E., 2019. Reframing Lake Geneva ecological trajectory in a context of multiple but asynchronous drivers. EarthArXiv. <a href="https://eartharxiv.org/j8up3/">DOI: 10.31223/osf.io/j8up3<a></p>
 <p>My trajectory over the years in a nutshell ↓</p>
 <p><img src="images/research_interests.png" style="width:80%; margin-left: 10%; margin-right: 10%; margin-bottom: 20px; margin-top: 20px" align="center"></p>
+</p>
 
 
 
@@ -367,6 +377,23 @@ $(document).ready(function () {
 
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

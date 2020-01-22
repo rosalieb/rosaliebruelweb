@@ -23,5 +23,5 @@ When I first used R, I would have never thought I would like it that much (heard
 My GitHub gathers some of my past and current projects. While you're here, have a look at:
 
 * The code to reproduce the analyses from our paper <a href="https://www.researchgate.net/publication/323394346_Seeking_alternative_stable_states_in_a_deep_lake" target="_blank">'Seeking alternative stable states in a deep lake'</a> is available <a href="https://github.com/rosalieb/AltStableStates" target="_blank">here</a>.
-* Our package <a href="https://github.com/rosalieb/serac" target="_blank">SERAC</a>,  currently under review.
+* Our package <a href="https://github.com/rosalieb/serac" target="_blank">SERAC</a>,  currently under review. <a href="https://eartharxiv.org/f4yma/">Link to the preprint</a> (DOI: 10.31223/osf.io/f4yma).
 * The code to reproduce this website is on my GitHub as well, <a href="https://github.com/rosalieb/rosaliebruelweb" target="_blank">here</a>.
