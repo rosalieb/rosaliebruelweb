@@ -146,8 +146,7 @@ I added the threshold argument (*thresh*) at the last minute. I noticed that som
 
 I tried the script on a R markdown file I am currently working on. Here, I am trying to see whether all the packages I have loaded for this session (.packages()) are needed in the script which pathname is "R/EwE_model_param_LakeChamplain.Rmd", and I want to plot which are the functions I used the most (plot_output = T).
 
-```t
-mp <- lessismore(packages = .packages(), 
+```tmtp <- lessismore(packages = .packages(), 
                 ath2file = "R/EwE_model_param_LakeChamplain.Rmd", 
                 lot_output = T)`
 ```
