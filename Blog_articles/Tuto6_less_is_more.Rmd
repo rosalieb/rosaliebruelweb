@@ -118,14 +118,16 @@ I re-thought about this issue today, and realized there might be another easy so
 
 I wrote the function *lessismore()* to hopefully tackle this. I don't have time to package it, but you can load it using the code below:
 
-```source("https://raw.githubusercontent.com/rosalieb/miscellaneous/master/R/lessismore.R")```
+```{r eval=FALSE, include=TRUE}
+source("https://raw.githubusercontent.com/rosalieb/miscellaneous/master/R/lessismore.R")
+```
 
 
 ## `r (titlenb <- titlenb+1)`. Rapid overview
 
 The function require the package <a href="https://cran.r-project.org/web/packages/sos/index.html">*sos*</a>.
 
-I edited the code from Nicholas Cooper's package <a href="https://rdrr.io/cran/NCmisc/">NCmisc</a>. He has a lot of great function in there. I didn't reuse his function _"list.functions.in.file()"_ because I wanted to keep the information on how many times each function was used + his code does not work with .Rmd, so I had to edit that anyway.
+I edited the code from Nicholas Cooper's package <a href="https://rdrr.io/cran/NCmisc/">NCmisc</a>. He has a lot of great function in there. I didn't reuse his function _"list.functions.in.file()"_ because I wanted to keep the information on how many times each function was used + his code does not work with .Rmd, so it required some work anyway.
 
 For each function that was not associated to a package, I conducted a second search with sos::findFn(), that uses <a href="https://www.rdocumentation.org/packages/utils/versions/3.6.1/topics/RSiteSearch">Rsitesearch</a> for matches in vignettes, help pages, or task views. This one takes longer, so that's why I did not use that function systematically (and first went through the option coded in base R).
 
@@ -146,9 +148,10 @@ I added the threshold argument (*thresh*) at the last minute. I noticed that som
 
 I tried the script on a R markdown file I am currently working on. Here, I am trying to see whether all the packages I have loaded for this session (.packages()) are needed in the script which pathname is "R/EwE_model_param_LakeChamplain.Rmd", and I want to plot which are the functions I used the most (plot_output = T).
 
-```tmtp <- lessismore(packages = .packages(), 
-                ath2file = "R/EwE_model_param_LakeChamplain.Rmd", 
-                lot_output = T)`
+```{r eval=FALSE, include=TRUE}
+tmp <- lessismore(packages = .packages(), 
+                   path2file = "R/EwE_model_param_LakeChamplain.Rmd",
+                   plot_output = T)
 ```
 
 Here is the result: <br>
@@ -169,11 +172,12 @@ Bonus, you can have a look at the most-used functions in your script:
 summ_fun <- read.delim("Data/Tuto6_summ_fn.txt")
 require("ggplot2")
 require("plotly")
-summ_fun$name <- rownames(summ_fun)
-summ_fun$index <- 1:nrow(summ_fun)
-summ_fun <- summ_fun[order(summ_fun$count, decreasing = T),]
-p <- ggplot(summ_fun, aes(index,count, label=summ_fun$name)) + geom_point() + geom_line() +
-            theme_bw() + labs(x="Index", y="Count", title="Occurence of each function in the script \n(Hoover to see name of the functions)")
+summ_fun <- summ_fun[order(summ_fun$Count, decreasing = T),]
+summ_fun$Function <- paste0(summ_fun$Function, "()")
+summ_fun$Rank <- 1:nrow(summ_fun)
+summ_fun$Function[1] <- "(Other functions)"
+p <- ggplot(summ_fun, aes(Rank, Count, label=Function)) + geom_point() + geom_line() +
+            theme_bw() + labs(x="Rank", y="Count", title="Occurence of each function in the script \n(Hoover to see name of the functions)")
 ggplotly(p)
 ```
 
