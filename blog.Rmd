@@ -74,9 +74,9 @@ h1 {
 /* Style the collapsible content. Note: hidden by default */
 .content {
   padding: 0 18px;
-  display: none;
+  /*display: none;*/
   overflow: hidden;
-  background-color: #97CA4A;
+  background-color: #eee;
 } 
 
 
@@ -198,9 +198,9 @@ h1 {
 
 <div style="text-align:center">
 ### On Twitter
-
 </div>
 ***
+
 <!-- First twitter section collapsible -->
 
 <h3><button type="button" class="collapsible">Science</button></h3>
@@ -286,7 +286,6 @@ __Host for @LaBioauLabo during one week__
 
 </div>
 </div>
-  </p>
 </div> 
 
 
