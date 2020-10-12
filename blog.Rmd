@@ -73,7 +73,7 @@ h1 {
   padding: 0 4px;
 }
 
-/* Create four equal columns that sits next to each other */
+/* Create three equal columns that sits next to each other */
 .column {
   flex: 33%;
   max-width: 33%;
@@ -183,42 +183,66 @@ h1 {
 ### On Twitter
 ***
 </div>
-<div class="column-left">
+
 ## Science
 \n
+
+<div class="row">
+<div class="column">
+
 
 __GLEON20, Student workshop, Rottnest Island, Western Australia__
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Kicking off the <a href="https://twitter.com/hashtag/GLEON20?src=hash&amp;ref_src=twsrc%5Etfw">#GLEON20</a> Student Association workshop with <a href="https://twitter.com/MEL_Phytos?ref_src=twsrc%5Etfw">@MEL_Phytos</a> and Sami Khan. <a href="https://twitter.com/RosalieBruel?ref_src=twsrc%5Etfw">@RosalieBruel</a> giving an excellent introduction to <a href="https://twitter.com/github?ref_src=twsrc%5Etfw">@github</a> <a href="https://twitter.com/GLEONetwork?ref_src=twsrc%5Etfw">@GLEONetwork</a> <a href="https://t.co/XDD9uX9OFk">pic.twitter.com/XDD9uX9OFk</a></p>&mdash; Jonathan Doubek (@jondoubek) <a href="https://twitter.com/jondoubek/status/1069441559744065536?ref_src=twsrc%5Etfw">December 3, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
+</div>
+<div class="column">
+
 \n
 __QUAPAL18 - presenting our work on Lake Geneva__
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">1 <a href="https://twitter.com/hashtag/QUAPAL18?src=hash&amp;ref_src=twsrc%5Etfw">#QUAPAL18</a><br>Assessing ecosystems resistance to air temperature warming requires long periods of times. Regarding the multiplicity of stressors in the Anthropocene, can we use past responses to climate as an analogue for future evolution of ecosystems? <a href="https://t.co/cn2kcPfak4">pic.twitter.com/cn2kcPfak4</a></p>&mdash; Rosalie Bruel (@RosalieBruel) <a href="https://twitter.com/RosalieBruel/status/1006862504746737665?ref_src=twsrc%5Etfw">June 13, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+<div class="column">
 
 \n
 __My first paper!__
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Our paper “Seeking alternative stable states in a deep lake” published in <a href="https://twitter.com/hashtag/Freshwater?src=hash&amp;ref_src=twsrc%5Etfw">#Freshwater</a> <a href="https://twitter.com/hashtag/Biology?src=hash&amp;ref_src=twsrc%5Etfw">#Biology</a> is now available in Early Views! You can read it from here: <a href="https://t.co/tJJb6X8rqE">https://t.co/tJJb6X8rqE</a>. 👇Thread on what we did👇, please RT! <a href="https://twitter.com/MEPerga?ref_src=twsrc%5Etfw">@MEPerga</a> <a href="https://twitter.com/UmrCarrtel?ref_src=twsrc%5Etfw">@UMRCARRTEL</a> <a href="https://t.co/4TyoyfVrsY">pic.twitter.com/4TyoyfVrsY</a></p>&mdash; Rosalie Bruel (@RosalieBruel) <a href="https://twitter.com/RosalieBruel/status/969249591685246976?ref_src=twsrc%5Etfw">March 1, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 </div>
+</div>
 
-<div class="column-center">
 ## Life at the lab
 \n
+
+<div class="row">  
+<div class="column">
+
 __About paper (co)authorhip ✍️__
 <blockquote class="twitter-tweet" data-lang="fr"><p lang="en" dir="ltr">This morning during <a href="https://twitter.com/EllenMarsden2?ref_src=twsrc%5Etfw">@EllenMarsden2</a> and <a href="https://twitter.com/dvm_uvm?ref_src=twsrc%5Etfw">@dvm_uvm</a> lab meeting, we discussed authorship in scientific papers. There&#39;s a lot of unspoken codes that can seem a bit obscure when you enter academia at first. The following thread gathers things I remember from the discussion <a href="https://twitter.com/hashtag/phdchat?src=hash&amp;ref_src=twsrc%5Etfw">#phdchat</a> 1/</p>&mdash; Rosalie Bruel (@RosalieBruel) <a href="https://twitter.com/RosalieBruel/status/1108541911378419712?ref_src=twsrc%5Etfw">21 mars 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+</div>
+<div class="column">
 
 \n
 __Helping Ben Block (UVM-RESL Graduate student)__
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Went this morning with some folks from <a href="https://twitter.com/UVM_RSENR?ref_src=twsrc%5Etfw">@UVM_RSENR</a> to try out the ice jigger <a href="https://twitter.com/BentheEcologist?ref_src=twsrc%5Etfw">@BentheEcologist</a> will use to catch fish and study their diets over the winter.<br>Clever adaptations of the equipment and thick ice were involved. <a href="https://t.co/410wyi49ra">pic.twitter.com/410wyi49ra</a></p>&mdash; Rosalie Bruel (@RosalieBruel) <a href="https://twitter.com/RosalieBruel/status/1085668742271508487?ref_src=twsrc%5Etfw">January 16, 2019</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</div>
+<div class="column">
 
 \n
 __Helping Natalie Flores (UVM-RESL Graduate student)__
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">This morning, Kerry (an undergrad student) and I woke up early to go help <a href="https://twitter.com/NatalieMFlo?ref_src=twsrc%5Etfw">@NatalieMFlo</a> on the field, at Shelburne Pond, VT. <a href="https://t.co/YlK6ukOHkZ">pic.twitter.com/YlK6ukOHkZ</a></p>&mdash; Rosalie Bruel (@RosalieBruel) <a href="https://twitter.com/RosalieBruel/status/1038781427842789376?ref_src=twsrc%5Etfw">September 9, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 </div>
+</div>
 
-<div class="column-right"> 
 ## Public outreach
 \n
+
+<div class="row">  
+<div class="column">
+
 __Host for @LaBioauLabo during one week__
 <blockquote class="twitter-tweet"><p lang="fr" dir="ltr">[admin] Bonjour à tous ! Cette semaine c’est <a href="https://twitter.com/RosalieBruel?ref_src=twsrc%5Etfw">@RosalieBruel</a>, doctorante <a href="https://twitter.com/Inra_France?ref_src=twsrc%5Etfw">@Inra_France</a> <a href="https://twitter.com/Univ_Savoie?ref_src=twsrc%5Etfw">@Univ_Savoie</a> <a href="https://twitter.com/UmrCarrtel?ref_src=twsrc%5Etfw">@UmrCarrtel</a> qui sera avec nous. <br>Retrouvez sa bio sur le site<a href="https://t.co/qG5GkBcFqf">https://t.co/qG5GkBcFqf</a>… <a href="https://t.co/pfMXpAzRiK">pic.twitter.com/pfMXpAzRiK</a></p>&mdash; La Bio au Labo (@laBioauLabo) <a href="https://twitter.com/laBioauLabo/status/980716083685584896?ref_src=twsrc%5Etfw">April 2, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
