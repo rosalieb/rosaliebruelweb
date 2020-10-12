@@ -1,4 +1,5 @@
 ---
+title: "serac"
 output:
   html_document:
     df_print: paged
@@ -63,13 +64,14 @@ source("render_toc.R")
 ## serac: a R package for ShortlivEd RAdionuclide Chronology of recent sediment cores
 <div style="text-align:right">
 Rosalie Bruel  
-*April 5^th^, 2019*
+*October 11^th^, 2020*
 </div>
 
 __Content__
 ```{r toc, echo=FALSE} 
 render_toc("Tuto2_serac.Rmd")
 ```
+
 ```{r get data camp, message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
 library(tutorial)
 tutorial::go_interactive()
@@ -78,17 +80,33 @@ tutorial::go_interactive()
 ***  
 
 
-I had to produce some age-depth model plot for my PhD thesis. My colleagues working on dating would usually use a spreadsheet, and then a paying photo editor to edit their figures. I do not have the license for either of these, so of course I turned to R.
-My colleague Pierre Sabatier thought it was great and that we should turn the code in something even more automatic.
+Dating sediments is the first and critical step of any palaeo-study. Specifically, accurately dating the past century is crucial in palaeoclimate and palaeoecological studies because of the many socio-ecological changes that took place during that period. When annual varves are absent, short-lived radionuclides, based on the measurements of the activity of <sup>137</sup>Cs, <sup>241</sup>Am, <sup>210</sup>Pb, and <sup>226</sup>Ra, provide the most accurate and widely used age-depth model technique for the past century. 
 
-The steps are documented in our manuscript, but in this blogpost I'm including a way for you to test the potential of the function (go directly to the bottom of this page).
+The isotopes <sup>137</sup>Cs, <sup>241</sup>Am, <sup>210</sup>Pb, and <sup>226</sup>Ra are most commonly measured together using a non-destructive gamma-spectrometric analysis, allowing a direct determination of <sup>210</sup>Pb unsupported (<sup>210</sup>Pb<sub>ex</sub>) through the <sup>226</sup>Ra activity. Measurements are often stored in a spreadsheet, allowing computation of the age-depth model. Then, figures can be created and edited in a costly photo editor. 
+
+Using spreadsheets for storing and computing age-depth models raises the issue of versionning, and increases the risk for errors. Furthermore, most of the common programs (for spreadsheet or photo editing) need a license, that not everyone can afford (think about someone in-between two jobs, with no affiliations).
+
+Our package allows a systematic approach to producing chronologies for sediment cores using short-lived radionuclides (<sup>210</sup>Pb<sub>ex</sub>, <sup>137</sup>Cs, and <sup>241</sup>Am). The package is implemented in R (free and open source). Our code itself is open source. We included a number of arguments allowing beginners to tweak the code to edit the output (change in colors, font sizes, etc.), but more advanced users can fork our code from Github and edit it.
+
+Several <sup>210</sup>Pb<sub>ex</sub> models are implemented in our package: 
+<ul>
+  <li>constant initial concentration (CIC),</li>
+  <li>constant rate of supply (CRS),</li>
+  <li>constant flux constant sedimentation rate (CFCS),</li>
+  <li>piecewise versions of CRS and CFCS.</li>
+</ul>
+The steps are documented in our manuscript and in a vignettes you can access from R. In this blogpost I'm including a way for you to test the potential of the function (go directly to the bottom of this page).
 
 #### 1. Get your data ready
 The input format has to follow some codes, otherwise R will display an error message.
 
-We are sharing within the package some example data from Lake Allos (France). You can use those to follow along, or based the input format on them. The publication by Wilhelm *et al* (2012) is accessible <a href=https://www.sciencedirect.com/science/article/pii/S0033589412000294 target="_blank">here</a>. 
+We are sharing within the package some example data from Lake Allos (France). You can use those to follow along, or based the input format on them. The publication by Wilhelm *et al* (2012) is accessible <a href=https://www.sciencedirect.com/science/article/pii/S0033589412000294 target="_blank">here</a>. <br>
 
-<div style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px; font-size:80%; text-align:center;"><img src="images/Tuto2/1_Allos_Flickr_Wilhelm2012.png" alt="Lake Allos (source: Flickr)"  style="padding-bottom:0.5em;" align:"right"  />__left__: Lake Allos (Source: Flickr); __right__: Location, hydrological, geological and geomorphological characteristics of Lake Allos and its catchment (Fig. 1 in Wilhelm et al 2012)</div>
+
+<!-- <div style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px; font-size:80%; text-align:center;"><img src="images/Tuto2/1_Allos_Flickr_Wilhelm2012.png" alt="Lake Allos (source: Flickr)"  style="padding-bottom:0.5em;" align:"right"  />__left__: Lake Allos (Source: Flickr); __right__: Location, hydrological, geological and geomorphological characteristics of Lake Allos and its catchment (Fig. 1 in Wilhelm et al 2012)</div> -->
+
+![Lake Allos (source: Flickr)"  style="padding-bottom:0.5em;" align:"right"  />__left__: Lake Allos (Source: Flickr); __right__: Location, hydrological, geological and geomorphological characteristics of Lake Allos and its catchment (Fig. 1 in Wilhelm et al 2012)](`r paste0(getwd(),"/images/Tuto2/1_Allos_Flickr_Wilhelm2012.png")`)
+
 
 
 Your dataset should follow a similar format than the one below. Only 4 columns are in fact mandatory:
@@ -109,32 +127,34 @@ You can download *serac* from my GitHub repository using the packages devtools.
 
 <div class="Rchunk">
 library(devtools) </br>
-devtools::install_github("rosalieb/serac") </br> 
+devtools::install_github('rosalieb/serac',  build_vignettes = TRUE) </br> 
 library(serac) 
 </div>
-
 
 
 #### 3. Test your hypotheses
 At the minimum, your function will be:  
 <div class="Rchunk">
-serac(name="serac_example_ALO09P12",coring_yr=2009)
+serac(name='serac_example_ALO09P12',coring_yr=2009)
 </div>
 
 
 Several sedimentation hypotheses were tested, and this is what the author chose as the best model:
 
 <div class="Rchunk" >
-serac(name="ALO09P12", coring_yr=2009, model=c("CFCS"), plotphoto=FALSE, minphoto=c(0), maxphoto=c(210), plot_Pb=T, plot_Am=T, plot_Cs=T, Cher=c(30,40), Hemisphere=c("NH"), NWT=c(51,61), sedchange=c(75.5), plot_Pb_inst_deposit=T, inst_deposit=c(20,28,100,107,135,142,158,186), suppdescriptor=TRUE, descriptor_lab=c("Ca/Fe"), historic_d=c(20,28,100,107,135,142,158,186), historic_a=c(1994,1920,1886,1868), historic_n=c("sept1 994 flood","1920 flood","1886 flood","1868 flood ?"), min_yr=c(1750),dmax=c(180), plotpdf=TRUE,preview=F)  
+serac(name='ALO09P12', coring_yr=2009, model=c('CFCS'), plotphoto=FALSE, minphoto=c(0), maxphoto=c(210), plot_Pb=T, plot_Am=T, plot_Cs=T, Cher=c(30,40), Hemisphere=c('NH'), NWT=c(51,61), sedchange=c(75.5), plot_Pb_inst_deposit=T, inst_deposit=c(20,28,100,107,135,142,158,186), suppdescriptor=TRUE, descriptor_lab=c('Ca/Fe'), historic_d=c(20,28,100,107,135,142,158,186), historic_a=c(1994,1920,1886,1868), historic_n=c('sept 1994 flood','1920 flood','1886 flood','1868 flood ?'), min_yr=c(1750),dmax=c(180), plotpdf=TRUE,preview=F)  
 </div>
 
 
 Here the output plot:
 
-<img src="Cores/ALO09P12/ALO09P12.pdf" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center">
+<!-- <img src="Cores/ALO09P12/ALO09P12.pdf" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center"> -->
+
+![](`r paste0(getwd(),"/Cores/ALO09P12/ALO09P12.png")`)
+
 
 #### Have fun!
-In this tutorial, I'm using the console powered by DataCamp, so I'm just loading the script (December 2018 version). Using the GitHub version you'll get access to the latest bug fix (whatamIsaying, everything works perfectly fine obviously).
+In this tutorial, I'm using the console powered by DataCamp, so I'm just loading the script. It might be too slow for it to really work, so I would recommend you try it in a real R session, following the steps in the <a target="_blank" rel="noopener noreferrer" href="serac_vignette.html"> vignette </a>.
 
 ```{r load packages, echo=TRUE}
 mywd <- "https://raw.githubusercontent.com/rosalieb/rosaliebruelweb/master/Blog_articles/"
