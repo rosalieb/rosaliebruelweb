@@ -328,6 +328,10 @@ $(document).ready(function () {
 </div>
 
 
+&lt;!DOCTYPE html&gt;
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134870808-1"></script>
 <script>
@@ -345,26 +349,7 @@ $(document).ready(function () {
   text-align: left;
   margin-right: 5%;
 }
-.column-left{
-  float: left;
-  width: 30%;
-  vertical-align: top;
-  text-align: left;
-  margin-right: 5%;
-}
-.column-center{
-  display: inline-block;
-  width: 30%;
-  vertical-align: top;
-  text-align: left;
-  margin-right: 5%;
-}
-.column-right{
-  float: right;
-  width: 30%;
-  vertical-align: top;
-  text-align: left;
-}
+
 
 /* For portefolio */
 /* taken from https://www.w3schools.com/howto/howto_css_portfolio_gallery.asp */
@@ -384,11 +369,39 @@ body {
   margin: auto;
 }
 
-<!-- syntax padding: top right bottom left; -->
 h1 {
   font-size: 50px;
   word-break: break-all;
 }
+
+<!-- Collapsible buttons -->
+ /* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #eee;
+  color: #444; <!-- text color -->
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  color: #FFFFFF; 
+  background-color: #777; <!-- put back to #ccc if want simple color-->
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #97CA4A;
+} 
+
 
 .row {
   display: flex;
@@ -409,8 +422,8 @@ h1 {
 }
 
 
-/* Content */
-.content {
+/* Content normal */
+.content1 {
   background-color: white;
   padding: 10px;
   margin-top: 15px;
@@ -436,16 +449,23 @@ h1 {
 
 
 </style>
+</head>
 
 <div class="full-page">
+
 <div style="text-align:center">
+
+
 <hr />
-<h3 id="blog-post">Blog post</h3>
+<body>
+<div id="blog-post" class="section level3">
+<h3>Blog post</h3>
 <hr />
 </div>
+
 <div class="row">
 <div class="column">
-<div class="content">
+<div class="content1">
 <img src="images/blog/Tuto6_0_MainPhoto.png" alt="Main" style="width:100%">
 <h3>
 Less is more
@@ -458,7 +478,7 @@ Help identifing unnecessary loaded packages in a .R or .Rmd
 </div>
 </div>
 <div class="column">
-<div class="content">
+<div class="content1">
 <img src="images/blog/Tuto1_0_MainPhoto.png" alt="Main" style="width:100%">
 <h3>
 QGIS3 tutorial
@@ -471,7 +491,7 @@ Generate a bathymetry map on QGIS 3 from a XYZ csv file
 </div>
 </div>
 <div class="column">
-<div class="content">
+<div class="content1">
 <img src="images/blog/Tuto3_0_MainPhoto.png" alt="Main" style="width:100%">
 <h3>
 Maps in R
@@ -484,7 +504,7 @@ Saving here some useful codes to create maps in R [work in progress]
 </div>
 </div>
 <div class="column">
-<div class="content">
+<div class="content1">
 <img src="images/blog/Tuto4_0_MainPhoto.png" alt="Main" style="width:100%">
 <h3>
 Analyzing large ecological datasets with R
@@ -497,7 +517,7 @@ Random but hopefully useful bits of code to analyze large ecological datasets
 </div>
 </div>
 <div class="column">
-<div class="content">
+<div class="content1">
 <img src="images/blog/Resource1_0_MainPhoto.png" alt="Main" style="width:100%">
 <h3>
 Posters
@@ -518,9 +538,13 @@ Some posters presented at conferences or else
 <h3 id="on-twitter">On Twitter</h3>
 </div>
 <hr />
-<div id="science" class="section level2">
-<h2>Science</h2>
-
+<!-- First twitter section collapsible -->
+<h3>
+<button type="button" class="collapsible">
+Science
+</button>
+</h3>
+<div class="content">
 <div class="row">
 <div class="column">
 <strong>GLEON20, Student workshop, Rottnest Island, Western Australia</strong>
@@ -554,9 +578,13 @@ Our paper “Seeking alternative stable states in a deep lake” published in <a
 </div>
 </div>
 </div>
-<div id="life-at-the-lab" class="section level2">
-<h2>Life at the lab</h2>
-
+<!-- Second twitter section collapsible -->
+<h3>
+<button type="button" class="collapsible">
+Life at the lab
+</button>
+</h3>
+<div class="content">
 <div class="row">
 <div class="column">
 <strong>About paper (co)authorhip ✍️</strong>
@@ -590,9 +618,14 @@ This morning, Kerry (an undergrad student) and I woke up early to go help <a hre
 </div>
 </div>
 </div>
-<div id="public-outreach" class="section level2">
-<h2>Public outreach</h2>
-
+<!-- Third twitter section collapsible -->
+<h3>
+<button type="button" class="collapsible">
+Public outreach
+</button>
+</h3>
+<div class="content">
+<h2 id="section"></h2>
 <div class="row">
 <div class="column">
 <strong>Host for <span class="citation">@LaBioauLabo</span> during one week</strong>
@@ -604,6 +637,27 @@ This morning, Kerry (an undergrad student) and I woke up early to go help <a hre
 </blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
+</div>
+</p>
+</div>
+<script>
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.display === "block") {
+      content.style.display = "none";
+    } else {
+      content.style.display = "block";
+    }
+  });
+}
+</script>
+</body>
+</html>
 </div>
 
 
