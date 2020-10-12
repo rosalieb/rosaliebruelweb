@@ -3,7 +3,7 @@ output_dir: "."
 navbar:
   title: "Rosalie Bruel"
   left:
-    - text: "Research "
+    - text: "Research"
       href: research.html
     #- text: "Speaking"
     #  href: talks.html
