@@ -16,8 +16,13 @@ output: html_document
 </script>
 
 
-__Contact__
+______
 
-Email on UVM page https://www.uvm.edu/rsenr/profiles/rosalie-bruel 
+Contact me 
+<ul>
+  <li>by email: rosaliebruel [at] gmail [dot] com</li>
+  <li>on Twitter @RosalieBruel</li>
+  <li>through <a target="_blank" rel="noopener noreferrer" href="https://www.researchgate.net/profile/Rosalie_Bruel">ResearchGate</a></li>
+</ul>
 
-Site in construction.
+I am looking forward to connect!

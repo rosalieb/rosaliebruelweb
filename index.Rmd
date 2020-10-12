@@ -45,6 +45,7 @@ output: html_document
 </style>
 
 <div class="no-column">
+______ 
 
 <img src="images/pumpkinseed.JPG" style="width:25%; border:6px solid; margin-right: 20px; margin-bottom: 20px; margin-top: 20px" align="left">
 
@@ -54,6 +55,8 @@ My research initially focused on how heavily anthropogenised ecosystems respond 
 I graduated from the University of Grenoble (FR) in 2018 with a PhD in Ecology (supervisor: <a href="http://wp.unil.ch/lakes/marie-elodie-perga/" target="_blank">Dr. Marie-Elodie Perga</a>). I am currently a Postdoctoral Associate at the University of Vermont (US), working with <a href="https://www.uvm.edu/rsenr/profiles/ellen_marsden" target="_blank">Dr. Ellen Marsden</a> and <a href="http://stockwelllaboratory.com" target="_blank">Dr. Jason Stockwell</a>.
 
 My full CV is available <a href="files/CV_Rosalie_Bruel.pdf" target="_blank">here</a>.
+
+My ORCID profiles has the most up-to-date list of publications: <div itemscope itemtype="https://schema.org/Person"><a itemprop="sameAs" content="https://orcid.org/0000-0001-8351-7539" href="https://orcid.org/0000-0001-8351-7539" target="orcid.widget" rel="me noopener noreferrer" style="vertical-align:top;"><img src="https://orcid.org/sites/default/files/images/orcid_16x16.png" style="width:1em;margin-right:.5em;" alt="ORCID iD icon">https://orcid.org/0000-0001-8351-7539</a></div>
 
 \n
 
