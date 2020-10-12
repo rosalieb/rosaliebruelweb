@@ -62,6 +62,7 @@ body {
   margin: auto;
 }
 
+<!-- syntax padding: top right bottom left; -->
 h1 {
   font-size: 50px;
   word-break: break-all;
@@ -123,7 +124,6 @@ h1 {
 
 
 ***  
-***  
 
 
 ### Blog post  
@@ -176,14 +176,16 @@ h1 {
 \n
 
 
+***
 
-
+<br>
+<br>
 
 <div style="text-align:center">
 ### On Twitter
-***
-</div>
 
+</div>
+***
 ## Science
 \n
 
