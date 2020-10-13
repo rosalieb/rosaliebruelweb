@@ -4,6 +4,8 @@
 #date: "19/02/2019"
 output: html_document
 ---
+<html>
+<head>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134870808-1"></script>
@@ -94,7 +96,36 @@ h1 {
 }
 
 
+<!-- Accordion-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+
+
 </style>
+</head>
 
 \n
 
@@ -166,10 +197,11 @@ h1 {
 ### On Twitter
 
 </div>
-***
-## Science
-\n
 
+
+<button class="accordion">Science</button>
+<div class="panel">
+  <p>
 <div class="row">
 <div class="column">
 
@@ -193,10 +225,12 @@ __My first paper!__
 
 </div>
 </div>
+  </p>
+</div>
 
-## Life at the lab
-\n
-
+<button class="accordion">Life at the lab</button>
+<div class="panel">
+  <p>
 <div class="row">  
 <div class="column">
 
@@ -219,10 +253,12 @@ __Helping Natalie Flores (UVM-RESL Graduate student)__
 
 </div>
 </div>
+  </p>
+</div>
 
-## Public outreach
-\n
-
+<button class="accordion">Public outreach</button>
+<div class="panel">
+  <p>
 <div class="row">  
 <div class="column">
 
@@ -230,3 +266,25 @@ __Host for @LaBioauLabo during one week__
 <blockquote class="twitter-tweet"><p lang="fr" dir="ltr">[admin] Bonjour à tous ! Cette semaine c’est <a href="https://twitter.com/RosalieBruel?ref_src=twsrc%5Etfw">@RosalieBruel</a>, doctorante <a href="https://twitter.com/Inra_France?ref_src=twsrc%5Etfw">@Inra_France</a> <a href="https://twitter.com/Univ_Savoie?ref_src=twsrc%5Etfw">@Univ_Savoie</a> <a href="https://twitter.com/UmrCarrtel?ref_src=twsrc%5Etfw">@UmrCarrtel</a> qui sera avec nous. <br>Retrouvez sa bio sur le site<a href="https://t.co/qG5GkBcFqf">https://t.co/qG5GkBcFqf</a>… <a href="https://t.co/pfMXpAzRiK">pic.twitter.com/pfMXpAzRiK</a></p>&mdash; La Bio au Labo (@laBioauLabo) <a href="https://twitter.com/laBioauLabo/status/980716083685584896?ref_src=twsrc%5Etfw">April 2, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 </div>
+  </p>
+</div>
+
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+</body>
+</html>
