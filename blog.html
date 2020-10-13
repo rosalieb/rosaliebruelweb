@@ -328,8 +328,6 @@ $(document).ready(function () {
 </div>
 
 
-<html>
-<head>
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134870808-1"></script>
 <script>
@@ -340,49 +338,85 @@ $(document).ready(function () {
   gtag('config', 'UA-134870808-1');
 </script>
 <style>
-<p>.full-page{ float: left; width: 100%; vertical-align: top; text-align: left; margin-right: 5%; }</p>
-<p>/* For portefolio <em>/ /</em> taken from <a href="https://www.w3schools.com/howto/howto_css_portfolio_gallery.asp" class="uri">https://www.w3schools.com/howto/howto_css_portfolio_gallery.asp</a> <em>/ /</em> edit for gallery <a href="https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp" class="uri">https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp</a> <em>/ </em> { box-sizing: border-box; }</p>
-<p>body { background-color: #f1f1f1; padding: 20px; }</p>
-<p>/* Center website */ .main { max-width: 1000px; margin: auto; }</p>
-<!-- syntax padding: top right bottom left; -->
-<p>h1 { font-size: 50px; word-break: break-all; }</p>
-<p>.row { display: flex; flex-wrap: wrap; padding: 0 4px; }</p>
-<p>/* Create three equal columns that sits next to each other */ .column { flex: 33%; max-width: 33%; padding: 0 10px; }</p>
-<p>.column img { margin-top: 8px; vertical-align: middle; }</p>
-<p>/* Content */ .content { background-color: white; padding: 10px; margin-top: 15px; margin-bottom: 15px; }</p>
-<p>/* Responsive layout - makes a two column-layout instead of four columns */ <span class="citation">@media</span> screen and (max-width: 800px) { .column { flex: 45%; max-width: 50%; } }</p>
-<p>/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */ <span class="citation">@media</span> screen and (max-width: 600px) { .column { flex: 100%; max-width: 100%; } }</p>
-<!-- Accordion-->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.accordion {
-  background-color: #3E3F3A;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
+.full-page{
+  float: left;
   width: 100%;
-  border: none;
+  vertical-align: top;
   text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
+  margin-right: 5%;
 }
 
-.active, .accordion:hover {
-  background-color: #3E3F3A;
-  color: white;
+
+/* For portefolio */
+/* taken from https://www.w3schools.com/howto/howto_css_portfolio_gallery.asp */
+/* edit for gallery https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp */
+* {
+  box-sizing: border-box;
 }
 
-.panel {
-  padding: 0 18px;
-  display: none;
+body {
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+<!-- syntax padding: top right bottom left; -->
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 10px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+
+/* Content */
+.content {
   background-color: white;
-  overflow: hidden;
+  padding: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 45%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
 
 
 </style>
-</head>
 
 <div class="full-page">
 <div style="text-align:center">
@@ -464,11 +498,10 @@ Some posters presented at conferences or else
 <div style="text-align:center">
 <h3 id="on-twitter">On Twitter</h3>
 </div>
-<button class="accordion">
-Science
-</button>
-<div class="panel">
-<p>
+<hr />
+<div id="science" class="section level2">
+<h2>Science</h2>
+
 <div class="row">
 <div class="column">
 <strong>GLEON20, Student workshop, Rottnest Island, Western Australia</strong>
@@ -501,13 +534,10 @@ Our paper “Seeking alternative stable states in a deep lake” published in <a
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 </div>
-</p>
 </div>
-<button class="accordion">
-Life at the lab
-</button>
-<div class="panel">
-<p>
+<div id="life-at-the-lab" class="section level2">
+<h2>Life at the lab</h2>
+
 <div class="row">
 <div class="column">
 <strong>About paper (co)authorhip ✍️</strong>
@@ -540,13 +570,10 @@ This morning, Kerry (an undergrad student) and I woke up early to go help <a hre
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 </div>
-</p>
 </div>
-<button class="accordion">
-Public outreach
-</button>
-<div class="panel">
-<p>
+<div id="public-outreach" class="section level2">
+<h2>Public outreach</h2>
+
 <div class="row">
 <div class="column">
 <strong>Host for <span class="citation">@LaBioauLabo</span> during one week</strong>
@@ -558,26 +585,7 @@ Public outreach
 </blockquote>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
-</p>
 </div>
-<script>
-var acc = document.getElementsByClassName("accordion");
-var i;
-
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
-    }
-  });
-}
-</script>
-</body>
-</html>
 
 
 
