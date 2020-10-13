@@ -100,7 +100,7 @@ h1 {
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 .accordion {
-  background-color: #eee;
+  background-color: #3E3F3A;
   color: #444;
   cursor: pointer;
   padding: 18px;
@@ -113,7 +113,8 @@ h1 {
 }
 
 .active, .accordion:hover {
-  background-color: #ccc; 
+  background-color: #3E3F3A;
+  color: white;
 }
 
 .panel {
