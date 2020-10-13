@@ -4,10 +4,7 @@
 #date: "19/02/2019"
 output: html_document
 ---
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134870808-1"></script>
 <script>
@@ -46,39 +43,11 @@ body {
   margin: auto;
 }
 
+<!-- syntax padding: top right bottom left; -->
 h1 {
   font-size: 50px;
   word-break: break-all;
 }
-
-<!-- Collapsible buttons -->
- /* Style the button that is used to open and close the collapsible content */
-.collapsible {
-  background-color: #eee;
-  color: #444; <!-- text color -->
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-}
-
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .collapsible:hover {
-  color: #FFFFFF; 
-  background-color: #777; <!-- put back to #ccc if want simple color-->
-}
-
-/* Style the collapsible content. Note: hidden by default */
-.content {
-  padding: 0 18px;
-  /*display: none;*/
-  overflow: hidden;
-  background-color: #eee;
-} 
-
 
 .row {
   display: flex;
@@ -99,8 +68,8 @@ h1 {
 }
 
 
-/* Content normal */
-.content1 {
+/* Content */
+.content {
   background-color: white;
   padding: 10px;
   margin-top: 15px;
@@ -126,7 +95,6 @@ h1 {
 
 
 </style>
-</head>
 
 \n
 
@@ -139,8 +107,6 @@ h1 {
 ***  
 
 
-<body>
-
 ### Blog post  
 ***
 </div>
@@ -150,35 +116,35 @@ h1 {
 
 <div class="row">
 <div class="column">
-  <div class="content1">
+  <div class="content">
   <img src="images/blog/Tuto6_0_MainPhoto.png" alt="Main" style="width:100%">
   <h3>Less is more</h3>
   <a href="Blog_articles/Tuto6_less_is_more.html"><p>Help identifing unnecessary loaded packages in a .R or .Rmd</p></a>
   </div>
 </div> 
 <div class="column">
-  <div class="content1">
+  <div class="content">
   <img src="images/blog/Tuto1_0_MainPhoto.png" alt="Main" style="width:100%">
   <h3>QGIS3 tutorial</h3>
   <a href="Blog_articles/Tuto1_bathymetry_QGIS3.html"><p>Generate a bathymetry map on QGIS 3 from a XYZ csv file</p></a>
   </div>
 </div> 
 <div class="column">
-  <div class="content1">
+  <div class="content">
   <img src="images/blog/Tuto3_0_MainPhoto.png" alt="Main" style="width:100%">
   <h3>Maps in R</h3>
   <a href="Blog_articles/Tuto3_bathymetry_R.html"><p>Saving here some useful codes to create maps in R [work in progress]</p></a>
   </div>
 </div> 
 <div class="column">
-  <div class="content1">
+  <div class="content">
   <img src="images/blog/Tuto4_0_MainPhoto.png" alt="Main" style="width:100%">
   <h3>Analyzing large ecological datasets with R</h3>
   <a href="Blog_articles/Tuto4_useful_code_large_databases_R.html"><p>Random but hopefully useful bits of code to analyze large ecological datasets</p></a>
   </div>
 </div> 
 <div class="column">
-  <div class="content1">
+  <div class="content">
   <img src="images/blog/Resource1_0_MainPhoto.png" alt="Main" style="width:100%">
   <h3>Posters</h3>
   <a href="Blog_articles/Resource0_homepage.html"><p>Some posters presented at conferences or else</p></a>
@@ -198,15 +164,14 @@ h1 {
 
 <div style="text-align:center">
 ### On Twitter
+
 </div>
 ***
+## Science
+\n
 
-<!-- First twitter section collapsible -->
-
-<h3><button type="button" class="collapsible">Science</button></h3>
-<div class="content">
-  <div class="row">
-  <div class="column">
+<div class="row">
+<div class="column">
 
 
 __GLEON20, Student workshop, Rottnest Island, Western Australia__
@@ -229,17 +194,7 @@ __My first paper!__
 </div>
 </div>
 
-
-</div> 
-
-
-
-<!-- Second twitter section collapsible -->
-<h3><button type="button" class="collapsible"> Life at the lab </button></h3>
-<div class="content">
-
-
-
+## Life at the lab
 \n
 
 <div class="row">  
@@ -265,17 +220,7 @@ __Helping Natalie Flores (UVM-RESL Graduate student)__
 </div>
 </div>
 
-</div> 
-
-
-
-
-
-<!-- Third twitter section collapsible -->
-<h3><button type="button" class="collapsible"> Public outreach </button></h3>
-<div class="content">
-
-## 
+## Public outreach
 \n
 
 <div class="row">  
@@ -285,26 +230,3 @@ __Host for @LaBioauLabo during one week__
 <blockquote class="twitter-tweet"><p lang="fr" dir="ltr">[admin] Bonjour à tous ! Cette semaine c’est <a href="https://twitter.com/RosalieBruel?ref_src=twsrc%5Etfw">@RosalieBruel</a>, doctorante <a href="https://twitter.com/Inra_France?ref_src=twsrc%5Etfw">@Inra_France</a> <a href="https://twitter.com/Univ_Savoie?ref_src=twsrc%5Etfw">@Univ_Savoie</a> <a href="https://twitter.com/UmrCarrtel?ref_src=twsrc%5Etfw">@UmrCarrtel</a> qui sera avec nous. <br>Retrouvez sa bio sur le site<a href="https://t.co/qG5GkBcFqf">https://t.co/qG5GkBcFqf</a>… <a href="https://t.co/pfMXpAzRiK">pic.twitter.com/pfMXpAzRiK</a></p>&mdash; La Bio au Labo (@laBioauLabo) <a href="https://twitter.com/laBioauLabo/status/980716083685584896?ref_src=twsrc%5Etfw">April 2, 2018</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 </div>
-</div>
-</div> 
-
-
-<script>
-var coll = document.getElementsByClassName("collapsible");
-var i;
-
-for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
-}
-</script>
-
-</body>
-</html>
