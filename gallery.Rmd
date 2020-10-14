@@ -7,7 +7,6 @@ output: html_document
 
 \n
 
-<!DOCTYPE html>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -136,7 +135,14 @@ img {vertical-align: middle;}
 </head>
 
 <body>
-<h2>A few snapshots</h2>
+
+<div style="text-align:center">
+
+***  
+
+### A few snapshots
+***
+</div>
 
 <div class="container">
 <div class="mySlides ">
