@@ -64,7 +64,7 @@ source("render_toc.R")
 ## serac: a R package for ShortlivEd RAdionuclide Chronology of recent sediment cores
 <div style="text-align:right">
 Rosalie Bruel  
-*October 11^th^, 2020*
+*October 25^th^, 2020*
 </div>
 
 __Content__
@@ -100,7 +100,7 @@ The steps are documented in our manuscript and in a vignettes you can access fro
 #### 1. Get your data ready
 The input format has to follow some codes, otherwise R will display an error message.
 
-We are sharing within the package some example data from Lake Allos (France). You can use those to follow along, or based the input format on them. The publication by Wilhelm *et al* (2012) is accessible <a href=https://www.sciencedirect.com/science/article/pii/S0033589412000294 target="_blank">here</a>. <br>
+We are sharing within the package some example data from Lake Allos (France). You can use those to follow along, or based the input format on them. The publication by Wilhelm *et al* (2012) is accessible <a target="_blank" rel="noopener noreferrer" href=https://www.sciencedirect.com/science/article/pii/S0033589412000294>here</a>. <br>
 
 
 <!-- <div style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px; font-size:80%; text-align:center;"><img src="images/Tuto2/1_Allos_Flickr_Wilhelm2012.png" alt="Lake Allos (source: Flickr)"  style="padding-bottom:0.5em;" align:"right"  />__left__: Lake Allos (Source: Flickr); __right__: Location, hydrological, geological and geomorphological characteristics of Lake Allos and its catchment (Fig. 1 in Wilhelm et al 2012)</div> -->
@@ -126,7 +126,7 @@ alo
 You can download *serac* from my GitHub repository using the packages devtools.  
 
 <div class="Rchunk">
-library(devtools) </br>
+install.packages(devtools) </br>
 devtools::install_github('rosalieb/serac',  build_vignettes = TRUE) </br> 
 library(serac) 
 </div>
@@ -153,10 +153,20 @@ Here the output plot:
 ![](`r paste0(getwd(),"/Cores/ALO09P12/ALO09P12.png")`)
 
 
-#### Have fun!
-In this tutorial, I'm using the console powered by DataCamp, so I'm just loading the script. It might be too slow for it to really work, so I would recommend you try it in a real R session, following the steps in the <a target="_blank" rel="noopener noreferrer" href="serac_vignette.html"> vignette </a>.
+Serac allows to test several type of sedimentation hypotheses: 
+<ul>
+<li>constant initial concentration (CIC),</li> 
+<li>constant rate of supply (CRS), </li> 
+<li>constant flux constant sedimentation rate (CFCS),</li>
+</ul>
+as well as  piecewise versions of CRS and CFCS.
 
-```{r load packages, echo=TRUE}
+Refer to the example in our paper to see the extent of model hypotheses you can test. And please, let us know if you see any issues with the package by sending us an email!
+
+<!--
+In this tutorial, I'm using the console powered by DataCamp, so I'm just loading the script. It might be too slow for it to really work, so I would recommend you try it in a real R session, following the steps in the <a target="_blank" rel="noopener noreferrer" href="serac_vignette.html"> vignette </a>. -->
+
+```{r load packages, eval=FALSE, include=FALSE}
 mywd <- "https://raw.githubusercontent.com/rosalieb/rosaliebruelweb/master/Blog_articles/"
 pkgTest <- function(x)
 {
@@ -205,9 +215,13 @@ list.files("Cores")
 ```
 
 
-#### Source  
+#### 4. Citation and references  
 
-Table of content created using <a href=https://www.garrickadenbuie.com/blog/add-a-generated-table-of-contents-anywhere-in-rmarkdown/ target="_blank">this method</a>.
+To cite our method, please use: Bruel, R., Sabatier, P., 2020. serac: A R package for ShortlivEd RAdionuclide chronology of recent sediment cores. Journal of Environmental Radioactivity 225, 106449. <a href="https://doi.org/10.1016/j.jenvrad.2020.106449" target="_blank"> https://doi.org/10.1016/j.jenvrad.2020.106449</a>
+
+Refer to the package's <a href="Tuto2_vignette.html" target="_blank">vignette</a> for more details. 
+
+_Table of content created using <a href="https://www.garrickadenbuie.com/blog/add-a-generated-table-of-contents-anywhere-in-rmarkdown/" target="_blank">this method</a>._
 
 
 </div>

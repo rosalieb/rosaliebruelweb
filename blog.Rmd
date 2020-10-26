@@ -117,6 +117,13 @@ h1 {
 <div class="row">
 <div class="column">
   <div class="content">
+  <img src="images/blog/Tuto2_0_MainPhoto.jpg" alt="Main" style="width:100%">
+  <h3> _serac_ </h3>
+  <a href="Blog_articles/Tuto2_serac.html"><p>A R package for ShortlivEd RAdionuclide chronology of recent sediment cores</p></a>
+  </div>
+</div> 
+<div class="column">
+  <div class="content">
   <img src="images/blog/Tuto6_0_MainPhoto.png" alt="Main" style="width:100%">
   <h3>Less is more</h3>
   <a href="Blog_articles/Tuto6_less_is_more.html"><p>Help identifing unnecessary loaded packages in a .R or .Rmd</p></a>
