@@ -34,14 +34,14 @@ In 2011, I took a course in Marine Biology at Napier University (Edinburgh), whe
 
 
 <ol reversed>
-<li><b>Bruel, R.</b>, White, E. R., 2020. Sampling requirements and approaches to detect ecosystem shifts. _Ecological Indicators_ (manuscript in production) <a href="https://doi.org/10.1101/2020.04.07.030643">Preprint on bioRxiv in the meantime</a></li>
+<li><b>Bruel, R.</b>, White, E. R., 2020. Sampling requirements and approaches to detect ecosystem shifts. _Ecological Indicators_. <a href="https://authors.elsevier.com/sd/article/S1470-160X(20)31035-9">DOI: 10.1016/j.ecolind.2020.107096</a></li>
 
-<li><b>Bruel, R.</b>, Sabatier, P., 2020. serac: a R package for ShortlivEd RAdionuclide Chronology of recent sediment cores. _Journal of Environmental Radioactivity_ 225. <a href="https://authors.elsevier.com/a/1bytM,62%7EnVKS6">DOI: 10.1016/j.jenvrad.2020.106449</a></li>
+<li><b>Bruel, R.</b>, Sabatier, P., 2020. serac: a R package for ShortlivEd RAdionuclide Chronology of recent sediment cores. _Journal of Environmental Radioactivity_ <b>225</b>. <a href="https://authors.elsevier.com/a/1bytM,62%7EnVKS6">DOI: 10.1016/j.jenvrad.2020.106449</a></li>
 
-<li>Perga, M.-E., <b>Bruel, R.</b>, Rodriguez, L., Guénand, Y., Bouffard, D., 2018. Storm impacts on alpine lakes: antecedent weather conditions matter more than the event intensity. _Global Change Biology_ <a href="https://doi.org/10.1111/gcb.14384"> DOI: 10.1111/gcb.14384</a>
+<li>Perga, M.-E., <b>Bruel, R.</b>, Rodriguez, L., Guénand, Y., Bouffard, D., 2018. Storm impacts on alpine lakes: antecedent weather conditions matter more than the event intensity. _Global Change Biology_ <b>24*(10)*</b>: 5004-5016. <a href="https://doi.org/10.1111/gcb.14384"> DOI: 10.1111/gcb.14384</a>
 &nbsp;&nbsp;&nbsp;&nbsp;</li>
 
-<li><b>Bruel, R.</b>, Marchetto, A., Bernard, A., Lami, A., Sabatier, P., Frossard, V., Perga, M.-E., 2018. Seeking alternative stable states in a deep lake. _Freshwater Biology_. <a href="https://doi.org/10.1111/fwb.13093">DOI: 10.1111/fwb.13093 </a><br></li>
+<li><b>Bruel, R.</b>, Marchetto, A., Bernard, A., Lami, A., Sabatier, P., Frossard, V., Perga, M.-E., 2018. Seeking alternative stable states in a deep lake. _Freshwater Biology_ <b>63*(6)*</b>: 553-568. <a href="https://doi.org/10.1111/fwb.13093">DOI: 10.1111/fwb.13093 </a><br></li>
 </ol>
 
 
