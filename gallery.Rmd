@@ -136,13 +136,11 @@ img {vertical-align: middle;}
 
 <body>
 
-<div style="text-align:center">
 
 ***  
 
 ### A few snapshots
 ***
-</div>
 
 <div class="container">
 <div class="mySlides ">

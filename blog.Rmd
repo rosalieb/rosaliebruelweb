@@ -101,7 +101,7 @@ h1 {
 <div class="full-page">
 \n
 
-<div style="text-align:center">
+
 
 
 ***  
@@ -109,7 +109,7 @@ h1 {
 
 ### Blog post  
 ***
-</div>
+
 
 \n
 

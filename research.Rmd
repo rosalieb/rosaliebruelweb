@@ -26,7 +26,11 @@ p.big {
 </style>
 
 
-______
+***  
+
+
+### Research
+***
 <p class="big">
 In 2011, I took a course in Marine Biology at Napier University (Edinburgh), where we learned about deep seas organisms (among other things). I found them fascinating (who wouldn't...). This is partly what made me choose my Master in Aquatic Ecology. During my first internship, I ended up working relatively far from the deap seas, as I worked on clams in a bay (Arcachon Bay, 10 m bsl). But things got out of control when I studied seasonal dynamics of high-altitude lake (Lake Anterne, 2,063 m asl) during my 2nd year. Of course, these internships were fascinating. While I will forever struggle with the gulf between everything I'd like to study and the average human life expectancy, my research interests now revolve around how systems are responding to local and global perturbations. This general thematic gets my interest because there's opportunity for both fundamental and applied research.
 
