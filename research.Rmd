@@ -40,7 +40,7 @@ In 2011, I took a course in Marine Biology at Napier University (Edinburgh), whe
 <ol reversed>
 <li><b>Bruel, R.</b>, Girardclos, S., Marchetto, A., Kremer, K., Crouzet, C., Reyss, J.-L., Sabatier, P., Perga, M.-E., 2021. Reframing Lake Geneva ecological trajectory in a context of multiple but asynchronous pressures. _Journal of Paleolimnology_. <b>65*(3)*</b>: 353-368 <a href="rdcu.be/cekeX ">DOI: 10.1007/s10933-021-00176-y</a></li>
 
-<li><b>Bruel, R.</b>, White, E. R., 2020. Sampling requirements and approaches to detect ecosystem shifts. _Ecological Indicators_. <a href="https://authors.elsevier.com/sd/article/S1470-160X(20)31035-9">DOI: 10.1016/j.ecolind.2020.107096</a></li>
+<li><b>Bruel, R.</b>, White, E. R., 2021. Sampling requirements and approaches to detect ecosystem shifts. _Ecological Indicators_. <b>121</b>: 107096 <a href="https://authors.elsevier.com/sd/article/S1470-160X(20)31035-9">DOI: 10.1016/j.ecolind.2020.107096</a></li>
 
 <li><b>Bruel, R.</b>, Sabatier, P., 2020. serac: a R package for ShortlivEd RAdionuclide Chronology of recent sediment cores. _Journal of Environmental Radioactivity_ <b>225</b>. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0265931X20306950">DOI: 10.1016/j.jenvrad.2020.106449</a></li>
 
