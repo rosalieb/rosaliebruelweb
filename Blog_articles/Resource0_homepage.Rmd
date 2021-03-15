@@ -114,16 +114,16 @@ Thonon-les-bains, France <br>
 
 <h2 id="Doctoriales2016">Doctoriales 2016</h2>  
 Autrans, France <br>
-<img src="images/Posters/Doctoriales2016_Bruel.pdf" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" >  
-<a href="images/Posters/Doctoriales2016_Bruel.pdf" target="_blank"> Download the poster</a>  
+<img src="images/Posters/Doctoriales2016_Bruel.pdf" stnge="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" >  
+<a href="images/Posters/Doctoriales2016_Bruel.pdf" tanget="_blank"> Download the poster</a>  
 
 
 ***
 
 <h2 id="Pages2018">PAGES 2018</h2>  
 Zaragoza, Spain <br>
-<img src="images/Posters/PAGES2017_BRUEL_poster_vf.pdf" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" >  
-<a href="images/Posters/PAGES2017_BRUEL_poster_vf.pdf" target="_blank"> Download the poster</a>  
+<img src="images/Posters/PAGES2017_BRUEL_poster_vf.pdf" stnge="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" >  
+<a href="images/Posters/PAGES2017_BRUEL_poster_vf.pdf" tanget="_blank"> Download the poster</a>  
 
 
 </div>
