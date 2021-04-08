@@ -1,5 +1,5 @@
 ---
-# title: "index"
+title: "Rosalie Bruel"
 # author: "Rosalie Bruel"
 # date: "19/02/2019"
 output: html_document
@@ -8,8 +8,6 @@ output: html_document
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134870808-1"></script>
 <script>
- document.title = "Rosalie Bruel";
-
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
@@ -46,11 +44,7 @@ output: html_document
 }
 </style>
 
-<html>
-    <head>
-        <title>Rosalie Bruel</title>
-    </head>
-</html>
+
 
 <div class="no-column">
 ______ 

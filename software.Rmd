@@ -1,5 +1,5 @@
 ---
-#title: "software"
+title: "Rosalie Bruel > Coding/programming"
 #author: "Rosalie Bruel"
 #date: "19/02/2019"
 output: html_document
