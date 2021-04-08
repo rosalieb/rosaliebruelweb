@@ -1,5 +1,5 @@
 ---
-#title: "blog"
+title: "Rosalie Bruel > Blog/Tutorials"
 #author: "Rosalie Bruel"
 #date: "19/02/2019"
 output: html_document
@@ -16,6 +16,13 @@ output: html_document
 </script>
 
 <style>
+
+<!-- Have the title display in the tab name, but not on the html page  -->
+.author,.title{
+    display: none;
+}
+
+
 .full-page{
   float: left;
   width: 100%;
@@ -93,13 +100,11 @@ h1 {
   }
 }
 
-
 </style>
 
-\n
+
 
 <div class="full-page">
-\n
 
 
 

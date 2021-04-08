@@ -1,5 +1,5 @@
 ---
-# title: "Rosalie Bruel > Coding/programming"
+title: "Rosalie Bruel > Coding/programming"
 #author: "Rosalie Bruel"
 #date: "19/02/2019"
 output: html_document
@@ -13,7 +13,16 @@ output: html_document
   gtag('js', new Date());
 
   gtag('config', 'UA-134870808-1');
+}
 </script>
+
+<!-- Have the title display in the tab name, but not on the html page  -->
+<style>
+.title{
+    display: none;
+}
+    
+</style>
 
 
 ***  

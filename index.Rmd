@@ -42,8 +42,12 @@ output: html_document
 .row-bottom{
 
 }
-</style>
 
+<!-- Have the title display in the tab name, but not on the html page  -->
+.title{
+display: none;
+}
+</style>
 
 
 <div class="no-column">
