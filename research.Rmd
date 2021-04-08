@@ -23,6 +23,19 @@ p.small {
 p.big {
   line-height: 1.8;
 }
+
+p {
+  text-indent: 1.5em;
+}
+
+.first {
+  text-indent: 2em;
+}
+
+.second {
+  text-indent: -2.5em;
+}
+
 </style>
 
 
@@ -31,19 +44,34 @@ p.big {
 
 ### Research
 ***
+<!-- 
 <p class="big">
-In 2011, I took a course in Marine Biology at Napier University (Edinburgh), where we learned about deep seas organisms (among other things). I found them fascinating (who wouldn't...). This is partly what made me choose my Master in Aquatic Ecology. During my first internship, I ended up working relatively far from the deap seas, as I worked on clams in a bay (Arcachon Bay, 10 m bsl). But things got out of control when I studied seasonal dynamics of high-altitude lake (Lake Anterne, 2,063 m asl) during my 2nd year. Of course, these internships were fascinating. While I will forever struggle with the gulf between everything I'd like to study and the average human life expectancy, my research interests now revolve around how systems are responding to local and global perturbations. This general thematic gets my interest because there's opportunity for both fundamental and applied research.
+In 2011, I took a course in Marine Biology at Napier University (Edinburgh, Scotland), where we learned about deep seas organisms (among other things). I found them fascinating (who wouldn't...). This is partly what made me choose my Master in Aquatic Ecology. During my first internship, I ended up working relatively far from the deap seas, as I worked on clams in a bay (Arcachon Bay, 10 m bsl). But things got out of control when I studied seasonal dynamics of high-altitude lake (Lake Anterne, 2,063 m asl) during my 2nd year. Of course, these internships were fascinating. While I will forever struggle with the gulf between everything I'd like to study and the average human life expectancy, my research interests now revolve around how systems are responding to local and global perturbations. This general thematic gets my interest because of the opportunities for both fundamental and applied research. -->
+My research interests revolve around how aquatic ecosystems are responding to local and global perturbations. 
+I work with a quantitative approach to identify and characterize major environmental drivers, to help managers take timely and appropriate management decisions. I work with a pluridisciplinary approach on lowland and high-altitude lakes, at different spatial (local, regional, global) and temporal (millennial to sub-hourly resolution) scales, and on different responses (physical, chemical, biological).
+
+<br>
 
 <head><b>Publications</b> (<a href="https://orcid.org/0000-0001-8351-7539" target="_blank">ORCID profile</a> for the most up-to-date list):</head>
 
 
 <ol reversed>
+
+  
+<br>
+<p class="second"><u>2021</u></p>
+<li>Rantala, M. V., <b>Bruel, R.</b>, Marchetto, A., Lami, A., Spangenberg, J., Perga, M.-E., 2021. Heterogeneous responses of lake CO2 to nutrients and warming in perialpine lakes imprinted in subfossil cladoceran &#948;13C values. _Science of the Total Environment_ (in press).</li>
+
 <li><b>Bruel, R.</b>, Girardclos, S., Marchetto, A., Kremer, K., Crouzet, C., Reyss, J.-L., Sabatier, P., Perga, M.-E., 2021. Reframing Lake Geneva ecological trajectory in a context of multiple but asynchronous pressures. _Journal of Paleolimnology_. <b>65*(3)*</b>: 353-368 <a href="rdcu.be/cekeX ">DOI: 10.1007/s10933-021-00176-y</a></li>
 
 <li><b>Bruel, R.</b>, White, E. R., 2021. Sampling requirements and approaches to detect ecosystem shifts. _Ecological Indicators_. <b>121</b>: 107096 <a href="https://authors.elsevier.com/sd/article/S1470-160X(20)31035-9">DOI: 10.1016/j.ecolind.2020.107096</a></li>
 
+<br>
+<p class="second"><u>2020</u></p>
 <li><b>Bruel, R.</b>, Sabatier, P., 2020. serac: a R package for ShortlivEd RAdionuclide Chronology of recent sediment cores. _Journal of Environmental Radioactivity_ <b>225</b>. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0265931X20306950">DOI: 10.1016/j.jenvrad.2020.106449</a></li>
 
+<br>
+<p class="second"><u>2018</u></p>
 <li>Perga, M.-E., <b>Bruel, R.</b>, Rodriguez, L., Guénand, Y., Bouffard, D., 2018. Storm impacts on alpine lakes: antecedent weather conditions matter more than the event intensity. _Global Change Biology_ <b>24*(10)*</b>: 5004-5016. <a href="https://doi.org/10.1111/gcb.14384"> DOI: 10.1111/gcb.14384</a>
 &nbsp;&nbsp;&nbsp;&nbsp;</li>
 
@@ -51,7 +79,7 @@ In 2011, I took a course in Marine Biology at Napier University (Edinburgh), whe
 </ol>
 
 
-
+<br>
 <head><b>Preprints:</b></head>
 &nbsp;&nbsp;&nbsp;&nbsp;
 <ol reversed>
@@ -62,8 +90,8 @@ In 2011, I took a course in Marine Biology at Napier University (Edinburgh), whe
 
 
 
-My trajectory over the years in a nutshell ↓
+<!-- My trajectory over the years in a nutshell ↓ -->
 
-<img src="images/research_interests.png" style="width:80%; margin-left: 10%; margin-right: 10%; margin-bottom: 20px; margin-top: 20px" align="center">
+<!-- <img src="images/research_interests.png" style="width:80%; margin-left: 10%; margin-right: 10%; margin-bottom: 20px; margin-top: 20px" align="center"> -->
 
-</p>
+<!-- </p> -->
