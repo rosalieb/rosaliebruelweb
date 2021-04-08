@@ -1,5 +1,5 @@
 ---
-#title: "gallery"
+#title: "Rosalie Bruel > Gallery"
 #author: "Rosalie Bruel"
 #date: "19/02/2019"
 output: html_document
@@ -11,6 +11,8 @@ output: html_document
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+
+
 * {box-sizing: border-box;}
 .mySlides {display: none;}
 img {vertical-align: middle;}
@@ -132,6 +134,9 @@ img {vertical-align: middle;}
 /* Responsive layout - makes a two column-layout instead of four columns */
 
 </style>
+
+
+
 </head>
 
 <body>

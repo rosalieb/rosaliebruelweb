@@ -18,6 +18,7 @@ output: html_document
 
 <!-- Have the title display in the tab name, but not on the html page  -->
 <style>
+
 .title{
     display: none;
 }
