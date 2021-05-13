@@ -19,7 +19,7 @@ output: html_document
 .no-column{
   float: left;
   width: 100%;
-  text-align: left;
+  text-align: left; 
 }
 .column-left{
   float: left;
@@ -48,6 +48,7 @@ output: html_document
 display: none;
 }
 </style>
+
 
 
 <div class="no-column">

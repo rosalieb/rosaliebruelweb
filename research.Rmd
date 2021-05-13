@@ -64,6 +64,9 @@ I work with a quantitative approach to identify and characterize major environme
   
 <br>
 <p class="second"><u>2021</u></p>
+
+<li><b>Bruel, R.</b>, Marsden, J. E., Pientka, B., Staats, N., Mihuc, T., Stockwell, J. D., 2020. Rainbow smelt population responses to species invasions and change in environmental condition. _Journal of Great Lakes Research_ <a href="https://www.sciencedirect.com/science/article/pii/S0380133021000927">DOI: 10.1016/j.jglr.2021.04.008</a></li>
+
 <li>Rantala, M. V., <b>Bruel, R.</b>, Marchetto, A., Lami, A., Spangenberg, J., Perga, M.-E., 2021. Heterogeneous responses of lake CO2 to nutrients and warming in perialpine lakes imprinted in subfossil cladoceran &#948;13C values. _Science of the Total Environment_ (in press).</li>
 
 <li><b>Bruel, R.</b>, Girardclos, S., Marchetto, A., Kremer, K., Crouzet, C., Reyss, J.-L., Sabatier, P., Perga, M.-E., 2021. Reframing Lake Geneva ecological trajectory in a context of multiple but asynchronous pressures. _Journal of Paleolimnology_. <b>65*(3)*</b>: 353-368 <a href="rdcu.be/cekeX ">DOI: 10.1007/s10933-021-00176-y</a></li>
@@ -84,11 +87,16 @@ I work with a quantitative approach to identify and characterize major environme
 
 
 <br>
-<head><b>Preprints:</b></head>
+<head><b>Preprints: (*published)</b></head>
 &nbsp;&nbsp;&nbsp;&nbsp;
 <ol reversed>
-<li><b>Bruel, R.</b>, Marsden, J. E., Pientka, B., Staats, N., Mihuc, T., Stockwell, J. D., 2020. Rainbow smelt population responses to species invasions and change in environmental condition. bioRxiv. <a href="https://www.biorxiv.org/content/10.1101/2020.10.08.332205v1">DOI: 10.1101/2020.10.08.332205</a></li>
+<li><b>*Bruel, R.</b>, Marsden, J. E., Pientka, B., Staats, N., Mihuc, T., Stockwell, J. D., 2020. Rainbow smelt population responses to species invasions and change in environmental condition. _bioRxiv_. <a href="https://www.biorxiv.org/content/10.1101/2020.10.08.332205v1">DOI: 10.1101/2020.10.08.332205</a></li>
 
+<li><b>*Bruel, R.</b>, White, E. R., 2020. Sampling requirements and approaches to detect ecosystem shifts. _bioRxiv_. <a href="https://www.biorxiv.org/content/10.1101/2020.04.07.030643v1">DOI: 10.1101/2020.04.07.030643 </a></li>
+
+<li><b>*Bruel, R.</b>, Sabatier, P., 2020. serac: a R package for ShortlivEd RAdionuclide Chronology of recent sediment cores. _earthaRxiv_. <a href="https://eartharxiv.org/repository/view/461/">DOI: 10.31223/osf.io/f4yma</a></li>
+
+<li><b>*Bruel, R.</b>, Girardclos, S., Marchetto, A., Kremer, K., Crouzet, C., Reyss, J.-L., Sabatier, P., Perga, M.-E., 2019. Reframing Lake Geneva ecological trajectory in a context of multiple but asynchronous stressors _earthaRxiv_. <a href="https://eartharxiv.org/repository/view/510/ ">DOI: 10.31223/osf.io/j8up3</a></li>
 
 <br>
 
