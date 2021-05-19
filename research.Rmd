@@ -56,7 +56,7 @@ I work with a quantitative approach to identify and characterize major environme
 
 <br>
 
-<head><b>Publications</b> (<a href="https://orcid.org/0000-0001-8351-7539" target="_blank">ORCID profile</a> for the most up-to-date list):</head>
+<head><b>Publications</b> (last updated on `r format(Sys.Date(), format = "%B %d, %Y")`, see also my <a href="https://orcid.org/0000-0001-8351-7539" target="_blank">ORCID profile</a>):</head>
 
 
 <ol reversed>
