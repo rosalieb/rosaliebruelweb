@@ -65,7 +65,9 @@ I work with a quantitative approach to identify and characterize major environme
 <br>
 <p class="second"><u>2021</u></p>
 
-<li><b>Bruel, R.</b>, Marsden, J. E., Pientka, B., Staats, N., Mihuc, T., Stockwell, J. D., 2021. Rainbow smelt population responses to species invasions and change in environmental condition. _Journal of Great Lakes Research_ <a href="https://www.sciencedirect.com/science/article/pii/S0380133021000927">DOI: 10.1016/j.jglr.2021.04.008</a></li>
+<li>Monchamp, M.-E., <b>Bruel, R.</b>, Frossard, V., McGowan, S., Lavrieux, M., Muschick, M., Perga, M.-E., Dubois, N., 2021. Paleoecological evidence for a multi-trophic regime shift in a perialpine lake (Lake Joux, Switzerland). _Anthropocene_ <a href="https://www.sciencedirect.com/science/article/pii/S2213305421000242">DOI: 10.1016/j.ancene.2021.100301</a></li>
+
+<li><b>Bruel, R.</b>, Marsden, J. E., Pientka, B., Staats, N., Mihuc, T., Stockwell, J. D., 2021. Rainbow smelt population responses to species invasions and change in environmental condition. _Journal of Great Lakes Research_ <b>47*(4)*</b>: 1171-1181. <a href="https://www.sciencedirect.com/science/article/pii/S0380133021000927">DOI: 10.1016/j.jglr.2021.04.008</a></li>
 
 <li>Rantala, M. V., <b>Bruel, R.</b>, Marchetto, A., Lami, A., Spangenberg, J., Perga, M.-E., 2021. Heterogeneous responses of lake CO2 to nutrients and warming in perialpine lakes imprinted in subfossil cladoceran &#948;13C values. _Science of the Total Environment_ (in press).</li>
 
@@ -89,6 +91,8 @@ I work with a quantitative approach to identify and characterize major environme
 <br>
 <head><b>Preprints: (*published)</b></head>
 &nbsp;&nbsp;&nbsp;&nbsp;
+
+
 <ol reversed>
 <li><b>*Bruel, R.</b>, Marsden, J. E., Pientka, B., Staats, N., Mihuc, T., Stockwell, J. D., 2020. Rainbow smelt population responses to species invasions and change in environmental condition. _bioRxiv_. <a href="https://www.biorxiv.org/content/10.1101/2020.10.08.332205v1">DOI: 10.1101/2020.10.08.332205</a></li>
 
