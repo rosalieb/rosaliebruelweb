@@ -3,8 +3,10 @@ output_dir: "."
 navbar:
   title: "Rosalie Bruel"
   left:
-    - text: "Research"
-      href: research.html
+    #- text: "Research"
+    #  href: research.html
+    - text: "Publications"
+      href: publications.html
     #- text: "Speaking"
     #  href: talks.html
     - text: "Programming"
@@ -19,6 +21,8 @@ navbar:
       href: gallery.html
     - text: "My map"
       href: my_map.html
+    - text: "ZooSize"
+      href: ZooSize.html
   right:
     - icon: fa-envelope fa-lg
       href: contact.html
