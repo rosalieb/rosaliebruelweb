@@ -18,9 +18,9 @@ output: html_document
 <style>
 
 <!-- Have the title display in the tab name, but not on the html page  -->
-.author,.title{
+<!--.author,.title{
     display: none;
-}
+} -->
 
 
 .full-page{
@@ -113,7 +113,7 @@ h1 {
 ***  
 
 
-### Blog post  
+### Blog / tutorials 
 ***
 
 
@@ -177,18 +177,18 @@ h1 {
 
 <div style="text-align:center">
 ### On Twitter
-
-</div>
-***
-## Science
-\n
-
 <div class="row">
 
 <div class="column">
 __Presenting early results at SEFS 12__
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Believe me, the rainstorm pictured below wasn&#39;t fun to be in as a human on a bike. How do such extreme storms impact freshwater phytoplankton communities?<br><br>I am presenting preliminary results on that topic today at <a href="https://twitter.com/hashtag/SEFS12?src=hash&amp;ref_src=twsrc%5Etfw">#SEFS12</a> (RS14, session starting at 11:30 CEST). <a href="https://twitter.com/GLEONetwork?ref_src=twsrc%5Etfw">@GLEONetwork</a> <a href="https://t.co/hTJYh1fzN7">pic.twitter.com/hTJYh1fzN7</a></p>&mdash; Rosalie Bruel (@RosalieBruel) <a href="https://twitter.com/RosalieBruel/status/1420630750047653893?ref_src=twsrc%5Etfw">July 29, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 </div>
+
+
+</div>
+***
+## Science
+\n
 
 <div class="column">
 __Variability of response of a native species to an invasive species revealed by long-term, spatially explicit, datasets__

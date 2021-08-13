@@ -15,6 +15,7 @@ output: html_document
   gtag('config', 'UA-134870808-1');
 </script>
 
+<head>
 <style>
 # space between paragraph, small or big
 p.small {
@@ -40,11 +41,65 @@ p {
     display: none;
 }
 
+
+.full-page{
+  float: left;
+  width: 100%;
+  vertical-align: top;
+  text-align: left;
+  margin-right: 5%;
+}
+
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create three equal columns that sits next to each other */
+.column {
+  flex: 33%;
+  max-width: 33%;
+  padding: 0 10px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+}
+
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 45%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
 </style>
 
 <!-- tutorial on how to add a download button
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_download_button  -->
-<head>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Add icon library -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -104,8 +159,16 @@ Project champions: Lauren Barth (University of Toronto, Canada), <a href="https:
 
 We (<a href="https://twitter.com/CalderoPM" target="_blank">@CalderoPM</a>, <a href="https://twitter.com/LimnoLauren" target="_blank">@LimnoLauren</a>, <a href="https://twitter.com/RosalieBruel" target="_blank">@RosalieBruel</a>) will tweet some project updates on Twitter with the tag #ZooSize. 
 
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/GLEONetwork?ref_src=twsrc%5Etfw">@GLEONetwork</a> DATA CALL now open! Find <a href="https://twitter.com/hashtag/ZooSize?src=hash&amp;ref_src=twsrc%5Etfw">#ZooSize</a> project in <a href="https://t.co/SDRy9j9r1Q">https://t.co/SDRy9j9r1Q</a> <a href="https://twitter.com/hashtag/worldwide?src=hash&amp;ref_src=twsrc%5Etfw">#worldwide</a> <a href="https://twitter.com/hashtag/lake?src=hash&amp;ref_src=twsrc%5Etfw">#lake</a> <a href="https://twitter.com/hashtag/zooplankton?src=hash&amp;ref_src=twsrc%5Etfw">#zooplankton</a> <a href="https://twitter.com/hashtag/lenghts?src=hash&amp;ref_src=twsrc%5Etfw">#lenghts</a> Spread the word! <a href="https://twitter.com/RosalieBruel?ref_src=twsrc%5Etfw">@RosalieBruel</a> <a href="https://twitter.com/LimnoLauren?ref_src=twsrc%5Etfw">@LimnoLauren</a> <a href="https://twitter.com/SteveThackeray?ref_src=twsrc%5Etfw">@SteveThackeray</a> <a href="https://twitter.com/MECO_UniGe?ref_src=twsrc%5Etfw">@MECO_UniGe</a> <a href="https://twitter.com/PlanktonEcology?ref_src=twsrc%5Etfw">@PlanktonEcology</a> <a href="https://twitter.com/edeeyto?ref_src=twsrc%5Etfw">@edeeyto</a> <a href="https://twitter.com/MetuLimnology?ref_src=twsrc%5Etfw">@MetuLimnology</a> <a href="https://twitter.com/dvm_uvm?ref_src=twsrc%5Etfw">@dvm_uvm</a> <a href="https://twitter.com/MireiaBartrons?ref_src=twsrc%5Etfw">@MireiaBartrons</a> and many more THANKS! <a href="https://t.co/H37un4sM0u">pic.twitter.com/H37un4sM0u</a></p>&mdash; Maria Calderó (@CalderoPM) <a href="https://twitter.com/CalderoPM/status/1426100249903390721?ref_src=twsrc%5Etfw">August 13, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
+<br/>
+
+<div class="row">
+
+<div class="column">
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/GLEONetwork?ref_src=twsrc%5Etfw">@GLEONetwork</a> DATA CALL now open! Find <a href="https://twitter.com/hashtag/ZooSize?src=hash&amp;ref_src=twsrc%5Etfw">#ZooSize</a> project in <a href="https://t.co/SDRy9j9r1Q">https://t.co/SDRy9j9r1Q</a> <a href="https://twitter.com/hashtag/worldwide?src=hash&amp;ref_src=twsrc%5Etfw">#worldwide</a> <a href="https://twitter.com/hashtag/lake?src=hash&amp;ref_src=twsrc%5Etfw">#lake</a> <a href="https://twitter.com/hashtag/zooplankton?src=hash&amp;ref_src=twsrc%5Etfw">#zooplankton</a> <a href="https://twitter.com/hashtag/lenghts?src=hash&amp;ref_src=twsrc%5Etfw">#lenghts</a> Spread the word! <a href="https://twitter.com/RosalieBruel?ref_src=twsrc%5Etfw">@RosalieBruel</a> <a href="https://twitter.com/LimnoLauren?ref_src=twsrc%5Etfw">@LimnoLauren</a> <a href="https://twitter.com/SteveThackeray?ref_src=twsrc%5Etfw">@SteveThackeray</a> <a href="https://twitter.com/MECO_UniGe?ref_src=twsrc%5Etfw">@MECO_UniGe</a> <a href="https://twitter.com/PlanktonEcology?ref_src=twsrc%5Etfw">@PlanktonEcology</a> <a href="https://twitter.com/edeeyto?ref_src=twsrc%5Etfw">@edeeyto</a> <a href="https://twitter.com/MetuLimnology?ref_src=twsrc%5Etfw">@MetuLimnology</a> <a href="https://twitter.com/dvm_uvm?ref_src=twsrc%5Etfw">@dvm_uvm</a> <a href="https://twitter.com/MireiaBartrons?ref_src=twsrc%5Etfw">@MireiaBartrons</a> and many more THANKS! <a href="https://t.co/H37un4sM0u">pic.twitter.com/H37un4sM0u</a></p>&mdash; Maria Calderó (@CalderoPM) <a href="https://twitter.com/CalderoPM/status/1426100249903390721?ref_src=twsrc%5Etfw">August 13, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</div>
+
+</div>
 <br/>
 
 
