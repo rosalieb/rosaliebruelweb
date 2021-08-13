@@ -13,7 +13,8 @@ my.loc <- as.data.frame(rbind(c(5.447427, 43.529742, 3, "My hometown"), #Aix-en-
                                c(5.917781, 45.564601, 2, "PhD student 2014-18"), #Chambéry USMB
                                c(6.477635, 46.373565, 1, "PhD student 2014-18"), #Thonon
                                c(8.555371, 45.928306, 1, "7 months in 2016 during PhD"), #Verbania
-                               c(-73.212072, 44.475882, 1, "postdoc 2018-current"), #Burlington
+                               c(-73.212072, 44.475882, 1, "postdoc 2018-2021"), #Burlington
+                              c(2.3488, 48.8534, 1, "postdoc 2021-current"), #Burlington
                                #conferences
                               c(18.063240,59.334591,4, "NETLAKE workshop 2014"), #Erken - Stockholm coordinates
                               c(6.60793,46.40111, 4, "Summer school in limnology 2014"), #Evian Summer school
@@ -31,6 +32,10 @@ my.loc <- as.data.frame(rbind(c(5.447427, 43.529742, 3, "My hometown"), #Aix-en-
                               c(-73.92097, 41.70037 , 4, "NYNEDAFS 2019"), #Poughkeepsie
                               #c(-77.9391797,43.2136713,4, "IAGLR 2019"), #Brockport NY
                               c(-82.639999,27.773056,4, "Ecopath 35 2019"), #St Petersburg FL
+                              c(-73.9820,44.2796,4, "NYAFS 2020"), #Lake Placid, NY
+                              c(-73.212072, 44.475882,4, "GLEON 21.5 2020"), #Remote, putting Burlington
+                              c(-73.212072, 44.475882,4, "Aquacosm 2021"), #Remote, putting Burlington
+                              c(-6.266155,53.350140,4, "SEFS12 2021"), #Remote,Dublin
                               #mylakes
                               c(-1.16667, 44.65, 5, "Master thesis Year 1"),#Bassin d'Arcachon
                               c(6.7916635,45.98832938 ,5, "Master thesis Year 2"),#Lac d'Anterne
@@ -48,7 +53,8 @@ my.loc <- as.data.frame(rbind(c(5.447427, 43.529742, 3, "My hometown"), #Aix-en-
                               c(6.285833,46.639444,5, "PhD thesis work"),#LakeJoux (de)
                               c(8.6833306, 47.249999 ,5, "PhD thesis work"),#Lake Zurich
                               c(6.90249639, 45.45916483, 5, "Research associate work"),#Lac de Tignes
-                              c(-73.333332, 44.5333312, 5, "postdoc work")#Lake Champlain
+                              c(-73.333332, 44.5333312, 5, "postdoc work"),#Lake Champlain
+                              c(2.670633, 48.283761, 5, "postdoc work")#CEREEP Ecotron
  )
 )
 colnames(my.loc) <- c("lat","long","code","description")
