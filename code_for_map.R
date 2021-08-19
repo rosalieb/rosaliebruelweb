@@ -60,7 +60,7 @@ my.loc <- as.data.frame(rbind(c(5.447427, 43.529742, 4, "My hometown"), #Aix-en-
 colnames(my.loc) <- c("lat","long","code","description")
 
 # create the categories
-my.loc <- mutate(my.loc, group = cut(as.numeric(code), breaks = c(0, 1,2,3,4,5, Inf), labels = c("work", "work", "education", "personnal", "conferences", "mysystems")))
+my.loc <- mutate(my.loc, group = cut(as.numeric(code), breaks = c(0, 1,2,3,4,5, Inf), labels = c("currentwork", "work", "education", "personnal", "conferences", "mysystems")))
 my.loc$lat <- as.numeric(paste(my.loc$lat))
 my.loc$long <- as.numeric(paste(my.loc$long))
 
@@ -86,11 +86,14 @@ my.loc.html$long <- as.numeric(paste(my.loc.html$long))
 
 ### I downloaded markers from Google Images
 ### https://raw.githubusercontent.com/lvoogdt/Leaflet.awesome-markers/master/dist/images/markers-soft.png
-myIcons <- iconList(work = makeIcon(paste0(getwd(),"/images/icons/point.png"), iconWidth = 12, iconHeight =12), #work = makeIcon(paste0(getwd(),"/images/icons/work.png"), iconWidth = 12, iconHeight =12),
+myIcons <- iconList(currentwork = makeIcon(paste0(getwd(),"/images/icons/point_blue.png"), iconWidth = 12, iconHeight =12),
+                    work = makeIcon(paste0(getwd(),"/images/icons/point.png"), iconWidth = 12, iconHeight =12), 
+                    #work = makeIcon(paste0(getwd(),"/images/icons/work.png"), iconWidth = 12, iconHeight =12),
                     education = makeIcon(paste0(getwd(),"/images/icons/education.png"), iconWidth = 12, iconHeight =12),
                     personnal = makeIcon(paste0(getwd(),"/images/icons/home.png"), iconWidth = 12, iconHeight =12),
                     conferences = makeIcon(paste0(getwd(),"/images/icons/conference.png"), iconWidth = 12, iconHeight =12),
-                    mysystems = makeIcon(paste0(getwd(),"/images/icons/waves.png"), iconWidth = 12, iconHeight =12)
+                    mysystems = makeIcon(paste0(getwd(),"/images/icons/cross.png"), iconWidth = 12, iconHeight =12)
+                    #mysystems = makeIcon(paste0(getwd(),"/images/icons/waves.png"), iconWidth = 12, iconHeight =12)
                     )
 
 
@@ -122,7 +125,7 @@ mymap <-
              popup = htmlEscape(my.loc.5$description)
   ) %>%
   addMarkers(my.loc.6$lat, my.loc.6$long,
-             group="Systems I study/studied", clusterOptions = markerClusterOptions(), #icon = myIcons[my.loc.6$group],
+             group="Systems I study/studied", clusterOptions = markerClusterOptions(), icon = myIcons[my.loc.6$group],
              popup = htmlEscape(my.loc.6$description)
   ) %>%
   #to add multimedia
@@ -138,11 +141,12 @@ mymap <-
   #             fill = F, weight = 2, color = "#FFFFCC", group = "Outline") %>%
   # Layers control
   addLayersControl(
-    baseGroups = c("OSM (default)", "Toner", "Toner Lite"),
+    baseGroups = c("Toner Lite", "Toner", "OSM"),
     overlayGroups = c("Current workplace", "Past workplaces", "Personnal", "Conferences and workshops","Systems I study/studied", "photos!"),
     options = layersControlOptions(collapsed = FALSE),
     position = "bottomright"
-  )  %>% hideGroup(c("Personnal", "Past workplaces", "Education", "Conferences and workshops","Systems I study/studied", "photos!"))
+  )  %>% 
+  hideGroup(c("Personnal", "Past workplaces", "Education", "Conferences and workshops","Systems I study/studied", "photos!"))
    
 mymap
 
@@ -169,7 +173,7 @@ mapshot(mymap, url = paste0(getwd(), "/map.html"))
 #               fill = F, weight = 2, color = "#FFFFCC", group = "Outline") %>%
 #   # Layers control
 #   addLayersControl(
-#     baseGroups = c("OSM (default)", "Toner", "Toner Lite"),
+#     baseGroups = c("Toner Lite", "OSM (default)", "Toner"),
 #     overlayGroups = c("Quakes", "Outline"),
 #     options = layersControlOptions(collapsed = FALSE)
 #   )
