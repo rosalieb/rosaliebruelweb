@@ -45,6 +45,6 @@ My GitHub gathers some of my past and current projects. While you're here, have 
 
 <center>
 
-<a href="url"><img src="images/icons/hex-serac6.png" height="88" width="76" ></a> <a href="https://github.com/rosalieb/rhobo" target="_blank"><img src="images/icons/hex-rhobo3.png" height="88" width="76" ></a> 
+<a href="url"><img src="images/icons/hex-serac6.png" height="110" width="95" ></a>   <a href="https://github.com/rosalieb/rhobo" target="_blank"><img src="images/icons/hex-rhobo3.png" height="110" width="95" ></a> 
 
 </center>
