@@ -155,7 +155,7 @@ See the timeline of the project <a href="https://docs.google.com/spreadsheets/d/
 - August 2022: Deadline for submission of data from new sampling efforts
 
 
-Project champions: Lauren Barth (University of Toronto, Canada), <a href="https://www.dkit.ie/users/maria-caldero-pascual" target="_blank">Maria Calderó-Pascual</a> (DKIT, Ireland), <a href="https://rosalieb.github.io/rosaliebruelweb/index.html" target="_blank">Rosalie Bruel</a> (iEES-Paris, France)
+Project champions: Lauren Barth (University of Toronto, Canada), <a href="https://maria-caldero-pascual.netlify.app/" target="_blank">Maria Calderó-Pascual</a> (DKIT, Ireland), <a href="https://rosalieb.github.io/rosaliebruelweb/index.html" target="_blank">Rosalie Bruel</a> (iEES-Paris, France)
 
 We (<a href="https://twitter.com/CalderoPM" target="_blank">@CalderoPM</a>, <a href="https://twitter.com/LimnoLauren" target="_blank">@LimnoLauren</a>, <a href="https://twitter.com/RosalieBruel" target="_blank">@RosalieBruel</a>) will tweet some project updates on Twitter with the tag #ZooSize. 
 
