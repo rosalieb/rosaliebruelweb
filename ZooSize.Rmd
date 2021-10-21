@@ -67,10 +67,15 @@ function sortTable(n) {
       if (switchcount == 0 && dir == "asc") {
         dir = "desc";
         switching = true;
+        pointer: true;
       }
     }
   }
 }
+
+<!-- Sorting arrows -->
+
+    
 </script>
 
 <head>
@@ -208,6 +213,30 @@ tr:nth-child(even) {
   background-color: #f3f3f3
 }
 
+/* add arrows sorting table */
+
+.up-arrow {
+    width: 0;
+    height: 0;
+    border: solid 5px transparent;
+    background: transparent;
+    border-bottom: solid 7px black;
+    border-top-width: 0;
+    cursor: pointer;
+}
+
+.down-arrow {
+    width: 0;
+    height: 0;
+    border: solid 5px transparent;
+    background: transparent;
+    border-top: solid 7px black;
+    border-bottom-width: 0;
+    margin-top:1px;
+    cursor: pointer;
+}
+
+
 </style>
 
 <!-- tutorial on how to add a download button
@@ -294,9 +323,21 @@ We (<a href="https://twitter.com/CalderoPM" target="_blank">@CalderoPM</a>, <a h
 
 <table id="myTable">
   <tr class="header">
-    <th onclick="sortTable(0)">Date</th>
-    <th onclick="sortTable(1)">What</th>
-    <th onclick="sortTable(2)">Description</th>
+    <th onclick="sortTable(0)">
+      Date
+      <div class="up-arrow" onclick="clickupArrow()"></div>
+      <div class="down-arrow" onclick="clickDownArrow()"></div>
+    </th>
+    <th onclick="sortTable(1)">
+      What
+      <div class="up-arrow" onclick="clickupArrow()"></div>
+      <div class="down-arrow" onclick="clickDownArrow()"></div>
+    </th>
+    <th onclick="sortTable(2)">
+      Description 
+      <div class="up-arrow" onclick="clickupArrow()"></div>
+      <div class="down-arrow" onclick="clickDownArrow()"></div>
+    </th>
   </tr>
   <tr>
     <td>2021-02-10</td>
