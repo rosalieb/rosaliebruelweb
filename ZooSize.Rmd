@@ -15,6 +15,64 @@ output: html_document
   gtag('config', 'UA-134870808-1');
 </script>
 
+<!-- Sort table by multiple columns -->
+<script>
+function sortTable(n) {
+  var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+  table = document.getElementById("myTable");
+  switching = true;
+  //Set the sorting direction to ascending:
+  dir = "asc"; 
+  /*Make a loop that will continue until
+  no switching has been done:*/
+  while (switching) {
+    //start by saying: no switching is done:
+    switching = false;
+    rows = table.rows;
+    /*Loop through all table rows (except the
+    first, which contains table headers):*/
+    for (i = 1; i < (rows.length - 1); i++) {
+      //start by saying there should be no switching:
+      shouldSwitch = false;
+      /*Get the two elements you want to compare,
+      one from current row and one from the next:*/
+      x = rows[i].getElementsByTagName("TD")[n];
+      y = rows[i + 1].getElementsByTagName("TD")[n];
+      /*check if the two rows should switch place,
+      based on the direction, asc or desc:*/
+      if (dir == "asc") {
+        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch= true;
+          break;
+        }
+      } else if (dir == "desc") {
+        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+          //if so, mark as a switch and break the loop:
+          shouldSwitch = true;
+          break;
+        }
+      }
+    }
+    if (shouldSwitch) {
+      /*If a switch has been marked, make the switch
+      and mark that a switch has been done:*/
+      rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+      switching = true;
+      //Each time a switch is done, increase this count by 1:
+      switchcount ++;      
+    } else {
+      /*If no switching has been done AND the direction is "asc",
+      set the direction to "desc" and run the while loop again.*/
+      if (switchcount == 0 && dir == "asc") {
+        dir = "desc";
+        switching = true;
+      }
+    }
+  }
+}
+</script>
+
 <head>
 <style>
 # space between paragraph, small or big
@@ -93,6 +151,61 @@ p {
     flex: 100%;
     max-width: 100%;
   }
+}
+
+/* Dynamic table */
+#myInput {
+  background-image: url('/css/searchicon.png'); /* Add a search icon to input */
+  background-position: 10px 12px; /* Position the search icon */
+  background-repeat: no-repeat; /* Do not repeat the icon image */
+  width: 100%; /* Full-width */
+  font-size: 16px; /* Increase font-size */
+  padding: 12px 20px 12px 40px; /* Add some padding */
+  border: 1px solid #ddd; /* Add a grey border */
+  margin-bottom: 12px; /* Add some space below the input */
+}
+
+#myTable {
+  border-collapse: collapse; /* Collapse borders */
+  width: 100%; /* Full-width */
+  border: 1px solid #ddd; /* Add a grey border */
+  font-size: 14px; /* Increase font-size */
+}
+
+#myTable th, #myTable td {
+  text-align: left; /* Left-align text */
+  padding: 12px; /* Add padding */
+}
+
+#myTable tr {
+  /* Add a bottom border to all table rows */
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  /* Add a grey background color to the table header and on hover */
+  background-color: #d9d9d9;
+}
+
+/* Add sorting table function */
+/* https://www.w3schools.com/howto/howto_js_sort_table.asp */
+table {
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th {
+  cursor: pointer;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f3f3f3
 }
 
 </style>
@@ -174,5 +287,53 @@ We (<a href="https://twitter.com/CalderoPM" target="_blank">@CalderoPM</a>, <a h
 
 </div>
 <br/>
+
+
+## Detailed log of the project
+*Click the headers to sort the table.*
+
+<table id="myTable">
+  <tr class="header">
+    <th onclick="sortTable(0)">Date</th>
+    <th onclick="sortTable(1)">What</th>
+    <th onclick="sortTable(2)">Description</th>
+  </tr>
+  <tr>
+    <td>2021-02-10</td>
+    <td>Meeting</td>
+    <td>ZooSize general meeting.</td>
+  </tr>
+  <tr>
+    <td>2021-03-15</td>
+    <td>Meeting</td>
+    <td>ZooSize general meeting.</td>
+  </tr>
+  <tr>
+    <td>2021-06-08</td>
+    <td>Meeting</td>
+    <td>ZooSize general meeting.</td>
+  </tr>
+  <tr>
+    <td>2021-09-28</td>
+    <td>Meeting</td>
+    <td>ZooSize general meeting.</td>
+  </tr>
+  <tr>
+    <td>2021-10-09</td>
+    <td>Meeting</td>
+    <td>Adhoc meeting during GLEON-2021 (online).</td>
+  </tr>
+    <tr>
+    <td>2021-10-21</td>
+    <td>Change</td>
+    <td><b>Updated the data template</b>. We had some remaining comments that had been resolved but not deleted.</td>
+  </tr>
+    </tr>
+    <tr>
+    <td>[upcoming]</td>
+    <td>Change</td>
+    <td>Recommended SOP for measuring zooplankton.</td>
+  </tr>
+</table> 
 
 
