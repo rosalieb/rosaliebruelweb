@@ -323,8 +323,12 @@ See the timeline of the project <a href="https://docs.google.com/spreadsheets/d/
 - December 2021: Deadline for submission of existing data
 - August 2022: Deadline for submission of data from new sampling efforts
 
+
 <a id="contact"></a>
-Project champions: Lauren Barth (University of Toronto, Canada), <a href="https://maria-caldero-pascual.netlify.app/" target="_blank">Maria Calderó-Pascual</a> (DKIT, Ireland), <a href="https://rosalieb.github.io/rosaliebruelweb/index.html" target="_blank">Rosalie Bruel</a> (iEES-Paris, France)
+
+### Contacts
+
+Project champions: Lauren Barth (University of Toronto, Canada), <a href="https://maria-caldero-pascual.netlify.app/" target="_blank">Maria Calderó-Pascual</a> (DKIT, Ireland), <a href="https://rosalieb.github.io/rosaliebruelweb/index.html" target="_blank">Rosalie Bruel</a> (iEES-Paris, CNRS, France).
 
 
 <a href='mailto:rosaliebruel@gmail.com,Maria.CalderoPascual@dkit.ie,lauren.barth@utoronto.ca'>Email us</a> if you have any question on the project.
@@ -353,7 +357,7 @@ We (<a href="https://twitter.com/CalderoPM" target="_blank">@CalderoPM</a>, <a h
 
 <a id="log"> </a> 
 
-## Detailed log of the project  
+### Detailed log of the project  
 *Click the headers to sort the table.*
 
 <table id="myTable">
