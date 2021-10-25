@@ -107,10 +107,11 @@ p {
 
 .full-page{
   float: left;
-  width: 100%;
+  width: 75%;
   vertical-align: top;
   text-align: left;
-  margin-right: 5%;
+  margin-left: 90px;
+  margin-right: 2%;
 }
 
 
@@ -122,8 +123,8 @@ p {
 
 /* Create three equal columns that sits next to each other */
 .column {
-  flex: 33%;
-  max-width: 33%;
+  flex: 25%;
+  max-width: 40%;
   padding: 0 10px;
 }
 
@@ -145,7 +146,6 @@ p {
 /* Responsive layout - makes a two column-layout instead of four columns */
 @media screen and (max-width: 800px) {
   .column {
-    flex: 45%;
     max-width: 50%;
   }
 }
@@ -236,6 +236,29 @@ tr:nth-child(even) {
     cursor: pointer;
 }
 
+/* The sidebar menu */
+.sidenav {
+  position: fixed;
+  width: 90px;
+  padding: 8px 0;
+}
+
+/* Style all font awesome icons */
+.fa {
+  padding: 10px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+  opacity: 0.7;
+}
+
+
 
 </style>
 
@@ -269,10 +292,14 @@ P.blocktext {
 </head>
 
 ***  
-
+<a id="top"> </a>
 
 ### Collaborate!
 ***
+
+<div class="full-page">
+
+
 <img src="images/icons/gleon_logo1.jpg" style="width:20%; margin-right: 20px; margin-bottom: 20px; margin-top: 20px" align="right">
 
 <b>Collaborate to the GLEON project <a href="https://gleon.org/research/projects/zoosize-crustacean-zooplankton-community-size-distributions-across-worldwide-set" target="_blank"> ZooSize</a>!</b> 
@@ -284,9 +311,9 @@ ZooSize aims to get well represented individual crustacean zooplankton body leng
 
 Read more about our question, the data requirements, and authors guidelines in our collaboration guidelines. You can download the collaboration guidelines (.pdf) and data call form (.xslx) by clicking on the buttons below. Feel free to email me or one of the other project champions (Lauren Barth and Maria Calderó-Pascual) for an example on how to fill in the data call if necessary.
 
-<a href="files/CollaborationGuidelines_ZooSize.pdf" target="_blank"><button class="btn"><i class="fa fa-download"></i> Download the data call instructions and authors guidelines</button>  </a><img alt="DataCallForm" src="images/icons/adobe_pdf.png" width="43.75" height="52.5">
+<a href="files/CollaborationGuidelines_ZooSize.pdf" target="_blank" title="Download the data call instructions and authors guidelines"><button class="btn"><i class="fa fa-download"></i> Download the data call instructions <br>and authors guidelines</button>  </a><img alt="DataCallForm" src="images/icons/adobe_pdf.png" width="43.75" height="52.5">
 
-<a href="files/LakeName_ZooSize.xlsx" target="_blank"><button class="btn"><i class="fa fa-download"></i> Download the data template</button></a> <img alt="DataCallForm" src="images/icons/excel.png" width="56.25" height="67.5">
+<a href="files/LakeName_ZooSize.xlsx" target="_blank" title = "Download the data template"><button class="btn"><i class="fa fa-download"></i> Download the data template</button></a> <img alt="DataCallForm" src="images/icons/excel.png" width="56.25" height="67.5">
 
 
 See the timeline of the project <a href="https://docs.google.com/spreadsheets/d/1ZhrLiPbk6Rtv4yf9AaFMTSjQwlWszxK3/edit#gid=925206033" target = "_blank">here</a>. Important dates:
@@ -296,8 +323,12 @@ See the timeline of the project <a href="https://docs.google.com/spreadsheets/d/
 - December 2021: Deadline for submission of existing data
 - August 2022: Deadline for submission of data from new sampling efforts
 
-
+<a id="contact"></a>
 Project champions: Lauren Barth (University of Toronto, Canada), <a href="https://maria-caldero-pascual.netlify.app/" target="_blank">Maria Calderó-Pascual</a> (DKIT, Ireland), <a href="https://rosalieb.github.io/rosaliebruelweb/index.html" target="_blank">Rosalie Bruel</a> (iEES-Paris, France)
+
+
+<a href='mailto:rosaliebruel@gmail.com,Maria.CalderoPascual@dkit.ie,lauren.barth@utoronto.ca'>Email us</a> if you have any question on the project.
+
 
 We (<a href="https://twitter.com/CalderoPM" target="_blank">@CalderoPM</a>, <a href="https://twitter.com/LimnoLauren" target="_blank">@LimnoLauren</a>, <a href="https://twitter.com/RosalieBruel" target="_blank">@RosalieBruel</a>) will tweet some project updates on Twitter with the tag #ZooSize. 
 
@@ -318,7 +349,11 @@ We (<a href="https://twitter.com/CalderoPM" target="_blank">@CalderoPM</a>, <a h
 <br/>
 
 
-## Detailed log of the project
+
+
+<a id="log"> </a> 
+
+## Detailed log of the project  
 *Click the headers to sort the table.*
 
 <table id="myTable">
@@ -377,4 +412,16 @@ We (<a href="https://twitter.com/CalderoPM" target="_blank">@CalderoPM</a>, <a h
   </tr>
 </table> 
 
+</div>
 
+
+<div class="sidenav" align="left">
+  <a href="#top"> Project's <br> description </a>  
+  <br>
+  <a href="#contact" title="See our contacts"> Contacts </a>  
+  <br>
+  <a href="#log" title="Go to the project's log"> Project's <br> log </a>  
+  <br>
+<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="#ZooSize - crustacean zooplankton size distribution for freshwater lakes across global lake thermal regions @CalderoPM @RosalieBruel @LimnoLauren rosalieb.github.io/rosaliebruelweb/ZooSize.html" data-lang="en" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  
+</div>
