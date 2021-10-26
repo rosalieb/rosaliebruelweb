@@ -148,7 +148,10 @@ img {vertical-align: middle;}
 ### A few snapshots
 ***
 
+<!-- Container for the image gallery -->
 <div class="container">
+
+<!-- Full-width images with number text -->
 <div class="mySlides ">
   <div class="numbertext">1 / 6</div>
   <img src="images/gallery/2018_WFB161_electroshocking.JPG" class="responsive">
