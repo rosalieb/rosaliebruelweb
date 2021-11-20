@@ -5,23 +5,23 @@ navbar:
   left:
     #- text: "Research"
     #  href: research.html
-    - text: "Publications"
+    - text: Publications
       href: publications.html
     #- text: "Speaking"
     #  href: talks.html
-    - text: "Programming"
+    - text: Programming
       href: software.html
     #- text: "Teaching"
     #  href: teaching.html
     #- text: "CV"
     #  href: CV.html
-    - text: "Blog / Tutorials"
+    - text: Blog / Tutorials
       href: blog.html
-    - text: "Gallery"
+    - text: Gallery
       href: gallery.html
-    - text: "My map"
+    - text: My map
       href: my_map.html
-    - text: "ZooSize"
+    - text: ZooSize
       href: ZooSize.html
   right:
     - icon: fa-envelope fa-lg

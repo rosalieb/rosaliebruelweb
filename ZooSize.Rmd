@@ -1,5 +1,5 @@
 ---
-title: "Rosalie Bruel > ZooSize"
+title: "R. Bruel > ZooSize"
 #author: "Rosalie Bruel"
 #date: "12/08/2021"
 output: html_document
@@ -315,6 +315,7 @@ Read more about our question, the data requirements, and authors guidelines in o
 
 <a href="files/LakeName_ZooSize.xlsx" target="_blank" title = "Download the data template"><button class="btn"><i class="fa fa-download"></i> Download the data template</button></a> <img alt="DataCallForm" src="images/icons/excel.png" width="56.25" height="67.5">
 
+<a href="files/ZooSize_SOP_v1.0.pdf" target="_blank" title="Download the SOP"><button class="btn"><i class="fa fa-download"></i> Download the SOP</button>  </a><img alt="DataCallForm" src="images/icons/adobe_pdf.png" width="43.75" height="52.5">
 
 See the timeline of the project <a href="https://docs.google.com/spreadsheets/d/1ZhrLiPbk6Rtv4yf9AaFMTSjQwlWszxK3/edit#gid=925206033" target = "_blank">here</a>. Important dates:
 
@@ -348,6 +349,12 @@ We (<a href="https://twitter.com/CalderoPM" target="_blank">@CalderoPM</a>, <a h
 <div class="column">
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr"><a href="https://twitter.com/hashtag/ZooSize?src=hash&amp;ref_src=twsrc%5Etfw">#ZooSize</a> project update: we will have our next meeting on Sept. 29, at 13:00 UTC.<br>We will discuss ideas for a review paper we could write while waiting for data. Get in touch with us (<a href="https://twitter.com/CalderoPM?ref_src=twsrc%5Etfw">@CalderoPM</a> <a href="https://twitter.com/LimnoLauren?ref_src=twsrc%5Etfw">@LimnoLauren</a>) if you want the zoom link!<br><br>About the project: <a href="https://t.co/DIiTKNqBLZ">https://t.co/DIiTKNqBLZ</a></p>&mdash; Rosalie Bruel (@RosalieBruel) <a href="https://twitter.com/RosalieBruel/status/1439972446719946759?ref_src=twsrc%5Etfw">September 20, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 </div>
+
+<!--
+<div class="column">
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">📢<a href="https://twitter.com/GLEONetwork?ref_src=twsrc%5Etfw">@GLEONetwork</a> <a href="https://twitter.com/hashtag/ZooSize?src=hash&amp;ref_src=twsrc%5Etfw">#ZooSize</a> project <a href="https://twitter.com/hashtag/datacall?src=hash&amp;ref_src=twsrc%5Etfw">#datacall</a> is still OPEN! Check it out: <a href="https://t.co/SDRy9j9r1Q">https://t.co/SDRy9j9r1Q</a> Perfect 🎄present for <a href="https://twitter.com/RosalieBruel?ref_src=twsrc%5Etfw">@RosalieBruel</a> <a href="https://twitter.com/LimnoLauren?ref_src=twsrc%5Etfw">@LimnoLauren</a> and all <a href="https://twitter.com/hashtag/collaborators?src=hash&amp;ref_src=twsrc%5Etfw">#collaborators</a>! Soon we will upload a <a href="https://twitter.com/hashtag/SOP?src=hash&amp;ref_src=twsrc%5Etfw">#SOP</a> for <a href="https://twitter.com/hashtag/zooplankton?src=hash&amp;ref_src=twsrc%5Etfw">#zooplankton</a> <a href="https://twitter.com/hashtag/microscope?src=hash&amp;ref_src=twsrc%5Etfw">#microscope</a> Could you share yours? <a href="https://twitter.com/hashtag/preservative?src=hash&amp;ref_src=twsrc%5Etfw">#preservative</a> <a href="https://twitter.com/hashtag/bodysize?src=hash&amp;ref_src=twsrc%5Etfw">#bodysize</a> <a href="https://t.co/4gvRgYwj5M">pic.twitter.com/4gvRgYwj5M</a></p>&mdash; Maria Calderó Pascual (@CalderoPM) <a href="https://twitter.com/CalderoPM/status/1461408613159874568?ref_src=twsrc%5Etfw">November 18, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+</div>
+-->
 
 </div>
 <br/>
@@ -410,9 +417,9 @@ We (<a href="https://twitter.com/CalderoPM" target="_blank">@CalderoPM</a>, <a h
   </tr>
     </tr>
     <tr>
-    <td>[upcoming]</td>
+    <td>2021-11-20</td>
     <td>Change</td>
-    <td>Recommended SOP for measuring zooplankton.</td>
+    <td><a href="files/ZooSize_SOP_v1.0.pdf" target="_blank" title="Download the SOP">Recommended SOP</a> for measuring zooplankton.</td>
   </tr>
 </table> 
 
