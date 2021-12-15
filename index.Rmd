@@ -1,5 +1,5 @@
 ---
-title: "Rosalie Bruel"
+title: "R. Bruel"
 # author: "Rosalie Bruel"
 # date: "19/02/2019"
 output: html_document

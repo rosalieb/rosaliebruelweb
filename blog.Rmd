@@ -1,5 +1,5 @@
 ---
-title: "Rosalie Bruel > Blog/Tutorials"
+title: "R. Bruel > Blog"
 #author: "Rosalie Bruel"
 #date: "19/02/2019"
 output: html_document
@@ -16,20 +16,21 @@ output: html_document
 </script>
 
 <style>
-
 <!-- Have the title display in the tab name, but not on the html page  -->
-<!--.author,.title{
+.author,.title{
     display: none;
-} -->
+}
 
-
+<!--
 .full-page{
   float: left;
   width: 100%;
   vertical-align: top;
   text-align: left;
   margin-right: 5%;
+  margin-top: -5%;
 }
+-->
 
 
 /* For portefolio */
@@ -39,10 +40,12 @@ output: html_document
   box-sizing: border-box;
 }
 
+<!--
 body {
   background-color: #f1f1f1;
   padding: 20px;
 }
+-->
 
 /* Center website */
 .main {
@@ -51,10 +54,11 @@ body {
 }
 
 <!-- syntax padding: top right bottom left; -->
-h1 {
+<!-- h1 {
   font-size: 50px;
   word-break: break-all;
 }
+-->
 
 .row {
   display: flex;
@@ -100,11 +104,8 @@ h1 {
   }
 }
 
+
 </style>
-
-
-
-<div class="full-page">
 
 
 
@@ -164,7 +165,7 @@ h1 {
   </div>
 </div>
 </div>
-</div>
+
 
 \n
 \n
