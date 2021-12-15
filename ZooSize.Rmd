@@ -327,9 +327,9 @@ Read more about our question, the data requirements, and authors guidelines in o
 
 <a href="files/CollaborationGuidelines_ZooSize.pdf" target="_blank" title="Download the data call instructions and authors guidelines"><button class="btn"><i class="fa fa-download"></i> Data call instructions<br>and authors guidelines  </button>  </a><img alt="DataCallForm" src="images/icons/adobe_pdf.png" width="43.75" height="52.5">
 
-<a href="files/LakeName_ZooSize.xlsx" target="_blank" title = "Download the data template"><button class="btn"><i class="fa fa-download"></i> Data template</button></a> <img alt="DataCallForm" src="images/icons/excel.png" width="56.25" height="67.5">
+<a href="files/LakeName_ZooSize.xlsx" target="_blank" title = "Download the data template"><button class="btn"><i class="fa fa-download"></i> Data template</button></a><img alt="DataCallForm" src="images/icons/excel.png" width="56.25" height="67.5">
 
-<a href="files/ZooSize_SOP_v1.0.pdf" target="_blank" title="Download the SOP"><button class="btn"><i class="fa fa-download"></i> Download the SOP</button>  </a><img alt="DataCallForm" src="images/icons/adobe_pdf.png" width="43.75" height="52.5">
+<a href="files/ZooSize_SOP_v1.0.pdf" target="_blank" title="Download the SOP"><button class="btn"><i class="fa fa-download"></i>SOP</button>  </a><img alt="DataCallForm" src="images/icons/adobe_pdf.png" width="43.75" height="52.5">
 
 See the timeline of the project <a href="https://docs.google.com/spreadsheets/d/1ZhrLiPbk6Rtv4yf9AaFMTSjQwlWszxK3/edit#gid=925206033" target = "_blank">here</a>. Important dates:
 
