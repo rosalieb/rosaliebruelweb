@@ -303,7 +303,9 @@ P.blocktext {
 </style>
 </head>
 <body style="background-color:#fafafa">
+<!---
 <div id="snow"></div>
+--->
 ***  
 <a id="top"> </a>
 
