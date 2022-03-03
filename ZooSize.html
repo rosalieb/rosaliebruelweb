@@ -469,12 +469,12 @@ p {
   border-collapse: collapse; /* Collapse borders */
   width: 100%; /* Full-width */
   border: 1px solid #ddd; /* Add a grey border */
-  font-size: 14px; /* Increase font-size */
+  font-size: 13px; /*  font-size */
 }
 
 #myTable th, #myTable td {
   text-align: left; /* Left-align text */
-  padding: 12px; /* Add padding */
+  padding: 6px; /* Add padding */
 }
 
 #myTable tr {
@@ -499,6 +499,11 @@ th {
   cursor: pointer;
 }
 
+.changecol {
+  background-color: #B0B0B0;
+}
+
+
 th, td {
   text-align: left;
   padding: 16px;
@@ -518,6 +523,7 @@ tr:nth-child(even) {
     border-bottom: solid 7px black;
     border-top-width: 0;
     cursor: pointer;
+    color: #C0C0C0;
 }
 
 .down-arrow {
@@ -680,30 +686,30 @@ We realized that there is quite a diversity in sample preservative used. If you 
 <p><em>Click the headers to sort the table.</em></p>
 <table id="myTable">
 <tr class="header">
-<th onclick="sortTable(0)">
+<th id="1" onclick="sortTable(0)">
 Date
-<div class="up-arrow" onclick="clickupArrow()">
+<div class="up-arrow">
 
 </div>
-<div class="down-arrow" onclick="clickDownArrow()">
+<div class="down-arrow">
 
 </div>
 </th>
-<th onclick="sortTable(1)">
+<th id="2" onclick="sortTable(1)">
 What
-<div class="up-arrow" onclick="clickupArrow()">
+<div class="up-arrow">
 
 </div>
-<div class="down-arrow" onclick="clickDownArrow()">
+<div class="down-arrow">
 
 </div>
 </th>
-<th onclick="sortTable(2)">
+<th id="3" onclick="sortTable(2)">
 Description
-<div class="up-arrow" onclick="clickupArrow()">
+<div class="up-arrow">
 
 </div>
-<div class="down-arrow" onclick="clickDownArrow()">
+<div class="down-arrow">
 
 </div>
 </th>
@@ -826,9 +832,23 @@ Focus group
 <a href="#top"> Project’s <br> description </a><br />
 <br> <a href="#contact" title="See our contacts"> Contacts </a><br />
 <br> <a href="#log" title="Go to the project's log"> Project’s <br> log </a><br />
-<br> <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="#ZooSize - crustacean zooplankton size distribution for freshwater lakes across global lake thermal regions @CalderoPM @RosalieBruel @LimnoLauren - Visit " data-lang="en" data-show-count="true">Tweet</a>
+<br> <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="#ZooSize - crustacean zooplankton size distribution for freshwater lakes across global lake thermal regions @CalderoPM @RosalieBruel @zzeynepersoy @LimnoLauren - Visit " data-lang="en" data-show-count="true">Tweet</a>
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
+<!-- change the color of the header that was clicked 
+https://stackoverflow.com/questions/42089472/javascript-change-td-bgcolor-onclick -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+(function togCell(){
+  $('th').click(function(e){
+    $('th').removeClass('changecol');
+    $(this).addClass('changecol');
+    
+  });
+  
+})();
+</script>
+<!-- snow script -->
 <script>
 document.addEventListener('DOMContentLoaded', function(){
     var script = document.createElement('script');
