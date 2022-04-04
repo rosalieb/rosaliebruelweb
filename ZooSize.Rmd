@@ -479,6 +479,11 @@ We (<a href="https://twitter.com/CalderoPM" target="_blank">@CalderoPM</a>, <a h
     <td>Focus group</td>
     <td>1st focus group - we established the format for the literature review (Google Sheet)</td>
   </tr>
+    <tr>
+    <td>2022-04-04</td>
+    <td>Focus group</td>
+    <td>2nd focus group - we discussed the quality check of the taxa names and stages, and several potential issues surrounding the QCing and data analysis.</td>
+  </tr>
 </table> 
 
 </div>
