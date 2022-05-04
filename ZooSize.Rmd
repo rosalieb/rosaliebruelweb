@@ -479,10 +479,15 @@ We (<a href="https://twitter.com/CalderoPM" target="_blank">@CalderoPM</a>, <a h
     <td>Focus group</td>
     <td>1st focus group - we established the format for the literature review (Google Sheet)</td>
   </tr>
-    <tr>
+  <tr>
     <td>2022-04-04</td>
     <td>Focus group</td>
     <td>2nd focus group - we discussed the quality check of the taxa names and stages, and several potential issues surrounding the QCing and data analysis.</td>
+  </tr>
+  <tr>
+    <td>2022-05-04</td>
+    <td>Meeting</td>
+    <td>ZooSize 6th general meeting - updates on: the data call, the preservative survey, the QC'ing of the taxa names, the different ways of measuring zooplankton, the literature review.</td>
   </tr>
 </table> 
 
