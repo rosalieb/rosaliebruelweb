@@ -61,7 +61,7 @@ source("render_toc.R")
 
 <div class="full-page content">
 
-## serac: a R package for ShortlivEd RAdionuclide Chronology of recent sediment cores
+## serac: an R package for ShortlivEd RAdionuclide Chronology of recent sediment cores
 <div style="text-align:right">
 Rosalie Bruel  
 *October 25^th^, 2020*
@@ -105,7 +105,7 @@ We are sharing within the package some example data from Lake Allos (France). Yo
 
 <!-- <div style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px; font-size:80%; text-align:center;"><img src="images/Tuto2/1_Allos_Flickr_Wilhelm2012.png" alt="Lake Allos (source: Flickr)"  style="padding-bottom:0.5em;" align:"right"  />__left__: Lake Allos (Source: Flickr); __right__: Location, hydrological, geological and geomorphological characteristics of Lake Allos and its catchment (Fig. 1 in Wilhelm et al 2012)</div> -->
 
-![Lake Allos (source: Flickr)"  style="padding-bottom:0.5em;" align:"right"  />__left__: Lake Allos (Source: Flickr); __right__: Location, hydrological, geological and geomorphological characteristics of Lake Allos and its catchment (Fig. 1 in Wilhelm et al 2012)](`r paste0(getwd(),"/images/Tuto2/1_Allos_Flickr_Wilhelm2012.png")`)
+![__left__: Lake Allos (Source: Flickr); __right__: Location, hydrological, geological and geomorphological characteristics of Lake Allos and its catchment (Fig. 1 in Wilhelm et al 2012)](`r paste0(getwd(),"/images/Tuto2/1_Allos_Flickr_Wilhelm2012.png")`)
 
 
 
@@ -224,8 +224,9 @@ Refer to the package's <a href="Tuto2_vignette.html" target="_blank">vignette</a
 _Table of content created using <a href="https://www.garrickadenbuie.com/blog/add-a-generated-table-of-contents-anywhere-in-rmarkdown/" target="_blank">this method</a>._
 
 
-</div>
 
+
+</div>
 
 
 <!-- begin wwww.htmlcommentbox.com -->
@@ -233,4 +234,3 @@ _Table of content created using <a href="https://www.garrickadenbuie.com/blog/ad
  <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
  <script type="text/javascript" id="hcb"> /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&opts=16862&num=10&ts=1553273262432");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); /*-->*/ </script>
 <!-- end www.htmlcommentbox.com -->
-
