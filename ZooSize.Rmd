@@ -507,6 +507,11 @@ During the general meetings, we shared the link to a document with all the impor
     <td>Meeting</td>
     <td>ZooSize 6th general meeting - updates on: the data call, the preservative survey, the QC'ing of the taxa names, the different ways of measuring zooplankton, the literature review.</td>
   </tr>
+  <tr>
+    <td>2022-06-13</td>
+    <td>Change</td>
+    <td>New SOP version: <a href="files/ZooSize_SOP_v2.0.pdf" target="_blank" title="Download the SOP_v2.0">v2.0</a>. Previous version 1.1 can be found <a href="files/ZooSize_SOP_v1.0.pdf" target="_blank" title="Download the SOP_v1.0">here</a>.</td>
+  </tr>
 </table> 
 
 </div>
