@@ -125,8 +125,8 @@ body {
 <div class="column">
   <div class="content">
   <img src="images/blog/Tuto7_0_MainPhoto.jpg" alt="Main" style="width:100%">
-  <h3> _get.objects()_ </h3>
-  <a href="Blog_articles/Tuto7_getobjects.html"><p>An R function to get the objects created in a .R and .Rmd</p></a>
+  <h3> _get.objects.from.script()_ </h3>
+  <a href="Blog_articles/Tuto7_getobjects.html"><p>An R function to get the objects created in an .R or .Rmd file</p></a>
   </div>
 </div> 
 
