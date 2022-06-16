@@ -91,14 +91,14 @@ titlenb=0 # reset title number
 ::: {#myHeader .header}
 <h2>
 
-get.objects()
+Get a vector of objects created within in an .R or .Rmd file
 
 </h2>
 :::
 
 ::: {style="text-align:right"}
 Rosalie Bruel\
-*June 8^th^, 2022*
+*June 10^th^, 2022*
 :::
 
 ------------------------------------------------------------------------
@@ -107,52 +107,90 @@ Rosalie Bruel\
 
 ## `r (titlenb <- titlenb+1)`. Problem
 
-I am **not** good at keeping my RStudio environment tidy. I think being able to keep in memory dataset previously created is just too good of a feature not to use it.
+I appreciate the functionality in RStudio that keeps in memory (through .RDataTemp) objects created at previous steps, even when closing RStudio. It is useful when running a script takes a while, and the output is useful but not necessarily *that* useful that I want to permanently save it to a local file.
 
-However, on occasion, I have scripts I need to run once and that's it. At the end of said script, I would like to remove any object that was created from the environment.
+However, on occasion, I have scripts I need to run once and that's it. At the end of said script, I would like to be able to remove any object that was created from the environment. In other words, I would like to be able to use rm(), but instead of doing it for the whole environment (\`ls()\`), I would like to do it for a specific script.
 
-In other words, I would like to be able to use rm(), but instead of doing it for the whole environment (\`ls()\`), I would like to do it for a specific script.
-
-I wrote the function *get.objects()* to tackle this. You can load the function using the code below:
+I wrote the function *get.objects.from.script()* to tackle this. You can load the function using the code below:
 
 ```{r eval=FALSE, include=TRUE}
-source("https://raw.githubusercontent.com/rosalieb/miscellaneous/master/R/get.objects.R")
+source("https://raw.githubusercontent.com/rosalieb/miscellaneous/master/R/get.objects.from.script.R")
 ```
 
-## `r (titlenb <- titlenb+1)`. Rapid overview
+## `r (titlenb <- titlenb+1)`. Easy alternatives and why it did not fit my needs
+
+### `r titlenb`.1. Alternative solution in the script directly
+
+One easy way could be to list the files in the environment at the beginning of a script, and list the files after having ran the script, and do the differential of objects. For example, see the script below:
+
+```{r eval=FALSE, include=TRUE}
+# Start script
+initial_objects <- ls()
+
+# Create a bunch of objects
+temp <- LETTERS[1:3]
+data <- data.frame(x = 1:10, y = 10:1)
+p1 <- ggplot(data, aes(x, y)) + geom_point()
+
+# Remove only the objects that were created since initial_objects was last run
+# 1. See what is returned: should include "initial_objects" "temp" "data" "p1"  
+ls()[!ls() %in% initial_objects]
+# 2. Remove these objects
+rm(list = ls()[!ls() %in% initial_objects])
+```
+
+However, there are at least three scenarios I can think of in which the listed files (in `initial_objects`) wouldn't be the right ones:
+
+1.  If by mistake I forgot to run the first line \`initial_objects \<- ls()\`, it will be "too late" to go back.
+
+2.  If by mistake I run the first line multiple times, after running the script a first time (for example, if I run everything above a certain line, or if I run "all chunks above" in a .Rmd).
+
+3.  If there was already an element in the environment with the name. I frequently use names across scripts, for objects I will not keep (e.g., "temp" for a temporary object, "p1" for a plot, "out" for an output object that I would populate within a loop, etc.). If I already have an object "temp" in the environment, it won't be removed using the method above. However, it is not something I need to keep per my requirements stated in the section "problem".
+
+### `r titlenb`.2. Alternative solution when sourcing a script  
+
+A second option would be to run the script in its own environment, which is possible when sourcing a file. However, this would only work for a script I do not need to run line by line to visualize the output.
+
+```{r eval=FALSE, include=TRUE}
+my_env <- new.env()  
+source("myscript.R", my_env)  
+rm(my_env)  
+```
+
+## `r (titlenb <- titlenb+1)`. Rapid overview of the function
 
 The function is pretty simple, and follows three steps:
 
-1.  Step 1: screening through the current script (although you could also set the path to another script if you want).
+1.  Screening through the current script (although you could also set the path to another script if you want) with the function `getParseData()` from the library *utils*.
 
-2.  Save all the objects.
+2.  Keep only the objects (token = "SYMBOL").
 
 3.  Find and return which objects are in the Global Environment.
 
 You can then run
 
 ```{r eval=FALSE, include=TRUE}
-rm(list = get.objects())
+rm(list = get.objects.from.script())
 ```
 
 to remove the objects within a give script.
 
-
 Arguments of the function are: <br>
 
-| Arguments   | Description                                                                                                             | Example                           |
-|------------------|-----------------------------|--------------------------|
-| path2file   | path to file. Extensions can be .R or .Rmd. If .Rmd, will extract the code from the chunks using the *knitr* library    | "my_wd/file.R" / "my_wd/file.Rmd" |
-| exception | any objects that you wish to preserve. Default = NULL | c("output", "p1")                             |
-| source      | logical argument, indicating whether to source the script before running the function. It is a necessary condition to run the script first so that objects appear in the environment. Default = FALSE.                                  | FALSE                                 |
-| message      | logical argument, indicating whether to print a message or not. Default = TRUE                                  | TRUE                                 |
-
+| Arguments | Description                                                                                                                                                                                            | Example                           |
+|------------------|----------------------------|--------------------------|
+| path2file | path to file. Extensions can be .R or .Rmd. If .Rmd, will extract the code from the chunks using the *knitr* library                                                                                   | "my_wd/file.R" / "my_wd/file.Rmd" |
+| exception | any objects that you wish to preserve. Default = NULL                                                                                                                                                  | c("output", "p1")                 |
+| source    | logical argument, indicating whether to source the script before running the function. It is a necessary condition to run the script first so that objects appear in the environment. Default = FALSE. | FALSE                             |
+| message   | logical argument, indicating whether to print a message or not. Default = TRUE                                                                                                                         | TRUE                              |
 
 ## `r (titlenb <- titlenb+1)`. Example
 
 Here is an example. Note that the code below must be saved as a script. <br>
 
 ```{r eval=FALSE, include=TRUE}
+source("https://raw.githubusercontent.com/rosalieb/miscellaneous/master/R/get.objects.from.script.R")
+
 # Create a bunch of objects
 temp <- LETTERS[1:3]
 data <- data.frame(x = 1:10, y = 10:1)
@@ -160,11 +198,11 @@ p1 <- ggplot(data, aes(x, y)) + geom_point()
 
 # List the objects, and remove them if you wish.
 # Here, I listed as exception p1.
-get.objects()
+get.objects.from.script()
 
 # Number of objects in the environment:
 length(ls()) # 158
-rm(list = get.objects(exception = "p1",
+rm(list = get.objects.from.script(exception = "p1",
                       message = FALSE))
 length(ls()) # 156 (we decided to keep "p1", so only two objects were removed)
 ```
@@ -173,11 +211,7 @@ Here is the what it looks like if you run it: <br>
 
 <img src="images/Tuto7/Screenshot1.jpg" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center"/>
 
-It does work well: with `get.objects()`, I do find the  objects I just created. On the following line, I am able to remove these objects, but also include exception (e.g., if I want to keep p1 for example.)
-
-
-
-
+It work well: with `get.objects.from.script()`, I do find the objects I just created. On the following line, I am able to remove these objects, but also include exception (e.g., if I want to keep "p1" for example.)
 
 ```{=html}
 <script>
