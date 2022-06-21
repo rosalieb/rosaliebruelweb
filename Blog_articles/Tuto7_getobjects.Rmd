@@ -115,7 +115,7 @@ I wrote the function *get.objects.from.script()* to tackle this. You can load th
 
 ```{r klippy, echo=FALSE, include=TRUE}
 #remotes::install_github("rlesur/klippy")
-klippy::klippy('')
+klippy::klippy(position = c('top', 'right'))
 ```
 
 ```{r eval=FALSE, include=TRUE, class.source='klippy'}
