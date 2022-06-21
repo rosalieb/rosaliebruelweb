@@ -105,9 +105,10 @@ Rosalie Bruel\
 
 <a href="../blog.html"> ↩︎ Back </a>
 
-## `r (titlenb <- titlenb+1)`. Problem
+## `r (titlenb <- titlenb+1)`. Motivation
 
-I appreciate the functionality in RStudio that keeps in memory (.RDataTemp files) objects created at previous steps, even when closing RStudio. I find this functionality useful when I have a script that takes a while to run, for which the output is useful but not necessarily *that* useful that I want to permanently save it to a local file.
+I appreciate the functionality in RStudio that keeps in memory the objects created at previous steps, even after closing RStudio. I find this functionality useful when I have a script that takes a while to run, for which the output is useful but not necessarily *that* useful that I want to permanently save it to a local file.
+
 
 However, on occasion, I have scripts I need to run once and that's it. At the end of said script, I would like to be able to remove from the environment any object that was created by the script. In other words, I would like to be able to use rm(), but instead of doing it for the whole environment (\`ls()\`), I would like to do it for the environment of a specific script.
 
@@ -122,7 +123,12 @@ klippy::klippy(position = c('top', 'right'))
 source("https://raw.githubusercontent.com/rosalieb/miscellaneous/master/R/get.objects.from.script.R")
 ```
 
-## `r (titlenb <- titlenb+1)`. Easy alternatives and why they did not fit my needs
+
+<img src="images/Tuto7/weeding_scripts.jpg" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center"/>
+
+## `r (titlenb <- titlenb+1)`. Easy alternatives and why they did not fit my needs (but might fit yours)
+
+Skipping the alternative of changing my settings to "do not save/restore the workspace", below are two alternatives with existing code. Neither met all of my requirements. 
 
 ### `r titlenb`.1. Alternative 1: list objects before and after running the script
 
@@ -221,6 +227,11 @@ Here is the what it looks like if you run it: <br>
 <img src="images/Tuto7/Screenshot1.jpg" style="width:100%; margin-right: 5px; margin-bottom: 5px; margin-top: 5px" align="center"/>
 
 It work well: with `get.objects.from.script()`, I do find the objects I just created. On the following line, I am able to remove these objects, but also include exception (e.g., if I want to keep "p1" for example.)
+
+
+Furthermore, the function can be useful to those of you helping out colleagues/students. By simply adding `rm(list = get.objects.from.script())` at the end of the colleague/student's script, you can remove any objects not relevant to your current workspace, without having to navigate between workspace. This solution is less "nuclear" than the rm(list = ls()).
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">it suggests a clean workspace is the exception rather than the rule;<br>also, if someone’s giving some “drive by” help with your code, this clobbers their workspace (I run lots of student code)</p>&mdash; Jenny Bryan (@JennyBryan) <a href="https://twitter.com/JennyBryan/status/940067552381648898?ref_src=twsrc%5Etfw">December 11, 2017</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 
 ```{=html}
 <script>
