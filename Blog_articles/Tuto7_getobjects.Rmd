@@ -107,23 +107,28 @@ Rosalie Bruel\
 
 ## `r (titlenb <- titlenb+1)`. Problem
 
-I appreciate the functionality in RStudio that keeps in memory (through .RDataTemp) objects created at previous steps, even when closing RStudio. It is useful when running a script takes a while, and the output is useful but not necessarily *that* useful that I want to permanently save it to a local file.
+I appreciate the functionality in RStudio that keeps in memory (.RDataTemp files) objects created at previous steps, even when closing RStudio. I find this functionality useful when I have a script that takes a while to run, for which the output is useful but not necessarily *that* useful that I want to permanently save it to a local file.
 
-However, on occasion, I have scripts I need to run once and that's it. At the end of said script, I would like to be able to remove any object that was created from the environment. In other words, I would like to be able to use rm(), but instead of doing it for the whole environment (\`ls()\`), I would like to do it for a specific script.
+However, on occasion, I have scripts I need to run once and that's it. At the end of said script, I would like to be able to remove from the environment any object that was created by the script. In other words, I would like to be able to use rm(), but instead of doing it for the whole environment (\`ls()\`), I would like to do it for the environment of a specific script.
 
 I wrote the function *get.objects.from.script()* to tackle this. You can load the function using the code below:
 
-```{r eval=FALSE, include=TRUE}
+```{r klippy, echo=FALSE, include=TRUE}
+#remotes::install_github("rlesur/klippy")
+klippy::klippy('')
+```
+
+```{r eval=FALSE, include=TRUE, class.source='klippy'}
 source("https://raw.githubusercontent.com/rosalieb/miscellaneous/master/R/get.objects.from.script.R")
 ```
 
-## `r (titlenb <- titlenb+1)`. Easy alternatives and why it did not fit my needs
+## `r (titlenb <- titlenb+1)`. Easy alternatives and why they did not fit my needs
 
-### `r titlenb`.1. Alternative solution in the script directly
+### `r titlenb`.1. Alternative 1: list objects before and after running the script
 
 One easy way could be to list the files in the environment at the beginning of a script, and list the files after having ran the script, and do the differential of objects. For example, see the script below:
 
-```{r eval=FALSE, include=TRUE}
+```{r eval=FALSE, include=TRUE, class.source='klippy'}
 # Start script
 initial_objects <- ls()
 
@@ -141,39 +146,40 @@ rm(list = ls()[!ls() %in% initial_objects])
 
 However, there are at least three scenarios I can think of in which the listed files (in `initial_objects`) wouldn't be the right ones:
 
-1.  If by mistake I forgot to run the first line \`initial_objects \<- ls()\`, it will be "too late" to go back.
+1.  If by mistake I forgot to run the first line \`initial_objects \<- ls()\`, it will be "too late" to go back, and I will end up having to list the objects manually.
 
-2.  If by mistake I run the first line multiple times, after running the script a first time (for example, if I run everything above a certain line, or if I run "all chunks above" in a .Rmd).
+2.  A variant: If by mistake I run the first line multiple times, after running the script a first time (for example, if I run everything above a certain line, or if I run "all chunks above" in a .Rmd).
 
-3.  If there was already an element in the environment with the name. I frequently use names across scripts, for objects I will not keep (e.g., "temp" for a temporary object, "p1" for a plot, "out" for an output object that I would populate within a loop, etc.). If I already have an object "temp" in the environment, it won't be removed using the method above. However, it is not something I need to keep per my requirements stated in the section "problem".
+3.  If there was already an element in the environment with the same name as an object created within the script. I frequently use some names across scripts, for objects I will not keep. For example, I use "temp" for a temporary object, "p1" for a plot, "out" for an output object that I would populate within a loop, etc. If I already have an object "temp" in the environment, it won't be removed using the method above. However, it is not something I need to keep per my requirements stated in the section "problem".
 
-### `r titlenb`.2. Alternative solution when sourcing a script  
+### `r titlenb`.2. Alternative 2: run the script in its own environment  
 
-A second option would be to run the script in its own environment, which is possible when sourcing a file. However, this would only work for a script I do not need to run line by line to visualize the output.
+A second option would be to run the script in its own environment, which is possible when sourcing a file. 
 
-```{r eval=FALSE, include=TRUE}
+```{r eval=FALSE, include=TRUE, class.source='klippy'}
 my_env <- new.env()  
 source("myscript.R", my_env)  
 rm(my_env)  
 ```
 
-## `r (titlenb <- titlenb+1)`. Rapid overview of the function
+However, this would only work for a script I do not need to run line by line to visualize the output. This solution does not fit my exact needs either.
+
+## `r (titlenb <- titlenb+1)`. A rapid overview of the function get.objects.from.script()
 
 The function is pretty simple, and follows three steps:
 
-1.  Screening through the current script (although you could also set the path to another script if you want) with the function `getParseData()` from the library *utils*.
+1.  Screening through the current script (although you could also set the path to another script if you want). This part relies on the function `getParseData()` from the library *utils*.
 
 2.  Keep only the objects (token = "SYMBOL").
 
 3.  Find and return which objects are in the Global Environment.
 
-You can then run
+The function returns all the objects created in the script. You can then run `rm()`, except that instead of removing everything from the environment (`rm(list = ls())`), you can choose to remove only the objects created within the current script:
 
-```{r eval=FALSE, include=TRUE}
+```{r eval=FALSE, include=TRUE, class.source='klippy'}
 rm(list = get.objects.from.script())
 ```
 
-to remove the objects within a give script.
 
 Arguments of the function are: <br>
 
@@ -188,7 +194,7 @@ Arguments of the function are: <br>
 
 Here is an example. Note that the code below must be saved as a script. <br>
 
-```{r eval=FALSE, include=TRUE}
+```{r eval=FALSE, include=TRUE, class.source='klippy'}
 source("https://raw.githubusercontent.com/rosalieb/miscellaneous/master/R/get.objects.from.script.R")
 
 # Create a bunch of objects
