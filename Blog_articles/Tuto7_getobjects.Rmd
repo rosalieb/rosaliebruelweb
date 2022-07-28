@@ -198,7 +198,7 @@ Arguments of the function are: <br>
 
 ## `r (titlenb <- titlenb+1)`. Example
 
-Here is an example. Note that the code below must be saved as a script. <br>
+Here is an example. Note that the function `get.objects.from.script()` will only work on a saved script, because it requires an existing path. If you want to run the example below, you must copy and paste it (see the little copy link in the top right corner of the chunk for a quick copy!) in an R script, and save that script to your computer. <br>
 
 ```{r eval=FALSE, include=TRUE, class.source='klippy'}
 source("https://raw.githubusercontent.com/rosalieb/miscellaneous/master/R/get.objects.from.script.R")
