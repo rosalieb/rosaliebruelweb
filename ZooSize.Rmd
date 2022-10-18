@@ -512,6 +512,11 @@ During the general meetings, we shared the link to a document with all the impor
     <td>Change</td>
     <td>New SOP version: <a href="files/ZooSize_SOP_v2.0.pdf" target="_blank" title="Download the SOP_v2.0">v2.0</a>. Previous version 1.1 can be found <a href="files/ZooSize_SOP_v1.0.pdf" target="_blank" title="Download the SOP_v1.0">here</a>.</td>
   </tr>
+   <tr>
+    <td>2022-10-13</td>
+    <td>Meeting</td>
+    <td>ZooSize 7th general meeting - updates on: the data call, the current data availability (criteria for datasets on number of measurements available, availability of metadata, absence of temperature anomaly), discussion about making a poster for GLEON.</td>
+  </tr>
 </table> 
 
 </div>
