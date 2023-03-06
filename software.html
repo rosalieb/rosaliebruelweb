@@ -11,10 +11,10 @@
 
 
 
-<title>Rosalie Bruel &gt; Coding/programming</title>
+<title>R. Bruel &gt; Coding/programming</title>
 
-<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.20/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link href="site_libs/bootstrap-3.3.5/css/sandstone.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
@@ -59,6 +59,7 @@ if (window.hljs) {
 
 
 
+
 <link rel="stylesheet" href="styles.css" type="text/css" />
 
 
@@ -83,6 +84,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -140,11 +144,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -173,8 +181,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -182,16 +190,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -235,7 +236,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -297,7 +298,7 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Rosalie Bruel &gt; Coding/programming</h1>
+<h1 class="title toc-ignore">R. Bruel &gt; Coding/programming</h1>
 
 </div>
 
@@ -324,17 +325,44 @@ $(document).ready(function () {
 <div id="codingprogramming" class="section level3">
 <h3>Coding/programming</h3>
 <hr />
-<p>When I first used R, I would have never thought I would like it that much (heard that before?). I do most of my work in R because I don’t have any limitation in term of analyses, and it grants reproducibility of my results. I am also very reluctant to use any software that is not freely available, because it limits potential collaboration.</p>
-<p>My GitHub gathers some of my past and current projects. While you’re here, have a look at:</p>
+<p>When I first used R, I would have never thought I would like it that
+much (heard that before?). I do most of my work in R because I don’t
+have any limitation in term of analyses, and it grants reproducibility
+of my results. I am also very reluctant to use any software that is not
+freely available, because it limits potential collaboration.</p>
+<p>My GitHub gathers some of my past and current projects. While you’re
+here, have a look at:</p>
 <ul>
-<li>The code to reproduce the analyses from our paper <a href="https://www.researchgate.net/publication/323394346_Seeking_alternative_stable_states_in_a_deep_lake" target="_blank">‘Seeking alternative stable states in a deep lake’</a> (Bruel et al, 2018) is available <a href="https://github.com/rosalieb/AltStableStates" target="_blank">here</a>.</li>
-<li>Our R package <a href="https://github.com/rosalieb/serac" target="_blank"><em>serac</em></a>. See the accompanying paper in Journal of Environmental Radioactivity (Bruel &amp; Sabatier, 2020). <a href="https://eartharxiv.org/f4yma/">Link to the preprint</a> (DOI: 10.31223/osf.io/f4yma).</li>
-<li>The code to reproduce the analyses from our paper <a href="https://www.sciencedirect.com/science/article/pii/S1470160X20310359" target="_blank">‘Sampling requirements and approaches to detect ecosystem shifts’</a> (Bruel &amp; White, 2021) is available <a href="https://github.com/rosalieb/temporal-sampling" target="_blank">here</a>.</li>
-<li>The code to reproduce this website is on my GitHub as well, <a href="https://github.com/rosalieb/rosaliebruelweb" target="_blank">here</a>. I used <a href="https://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html">Emily C. Zabor’s tutorial</a>.</li>
-<li>Our R package <a href="https://github.com/rosalieb/rhobo" target="_blank"><em>rhobo</em></a>, developped with Sophie Guillon (Mines ParisTech) to handle and calibrate HOBO data from the PLANAQUA lake-mesocosmsat the <a href="https://www.cereep.bio.ens.psl.eu/spip.php?article45">CEREEP-Ecotron</a>.</li>
+<li>The code to reproduce the analyses from our paper
+<a href="https://www.researchgate.net/publication/323394346_Seeking_alternative_stable_states_in_a_deep_lake" target="_blank">‘Seeking
+alternative stable states in a deep lake’</a> (Bruel et al, 2018) is
+available
+<a href="https://github.com/rosalieb/AltStableStates" target="_blank">here</a>.</li>
+<li>Our R package
+<a href="https://github.com/rosalieb/serac" target="_blank"><em>serac</em></a>.
+See the accompanying paper in Journal of Environmental Radioactivity
+(Bruel &amp; Sabatier, 2020).
+<a href="https://eartharxiv.org/f4yma/">Link to the preprint</a> (DOI:
+10.31223/osf.io/f4yma).</li>
+<li>The code to reproduce the analyses from our paper
+<a href="https://www.sciencedirect.com/science/article/pii/S1470160X20310359" target="_blank">‘Sampling
+requirements and approaches to detect ecosystem shifts’</a> (Bruel &amp;
+White, 2021) is available
+<a href="https://github.com/rosalieb/temporal-sampling" target="_blank">here</a>.</li>
+<li>The code to reproduce this website is on my GitHub as well,
+<a href="https://github.com/rosalieb/rosaliebruelweb" target="_blank">here</a>.
+I used
+<a href="https://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html">Emily
+C. Zabor’s tutorial</a>.</li>
+<li>Our R package
+<a href="https://github.com/rosalieb/rhobo" target="_blank"><em>rhobo</em></a>,
+developped with Sophie Guillon (Mines ParisTech) to handle and calibrate
+HOBO data from the PLANAQUA lake-mesocosmsat the <a
+href="https://www.cereep.bio.ens.psl.eu/spip.php?article45">CEREEP-Ecotron</a>.</li>
 </ul>
 <center>
-<p><a href="url"><img src="images/icons/hex-serac6.png" height="110" width="95" ></a> <a href="https://github.com/rosalieb/rhobo" target="_blank"><img src="images/icons/hex-rhobo3.png" height="110" width="95" ></a></p>
+<p><a href="https://github.com/rosalieb/serac"><img src="images/icons/hex-serac6.png" height="110" width="95" ></a>
+<a href="https://github.com/rosalieb/rhobo" target="_blank"><img src="images/icons/hex-rhobo3.png" height="110" width="95" ></a></p>
 </center>
 </div>
 
