@@ -521,8 +521,13 @@ During the general meetings, we shared the link to a document with all the impor
   </tr>
   <tr>
     <td>2022-10-30</td>
-    <td>Meeting</td>
+    <td>Conference</td>
     <td>The ZooSize group prepared a poster for GLEON22 to showcase our progress! You can find the poster <a href="files/ZooSize_poster_GLEON22.pdf" target="_blank" title="Download the ZooSize poster prepared for GLEON22">here</a>.</td>
+  </tr>
+    <tr>
+    <td>2023-07-03</td>
+    <td>Conference</td>
+    <td>The ZooSize group prepared a poster for SEB23 You can find the poster <a href="files/ZooSize_poster_SEB23.pdf" target="_blank" title="Download the ZooSize poster prepared for SEB 2023">here</a>.</td>
   </tr>
 </table> 
 
