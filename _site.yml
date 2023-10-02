@@ -9,7 +9,7 @@ navbar:
       href: publications.html
     #- text: "Speaking"
     #  href: talks.html
-    - text: Programming 
+    - text: Programming
       href: software.html
     #- text: "Teaching"
     #  href: teaching.html

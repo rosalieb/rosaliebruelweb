@@ -9,12 +9,13 @@ my.loc <- as.data.frame(rbind(c(5.447427, 43.529742, 4, "My hometown"), #Aix-en-
                               c(6.2333, 44.1, 3, "'IUT' Environmental Biology 2009-11"), #Digne
                               c(-3.188267, 55.953252, 3, "Bachelor in Environmental Science 2011-12"), #Edinburgh
                                c(-1.514699, 43.481402, 3, "Master in Aquatic Ecology 2012-14"), #Anglet
-                               c(5.8667, 45.65, 2, "Research Associate 2018"), #Bourget-du-lac 
-                               c(5.917781, 45.564601, 3, "PhD student 2014-18"), #Chambéry USMB
-                               c(6.477635, 46.373565, 2, "PhD student 2014-18"), #Thonon
-                               c(8.555371, 45.928306, 2, "7 months in 2016 during PhD"), #Verbania
-                               c(-73.212072, 44.475882, 2, "postdoc 2018-2021"), #Burlington
-                              c(2.3488, 48.8534, 1, "postdoc 2021-current"), #Burlington
+                               c(5.8667, 45.65, 2, "UMR CARRTEL, USMB (Research Associate 2018)"), #Bourget-du-lac 
+                               c(5.917781, 45.564601, 3, "UMR CARRTEL, INRAE, USMB (PhD student 2014-18)"), #Chambéry USMB
+                               c(6.477635, 46.373565, 2, "UMR CARRTEL, INRAE, USMB (PhD student 2014-18)"), #Thonon
+                               c(8.555371, 45.928306, 2, "CNR-ISE (7 months in 2016 during PhD)"), #Verbania
+                               c(-73.212072, 44.475882, 2, "University of Vermont (postdoc 2018-2021)"), #Burlington
+                              c(2.3488, 48.8534, 2, "iEES-Paris, CNRS, Sorbonne Université (postdoc 2021-2022)"), #Paris
+                              c(5.5117, 43.5228, 1, "OFB, Pôle R&D ECLA (2022-current)"), #Aix-en-Provence
                                #conferences
                               c(18.063240,59.334591,5, "NETLAKE workshop 2014"), #Erken - Stockholm coordinates
                               c(6.60793,46.40111, 5, "Summer school in limnology 2014"), #Evian Summer school
@@ -36,6 +37,8 @@ my.loc <- as.data.frame(rbind(c(5.447427, 43.529742, 4, "My hometown"), #Aix-en-
                               c(-73.212072, 44.475882,5, "GLEON 21.5 2020"), #Remote, putting Burlington
                               c(-73.212072, 44.475882,5, "Aquacosm 2021"), #Remote, putting Burlington
                               c(-6.266155,53.350140,5, "SEFS12 2021"), #Remote,Dublin
+                              c(13.404954,52.520008, 5, "SIL 2022"), #Berlin
+                              c( -105.084419,40.585258, 5, "John Wesley Powell Center Workshop"), #Fort Collins
                               #mylakes
                               c(-1.16667, 44.65, 6, "Master thesis Year 1"),#Bassin d'Arcachon
                               c(6.7916635,45.98832938 ,6, "Master thesis Year 2"),#Lac d'Anterne
@@ -54,7 +57,7 @@ my.loc <- as.data.frame(rbind(c(5.447427, 43.529742, 4, "My hometown"), #Aix-en-
                               c(8.6833306, 47.249999 ,6, "PhD thesis work"),#Lake Zurich
                               c(6.90249639, 45.45916483, 6, "Research associate work"),#Lac de Tignes
                               c(-73.333332, 44.5333312, 6, "postdoc work"),#Lake Champlain
-                              c(2.670633, 48.283761, 6, "postdoc work")#CEREEP Ecotron
+                              c(2.670633, 48.283761, 6, "postdoc work") #CEREEP Ecotron
  )
 )
 colnames(my.loc) <- c("lat","long","code","description")
