@@ -37,8 +37,10 @@ my.loc <- as.data.frame(rbind(c(5.447427, 43.529742, 4, "My hometown"), #Aix-en-
                               c(-73.212072, 44.475882,5, "GLEON 21.5 2020"), #Remote, putting Burlington
                               c(-73.212072, 44.475882,5, "Aquacosm 2021"), #Remote, putting Burlington
                               c(-6.266155,53.350140,5, "SEFS12 2021"), #Remote,Dublin
+                              c(3.874054,43.610773, 5, "GEISHA-Stormblitz CESAB Workhop 2022"), #Montpellier
                               c(13.404954,52.520008, 5, "SIL 2022"), #Berlin
-                              c( -105.084419,40.585258, 5, "John Wesley Powell Center Workshop"), #Fort Collins
+                              c(-105.084419,40.585258, 5, "Fresh20 Zoops John Wesley Powell Center Workshop 2023"), #Fort Collins
+                              c(3.8744156,43.613049, 5, "Fresh20 Zoops CESAB Workhop 2024"), #Montpellier
                               #mylakes
                               c(-1.16667, 44.65, 6, "Master thesis Year 1"),#Bassin d'Arcachon
                               c(6.7916635,45.98832938 ,6, "Master thesis Year 2"),#Lac d'Anterne
