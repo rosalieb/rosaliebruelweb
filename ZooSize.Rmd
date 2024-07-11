@@ -547,12 +547,12 @@ During the general meetings, we shared the link to a document with all the impor
   <tr>
     <td>2024-07-18</td>
     <td>Conference</td>
-    <td>Presentation at the <a href="https://aquaticdatasciopensci.github.io">DSOS</a> 2024 summit.</td>
+    <td>Presentation at the <a href="https://aquaticdatasciopensci.github.io">DSOS</a> 2024 summit. Find the presentation <a href="files/ZooSize_DSOS24.pdf" target="_blank" title="Download the ZooSize presentation for DSOS24">here</a>.</td>
   </tr>
   <tr>
     <td>2024-09-09 to 2023-09-13</td>
     <td>Workshop</td>
-    <td>Workshop at the CESAB (Montpellier, FR) (Zeynep and Rosalie attended).</td>
+    <td>Workshop at the CESAB (Montpellier, FR) (Zeynep and Rosalie will attend).</td>
   </tr>
 </table> 
 
