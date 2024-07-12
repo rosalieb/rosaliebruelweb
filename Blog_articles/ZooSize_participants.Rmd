@@ -1,0 +1,77 @@
+---
+title: "ZooSize participants"
+output:
+  html_document:
+    df_print: paged
+---
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134870808-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-134870808-1');
+</script>
+
+
+
+<style>
+.full-page{
+  float: left;
+  width: 70%;
+  vertical-align: top;
+  text-align: left;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.body {
+  background-image: url("Cores/ALO09P12/ALO09P12.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: 15%;
+}
+.content {
+    padding:20px;
+    width:710px;
+    position:relative;
+    background: rgb(204, 204, 204); /* Fallback for older browsers without RGBA-support */
+    background: rgba(255,255,255, 0.85);
+}
+.Rchunk {
+  width:80%;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  text-align:left;
+  padding: 5px;
+  font-family: "Courier New", Times, serif;
+}
+</style>
+
+<a href="../ZooSize.html"> Back </a>
+
+<div class="body">
+
+<div class="full-page content">
+
+<div style="text-align:right">
+*Last updated: `r Sys.Date()`*
+</div>
+
+
+***  
+
+
+```{r read and visualize data, echo=FALSE}
+participants <- read.table(paste0(dirname(getwd()), "/files/ZooSize_participants.txt"), header=T)
+names(participants) <- c("Name", "Institution", "Country")
+knitr::kable(participants, )
+```
+
+
+
+
