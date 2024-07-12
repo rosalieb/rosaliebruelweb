@@ -68,7 +68,7 @@ output:
 
 ```{r read and visualize data, echo=FALSE}
 participants <- read.table(paste0(dirname(getwd()), "/files/ZooSize_participants.txt"), header=T)
-names(participants) <- c("Name", "Institution", "Country")
+names(participants) <- c("Name", "Institution", "Country", "Contributed datasets")
 knitr::kable(participants, )
 ```
 

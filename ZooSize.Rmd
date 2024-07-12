@@ -426,7 +426,7 @@ During the general meetings, we shared the link to a document with all the impor
 <br>
 
 <a id="participantslist"> </a> 
-### List of project participants 
+### List of project participants  
 Find <a href="blog/ZooSize_participants.html" target="_blank" title="Download the SOP">here</a> the names of the participants to the project.
 
 
