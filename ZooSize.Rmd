@@ -336,7 +336,7 @@ P.blocktext {
 <div class="full-page">
 
 
-<img src="images/icons/gleon_logo1.jpg" style="width:20%; margin-right: 20px; margin-bottom: 20px; margin-top: 20px" align="right">
+<img src="images/icons/gleon_zoosize_logo1.png" style="width:30%; margin-right: 20px; margin-bottom: 20px; margin-top: 20px" align="right">
 
 <b>Collaborate to the GLEON project <a href="https://gleon.org/research/projects/zoosize-crustacean-zooplankton-community-size-distributions-across-worldwide-set" target="_blank"> ZooSize</a>!</b> 
 
