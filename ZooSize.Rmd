@@ -434,6 +434,8 @@ Find <a href="ZooSize/ZooSize_participants.html" title="See the project particip
 
 <br>
 
+<a id="log"> </a> 
+
 ### Detailed log of the project  
 *Click the headers to sort the table.*
 
