@@ -65,11 +65,15 @@ output:
 
 ***  
 
+```{r message=FALSE, warning=FALSE, include=FALSE}
+library(tidyverse)
+```
 
 ```{r read and visualize data, echo=FALSE}
 participants <- read.table(paste0(dirname(getwd()), "/files/ZooSize_participants.txt"), header=T)
 names(participants) <- c("Name", "Institution", "Country", "Contributed datasets")
-knitr::kable(participants, )
+participants <- participants %>% mutate(`#` = paste0("(", row_number(), ")"), .before = 1)
+knitr::kable(participants)
 ```
 
 
