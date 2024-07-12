@@ -429,7 +429,7 @@ During the general meetings, we shared the link to a document with all the impor
   
 ### List of project participants    
 
-Find <a href="ZooSize/ZooSize_participants.html" target="_blank" title="Download the SOP">here</a> the names of the participants to the project.
+Find <a href="ZooSize/ZooSize_participants.html" title="See the project participants names and affiliations">here</a> the names of the participants to the project.
 
 
 <br>
