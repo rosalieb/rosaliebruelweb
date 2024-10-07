@@ -15,7 +15,8 @@ my.loc <- as.data.frame(rbind(c(5.447427, 43.529742, 4, "My hometown"), #Aix-en-
                                c(8.555371, 45.928306, 2, "CNR-ISE (7 months in 2016 during PhD)"), #Verbania
                                c(-73.212072, 44.475882, 2, "University of Vermont (postdoc 2018-2021)"), #Burlington
                               c(2.3488, 48.8534, 2, "iEES-Paris, CNRS, Sorbonne Université (postdoc 2021-2022)"), #Paris
-                              c(5.5117, 43.5228, 1, "OFB, Pôle R&D ECLA (2022-current)"), #Aix-en-Provence
+                              c(5.5117, 43.5228, 1, "OFB, Pôle R&D ECLA (2022-2024)"), #Aix-en-Provence
+                              c(6.477635, 46.373565, 1, "OFB, Pôle R&D ECLA (2024-current)"), #Thonon-les-bains
                                #conferences
                               c(18.063240,59.334591,5, "NETLAKE workshop 2014"), #Erken - Stockholm coordinates
                               c(6.60793,46.40111, 5, "Summer school in limnology 2014"), #Evian Summer school
