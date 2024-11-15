@@ -72,8 +72,8 @@ __Content__
 render_toc("Tuto2_serac.Rmd")
 ```
 
-```{r get data camp, message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
-library(tutorial)
+```{r get data camp, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE, paged.print=FALSE}
+pacman::p_load(tutorial)
 tutorial::go_interactive()
 ```
 
@@ -219,7 +219,7 @@ list.files("Cores")
 
 To cite our method, please use: Bruel, R., Sabatier, P., 2020. serac: An R package for ShortlivEd RAdionuclide chronology of recent sediment cores. Journal of Environmental Radioactivity 225, 106449. <a href="https://doi.org/10.1016/j.jenvrad.2020.106449" target="_blank"> https://doi.org/10.1016/j.jenvrad.2020.106449</a>
 
-Refer to the package's <a href="https://rosalieb.github.io/rosaliebruelweb/files/serac.html" target="_blank">vignette</a> for more details. 
+Refer to the package's <a href="https://rosalieb.github.io/rosaliebruelweb/files/Introduction-to-serac.html" target="_blank">vignette</a> for more details (if the link doesn't work, copy and paste in your browser the following: https://rosalieb.github.io/rosaliebruelweb/files/Introduction-to-serac.html). 
 
 _Table of content created using <a href="https://www.garrickadenbuie.com/blog/add-a-generated-table-of-contents-anywhere-in-rmarkdown/" target="_blank">this method</a>._
 
