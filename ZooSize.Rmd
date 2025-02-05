@@ -432,6 +432,7 @@ During the general meetings, we shared the link to a document with all the impor
 
 Find <a href="ZooSize/ZooSize_participants.html" title="See the project participants names and affiliations">here</a> the names of the participants to the project.
 
+See lakes currently in the database: <a href="ZooSize/ZooSize_map.html" title="See the lakes in the dataset" target="_blank">here</a>.
 
 <br>
 
