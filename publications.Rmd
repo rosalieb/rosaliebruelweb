@@ -61,6 +61,9 @@ p {
 <br>
 <p class="second"><u>2025</u></p>
 
+<li>Tran-Khac, V., Doubek, J.P., Patil, V., Stockwell, J.D., Adrian, R., Chang, C.-W., Dur, G., Lewandowska, A., Rusak, J.A., Salmaso, N., Straile, D., Thackeray, S.J., Venail, P., Bhattacharya, R., Brentrup, J., <b>Bruel, R.</b>, Feuchtmayr, H., Gessner, M.O., Grossart, H.-P., Ibelings, B.W., Jacquet, S., MacIntyre, S., Matsuzaki, S.-I.S., Nodine, E., Nõges, P., Rudstam, L., Soulignac, F., Verburg, P., Znachor, P., Zohary, T., Anneville, O., 2025. Using Long-Term Ecological Datasets to Unravel the Impacts of Short-Term Meteorological Disturbances on Phytoplankton Communities. _Freshwater Biology_ <b>70</b>, e70023. <a href="https://doi.org/10.1111/fwb.70023" target="_blank">DOI: 10.1111/fwb.70023</a>
+
+
 <li>Leclerc, C., Frossard, V., Sharaf, N., Bazin, S., <b>Bruel, R.</b>, Sentis, A. 2025. Climate Impacts on Lake Food-Webs Are Mediated by Biological Invasions. _Global Change Biology_ <b>31</b>, e70144. <a href="https://doi.org/10.1111/gcb.70144" target="_blank">DOI: 10.1111/gcb.70144</a>
 
 
