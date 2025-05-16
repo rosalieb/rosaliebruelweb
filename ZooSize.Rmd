@@ -330,7 +330,7 @@ P.blocktext {
 ***  
 <a id="top"> </a>
 
-### Collaborate!
+### ZooSize project
 ***
 
 <div class="full-page">
@@ -338,7 +338,9 @@ P.blocktext {
 
 <img src="images/icons/gleon_zoosize_logo1.png" style="width:30%; margin-right: 20px; margin-bottom: 20px; margin-top: 20px" align="right">
 
-<b>Collaborate to the GLEON project <a href="https://gleon.org/research/projects/zoosize-crustacean-zooplankton-community-size-distributions-across-worldwide-set" target="_blank"> ZooSize</a>!</b> 
+<b>ZooSize GLEON project ZooSize</b> 
+
+<i> > The data call closed in July 2023</i>
 
 ZooSize aims to get well represented individual crustacean zooplankton body length measurements for freshwater lakes across global lake thermal regions to gain insights on the following fundamental research question: 
 
@@ -367,7 +369,7 @@ See the timeline of the project <a href="https://docs.google.com/spreadsheets/d/
 - August 2021: Data call
 - December 2021: Deadline for submission of existing data
 - February 2022: New project co-champion! We are welcoming Zeynep Ersoy :) 
-- March 2023: Deadline for submission of data from new sampling efforts
+- July 2023: Deadline for submission of data from new sampling efforts
 
 
 <a id="contact"></a>
@@ -569,6 +571,16 @@ See lakes currently in the database: <a href="ZooSize/ZooSize_map.html" title="S
     <td>2025-02-03 to 2025-02-07</td>
     <td>Workshop</td>
     <td>Workshop at ESIIL (Boulder, Colorado, US) (Zeynep and Rosalie attended).</td>
+  </tr>
+      <tr>
+    <td>2025-05-12</td>
+    <td>Meeting</td>
+    <td>ZooSize 8th general meeting - updates on: data harmonization and data paper preparation following two in-person workshop and one internal meeting in April.</td>
+  </tr>
+      <tr>
+    <td>2025-02-03 to 2025-06-05</td>
+    <td>Workshop</td>
+    <td>Zeynep will present results at the <a href="https://sibecol-aeet-meeting2025.org">SIBECOL meeting</a>.</td>
   </tr>
 </table> 
 
