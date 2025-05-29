@@ -61,6 +61,8 @@ p {
 <br>
 <p class="second"><u>2025</u></p>
 
+<li>Dory, F., Arthaud, F., Augé, V., Baillot, S., Bertrand, C., Birck, C., <b>Bruel, R.</b>, Cavalli, L., Franquet, E., Jacob, F., Sagot, C., Souchier, M., Napoleoni, R., Perga, M.-É. 2025. Vulnerable but not equal: mountain lakes exhibit heterogeneous patterns of phytoplankton responses to climate change. _Limnology and Oceanography Letters_. DOI: <a href="https://aslopubs.onlinelibrary.wiley.com/doi/10.1002/lol2.70034" target="_blank">DOI: 10.1002/lol2.70034</a>
+
 <li>Tran-Khac, V., Doubek, J.P., Patil, V., Stockwell, J.D., Adrian, R., Chang, C.-W., Dur, G., Lewandowska, A., Rusak, J.A., Salmaso, N., Straile, D., Thackeray, S.J., Venail, P., Bhattacharya, R., Brentrup, J., <b>Bruel, R.</b>, Feuchtmayr, H., Gessner, M.O., Grossart, H.-P., Ibelings, B.W., Jacquet, S., MacIntyre, S., Matsuzaki, S.-I.S., Nodine, E., Nõges, P., Rudstam, L., Soulignac, F., Verburg, P., Znachor, P., Zohary, T., Anneville, O., 2025. Using Long-Term Ecological Datasets to Unravel the Impacts of Short-Term Meteorological Disturbances on Phytoplankton Communities. _Freshwater Biology_ <b>70</b>, e70023. <a href="https://doi.org/10.1111/fwb.70023" target="_blank">DOI: 10.1111/fwb.70023</a>
 
 
