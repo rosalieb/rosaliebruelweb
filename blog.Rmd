@@ -143,7 +143,7 @@ body {
   <div class="content">
   <img src="Blog_articles/images/Pres1/Pres1_0_image_git.png" alt="Main" style="width:100%">
   <h3> _Introduction to GitHub_ </h3>
-  <a href="files/Intro_GitHub_iEES_clubstats.pdf" target="_blank"><p>Introduction to GitHub as part of the stat club of the iEES laboratory (Sorbonne Université, Université Paris Cité, Univ Paris Est Créteil, CNRS, IRD, INRAE, Institut d’écologie et des sciences de l’environnement de Paris) (</p></a>
+  <a href="files/Intro_GitHub_iEES_clubstats.pdf" target="_blank"><p>Introduction to GitHub as part of the stat club of the iEES-Paris lab</p></a>
   </div>
 </div>
 
