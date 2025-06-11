@@ -562,7 +562,7 @@ See lakes currently in the database: <a href="ZooSize/ZooSize_map.html" title="S
     <td>Conference</td>
     <td>Presentation at the <a href="https://aquaticdatasciopensci.github.io">DSOS</a> 2024 summit. Find the presentation <a href="files/ZooSize_DSOS24.pdf" target="_blank" title="Download the ZooSize presentation for DSOS24">here</a>.</td>
   </tr>
-  <tr>
+    <tr>
     <td>2024-09-09 to 2024-09-13</td>
     <td>Workshop</td>
     <td>Workshop at the CESAB (Montpellier, FR) (Zeynep and Rosalie attended).</td>
@@ -572,16 +572,17 @@ See lakes currently in the database: <a href="ZooSize/ZooSize_map.html" title="S
     <td>Workshop</td>
     <td>Workshop at ESIIL (Boulder, Colorado, US) (Zeynep and Rosalie attended).</td>
   </tr>
-      <tr>
+    <tr>
     <td>2025-05-12</td>
     <td>Meeting</td>
     <td>ZooSize 8th general meeting - updates on: data harmonization and data paper preparation following two in-person workshop and one internal meeting in April.</td>
   </tr>
-      <tr>
+    <tr>
     <td>2025-02-03 to 2025-06-05</td>
-    <td>Workshop</td>
-    <td>Zeynep will present results at the <a href="https://sibecol-aeet-meeting2025.org">SIBECOL meeting</a>.</td>
+    <td>Conference</td>
+    <td>Zeynep presented the project and preliminary results at the <a href="https://sibecol-aeet-meeting2025.org">SIBECOL meeting</a>.</td>
   </tr>
+
 </table> 
 
 </div>
