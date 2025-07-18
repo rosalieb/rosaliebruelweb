@@ -440,8 +440,8 @@ map_zoosize <- leaflet() %>%
     radius = 2,
     popup = ~paste0(
       "<b>Waterbody name:</b> ", waterbody_name, "<br/>",
-      "<b><i>zoosize_id:</b> ", zoosize_id, "</i><br/>",
-      "<b>Data provider:</b> ", data_provider, "<br/>"
+      "<b><i>zoosize_id:</b> ", zoosize_id, "</i><br/>"#,
+      #"<b>Data provider:</b> ", data_provider, "<br/>"
     ),
     color = "black"
   ) 
