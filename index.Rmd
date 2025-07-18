@@ -51,7 +51,7 @@ a:link {
 }
 
 a:visited {
-  color: #6c7a89; /* soft grey-blue */
+  color: #2a5d9f; /* cobalt blue */
   background-color: transparent;
   text-decoration: none;
 }
@@ -89,7 +89,7 @@ My research interests revolve around how aquatic ecosystems are responding to lo
 In order to identify and characterize (both quantitatively and qualitatively) major environmental drivers, I work with a pluridisciplinary approach on lowland and high-altitude lakes, at different spatial (local, regional, global) and temporal (millennial to sub-hourly resolution) scales, and on different responses (physical, chemical, biological).
 
 
-I joined the French Biodiversity Agency (OFB) in 2022 as a researcher, working on lakes response to climate change. My main missions concerns the coordination of the French National Network of Temperature monitoring in waterbodies (<a href="https://poleecla.fr/reseau/thermie">"Réseau National de suivi de la Température en continu des plans d'eau"</a> / <a href="https://poleecla.fr/en/network-en/temperature">"French network of waterbodies in-situ temperature monitoring"</a>) and co-animation of the network <a href="https://www.lacs-sentinelles.org">"Lacs Sentinelles"</a>. This is my personal research page gathering projects I worked on or initiated prior to getting hired. The project listed on this page do not engage the responsibility of my employer.   
+I joined the French Biodiversity Agency (OFB) in 2022 as a researcher, working on lakes response to climate change. My main missions concerns the coordination of the French National Network of Temperature monitoring in waterbodies (<a href="https://poleecla.fr/reseau/thermie">"Réseau National de suivi de la Température en continu des plans d'eau"</a> / <a href="https://poleecla.fr/en/network-en/temperature">"French network of waterbodies in-situ temperature monitoring"</a>) and co-animation of the network <a href="https://www.lacs-sentinelles.org">"Lacs color: #2a5d9f; /* cobalt blue */Sentinelles"</a>. This is my personal research page gathering projects I worked on or initiated prior to getting hired. The project listed on this page do not engage the responsibility of my employer.   
 
 
 <!-- I graduated from the University of Grenoble (France) in 2018 with a PhD in Ecology (supervisor: <a href="http://wp.unil.ch/lakes/marie-elodie-perga/" target="_blank">Dr. Marie-Elodie Perga</a>). I then worked as a Postdoctoral Associate at the University of Vermont (UVM, VT, USA), with <a href="https://www.uvm.edu/rsenr/profiles/ellen_marsden" target="_blank">Dr. Ellen Marsden</a> and <a href="http://stockwelllaboratory.com" target="_blank">Dr. Jason Stockwell</a>. I am currently a postdoc at the IEES-Paris (CNRS, Sorbonne Université, Paris, France), working with <a href="https://iees-paris.ufr918.upmc.fr/index.php?page=fiche&id=84" target="_blank">Elisa Thebault</a>, <a href="https://iees-paris.ufr918.upmc.fr/index.php?page=fiche&id=34" target="_blank">Gérard Lacroix</a>, <a href="https://www.minesparis.psl.eu/Services/Annuaire/sophie-guillon" target="_blank">Sophie Guillon</a> and  <a href="https://cesco.mnhn.fr/fr/annuaire/colin-fontaine-6053" target="_blank">Colin Fontaine</a> on lake ecosystem stability to heatwaves.

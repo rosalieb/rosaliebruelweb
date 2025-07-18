@@ -49,7 +49,7 @@ a:link {
 }
 
 a:visited {
-  color: #6c7a89; /* soft grey-blue */
+  color: #2a5d9f; /* cobalt blue */
   background-color: transparent;
   text-decoration: none;
 }
