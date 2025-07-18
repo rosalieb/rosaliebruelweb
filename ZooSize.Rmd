@@ -264,6 +264,32 @@ tr:nth-child(even) {
   opacity: 0.7;
 }
 
+/* Color for links */
+a:link {
+  color: #2a5d9f; /* cobalt blue */
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #6c7a89; /* soft grey-blue */
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1a3c66; /* darker blue on hover */
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #274472; /* rich, slightly muted blue */
+  background-color: transparent;
+  text-decoration: underline;
+}
+/* end color for links */
+
 /* Snow */
 #snow {
     position: fixed;
@@ -386,8 +412,10 @@ Project champions: <a href="https://maria-caldero-pascual.netlify.app/" target="
 We (<a href="https://twitter.com/CalderoPM" target="_blank">@CalderoPM</a>, <a href="https://twitter.com/LimnoLauren" target="_blank">@LimnoLauren</a>, <a href="https://twitter.com/RosalieBruel" target="_blank">@RosalieBruel</a>, <a href="https://twitter.com/zzeynepersoy" target="_blank">@zzeynepersoy</a>) will tweet some project updates on Twitter with the tag #ZooSize. 
 --->
 
+
 <br/>
 
+<!--- 
 <div class="row">
 
 <div class="column">
@@ -402,7 +430,8 @@ We (<a href="https://twitter.com/CalderoPM" target="_blank">@CalderoPM</a>, <a h
 
 <div class="column">
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Last week we had our 6th <a href="https://twitter.com/hashtag/ZooSize?src=hash&amp;ref_src=twsrc%5Etfw">#ZooSize</a> general meeting co-championed by <a href="https://twitter.com/RosalieBruel?ref_src=twsrc%5Etfw">@RosalieBruel</a> <a href="https://twitter.com/zzeynepersoy?ref_src=twsrc%5Etfw">@zzeynepersoy</a> <a href="https://twitter.com/LimnoLauren?ref_src=twsrc%5Etfw">@LimnoLauren</a> <a href="https://twitter.com/CalderoPM?ref_src=twsrc%5Etfw">@CalderoPM</a> Already 17 <a href="https://twitter.com/hashtag/dataproviders?src=hash&amp;ref_src=twsrc%5Etfw">#dataproviders</a> 47 <a href="https://twitter.com/hashtag/lakes?src=hash&amp;ref_src=twsrc%5Etfw">#lakes</a> We presented preliminary analysis on <a href="https://twitter.com/hashtag/QCtaxanames?src=hash&amp;ref_src=twsrc%5Etfw">#QCtaxanames</a> <a href="https://twitter.com/hashtag/preservativesurvey?src=hash&amp;ref_src=twsrc%5Etfw">#preservativesurvey</a> <a href="https://twitter.com/hashtag/measurements?src=hash&amp;ref_src=twsrc%5Etfw">#measurements</a> <a href="https://twitter.com/hashtag/literaturereview?src=hash&amp;ref_src=twsrc%5Etfw">#literaturereview</a> on <a href="https://twitter.com/hashtag/zooplankton?src=hash&amp;ref_src=twsrc%5Etfw">#zooplankton</a> <a href="https://twitter.com/hashtag/size?src=hash&amp;ref_src=twsrc%5Etfw">#size</a> <a href="https://t.co/RfdoBf12lm">pic.twitter.com/RfdoBf12lm</a></p>&mdash; Maria Calderó Pascual (@CalderoPM) <a href="https://twitter.com/CalderoPM/status/1523560593932046336?ref_src=twsrc%5Etfw">May 9, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> </div>
-
+</div>
+--->
 
 <!--
 <div class="column">
@@ -410,8 +439,11 @@ We (<a href="https://twitter.com/CalderoPM" target="_blank">@CalderoPM</a>, <a h
 </div>
 -->
 
-</div>
+
+
 <br/>
+
+
 
 
 <a id="participants"> </a> 
@@ -599,9 +631,11 @@ See lakes currently in the database: <a href="ZooSize/ZooSize_map.html" title="S
   <br>
   <a href="#log" title="Go to the project's log"> Project's <br> log </a>  
   <br>
+  </div>
+<!--
 <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-text="#ZooSize - crustacean zooplankton size distribution for freshwater lakes across global lake thermal regions @CalderoPM @RosalieBruel @zzeynepersoy @LimnoLauren - Visit " data-lang="en" data-show-count="true">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  
-</div>
+-->  
+
 
 
 <!-- change the color of the header that was clicked 
