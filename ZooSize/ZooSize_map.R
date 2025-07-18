@@ -437,14 +437,25 @@ map_zoosize <- leaflet() %>%
     data = zoosize_map %>% select(-hylak_id),
     lat = ~waterbody_lat_decdeg,
     lng = ~waterbody_lon_decdeg,
-    radius = 2,
+    radius = 3,
     popup = ~paste0(
       "<b>Waterbody name:</b> ", waterbody_name, "<br/>",
       "<b><i>zoosize_id:</b> ", zoosize_id, "</i><br/>"#,
       #"<b>Data provider:</b> ", data_provider, "<br/>"
     ),
     color = "black"
-  ) 
+  ) %>%
+  addControl(
+    html = "<h3 style='margin:0;'>ZooSize project</h3><h4 style='margin:0;'>369 individual lakes as of July 2025</h4>",
+    position = "topright"
+  ) %>%
+  addControl(
+    html = "<a href='https://rosalieb.github.io/rosaliebruelweb/ZooSize.html' color:#2a5d9f;>
+             Go back to the ZooSize webpage
+           </a>",
+    position = "bottomleft"
+  )
+#map_zoosize
 # %>%
 #   addCircleMarkers(
 #     data = datasets()$waterbodies[datasets()$waterbodies$data_provider %in% input$importedDataProvider, ],
