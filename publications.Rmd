@@ -41,6 +41,32 @@ p {
     display: none;
 }
 
+/* Color for links */
+a:link {
+  color: #2a5d9f; /* cobalt blue */
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #6c7a89; /* soft grey-blue */
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #1a3c66; /* darker blue on hover */
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #274472; /* rich, slightly muted blue */
+  background-color: transparent;
+  text-decoration: underline;
+}
+/* end color for links */
+
 </style>
 
 
