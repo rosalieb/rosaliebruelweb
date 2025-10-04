@@ -614,6 +614,11 @@ See lakes currently in the database: <a href="ZooSize/ZooSize_map.html" title="S
     <td>Conference</td>
     <td>Zeynep presented the project and preliminary results at the <a href="https://sibecol-aeet-meeting2025.org">SIBECOL meeting</a>.</td>
   </tr>
+  <tr>
+    <td>2025-08-03 to 2025-08-07</td>
+    <td>Workshop</td>
+    <td>Workshop at the John Wesley Powell Center (Fort Collins, Colorado, US) (Rosalie attended).</td>
+  </tr>
 
 </table> 
 
