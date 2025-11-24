@@ -376,7 +376,7 @@ ZooSize aims to get well represented individual crustacean zooplankton body leng
 Read more about our question, the data requirements, and authors guidelines in our collaboration guidelines. You can download the collaboration guidelines (.pdf) and data call form (.xslx) by clicking on the buttons below. If you have data for several lakes, you can either fill the template for one lake several times, or fill the multi-lakes template (links below). Feel free to email me or one of the other project champions (Maria Calderó-Pascual, Zeynep Ersoy, and Lauren Barth) for an example on how to fill in the data call if necessary.
 
 _[Jan 2022 update]_  
-We realized that there is quite a diversity in sample preservative used. If you have 5-minutes, could you please fill-in this <a href="https://forms.gle/bVuN1vk696Q84kZm6" target = "_blank">Google Form</a>, asking details about your method. We will use the answers to (1) issue a recommendation for new data providers, if they don't have a fixed SOP at their lab, and (2) assess the need for having a sub-group work on quantifying the size differences from a same sample when different methods have been used. Do not hesitate to share the form with your colleagues, as you don't have to be part of the project to answer! <a href="https://forms.gle/bVuN1vk696Q84kZm6" target="_blank" title="Access poll on the use of preservative"><button class="btn2"><i class="fas fa-external-link-alt"></i></i> POLL</button> </a>
+There is quite a diversity in sample preservative used. If you work with zooplankton (whether you are a data provider or not), could you please fill-in this <a href="https://forms.gle/bVuN1vk696Q84kZm6" target = "_blank">Google Form</a>, asking details about your method. We will use the answers to (1) issue a recommendation for new data providers, if they don't have a fixed SOP at their lab, and (2) assess the need for having a sub-group work on quantifying the size differences from a same sample when different methods have been used. Do not hesitate to share the form with your colleagues, as you don't have to be part of the project to answer! <a href="https://forms.gle/bVuN1vk696Q84kZm6" target="_blank" title="Access poll on the use of preservative"><button class="btn2"><i class="fas fa-external-link-alt"></i></i> POLL</button> </a>
 
 
 <a href="files/CollaborationGuidelines_ZooSize.pdf" target="_blank" title="Download the data call instructions and authors guidelines"><button class="btn"><i class="fa fa-download"></i> Data call instructions<br>and authors guidelines  </button>  </a><img alt="AuthorGuidelines" src="images/icons/adobe_pdf.png" width="43.75" height="52.5">
@@ -468,6 +468,9 @@ Find <a href="ZooSize/ZooSize_participants.html" title="See the project particip
 
 See lakes currently in the database: <a href="ZooSize/ZooSize_map.html" title="See the lakes in the dataset" target="_blank">here</a>.
 
+
+<b>Partner GLEON projects</b>: <a href="https://sfigary.github.io/website/ZIG.html>ZIG</a> and ZooST.
+
 <br>
 
 <a id="log"> </a> 
@@ -508,6 +511,11 @@ See lakes currently in the database: <a href="ZooSize/ZooSize_map.html" title="S
     <td>Meeting</td>
     <td>ZooSize 3rd general meeting.</td>
   </tr>
+    <tr>
+    <td>2021-08-01</td>
+    <td>Data call</td>
+    <td><center><b>ZooSize data call opened.</b></center></td>
+  </tr>
   <tr>
     <td>2021-09-28</td>
     <td>Meeting</td>
@@ -528,6 +536,11 @@ See lakes currently in the database: <a href="ZooSize/ZooSize_map.html" title="S
     <td>2021-11-20</td>
     <td>Change</td>
     <td><a href="files/ZooSize_SOP_v1.0.pdf" target="_blank" title="Download the SOP">Recommended SOP</a> for measuring zooplankton.</td>
+  </tr>
+    <tr>
+    <td>2021-12-31</td>
+    <td>Data call</td>
+    <td>Initial deadline for submitting existing data.</td>
   </tr>
     <tr>
     <td>2022-01-25</td>
@@ -574,6 +587,11 @@ See lakes currently in the database: <a href="ZooSize/ZooSize_map.html" title="S
     <td>Conference</td>
     <td>The ZooSize group prepared a poster for SEB23 You can find the poster <a href="files/ZooSize_poster_SEB23.pdf" target="_blank" title="Download the ZooSize poster prepared for SEB 2023">here</a>.</td>
   </tr>
+  <tr>
+    <td>2023-07-31</td>
+    <td>Data call</td>
+    <td><center><b>Data call closed.</b></center></td>
+  </tr>
     <tr>
     <td>2023-09-11 to 2023-09-15</td>
     <td>Workshop</td>
@@ -619,10 +637,16 @@ See lakes currently in the database: <a href="ZooSize/ZooSize_map.html" title="S
     <td>Workshop</td>
     <td>Workshop at the John Wesley Powell Center (Fort Collins, Colorado, US) (Rosalie attended).</td>
   </tr>
+    <tr>
+    <td>2025-11-19 to 2025-11-22</td>
+    <td>Workshop</td>
+    <td>IMAN call from the University Rey Juan Carlos - 3 days workshop in Mostoles, Spain.</td>
+  </tr>
 
 </table> 
 
 </div>
+
 
 
 <div class="sidenav" align="left">

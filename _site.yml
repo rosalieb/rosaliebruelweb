@@ -36,5 +36,5 @@ navbar:
     #  href: https://orcid.org/0000-0001-8351-7539
 output:
   html_document:
-    theme: sandstone
+    theme: lumen #sandstone
     css: 'styles.css'

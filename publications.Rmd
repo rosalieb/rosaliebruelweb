@@ -86,6 +86,7 @@ a:active {
 
 <br>
 <p class="second"><u>2025</u></p>
+<li>Vagnon, C., Chevalier, M., Boulêtreau, S., <b>Bruel, R.</b>, Guillon, S., Holtgrieve, G., et al. (2025). Experimental Evidence for the Desynchronization of Ecosystem Dynamics by Global Change. _Ecology Letters_ 28, e70271. https://doi.org/10.1111/ele.70271
 
 <li>Dory, F., Arthaud, F., Augé, V., Baillot, S., Bertrand, C., Birck, C., <b>Bruel, R.</b>, Cavalli, L., Franquet, E., Jacob, F., Sagot, C., Souchier, M., Napoleoni, R., Perga, M.-É. 2025. Vulnerable but not equal: mountain lakes exhibit heterogeneous patterns of phytoplankton responses to climate change. _Limnology and Oceanography Letters_. DOI: <a href="https://aslopubs.onlinelibrary.wiley.com/doi/10.1002/lol2.70034" target="_blank">DOI: 10.1002/lol2.70034</a>
 

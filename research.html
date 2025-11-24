@@ -13,10 +13,10 @@
 
 <title>Rosalie Bruel &gt; Research</title>
 
-<script src="site_libs/header-attrs-2.10/header-attrs.js"></script>
-<script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<link href="site_libs/bootstrap-3.3.5/css/sandstone.min.css" rel="stylesheet" />
+<link href="site_libs/bootstrap-3.3.5/css/lumen.min.css" rel="stylesheet" />
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
@@ -32,8 +32,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
-<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
-<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.5.2/css/v4-shims.min.css" rel="stylesheet" />
 
 <style type="text/css">
   code{white-space: pre-wrap;}
@@ -54,6 +54,7 @@ if (window.hljs) {
   }
 }
 </script>
+
 
 
 
@@ -83,6 +84,9 @@ button.code-folding-btn:focus {
 }
 summary {
   display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
 }
 pre code {
   padding: 0;
@@ -140,11 +144,15 @@ $(document).ready(function () {
     href = "index.html";
   var menuAnchor = $('a[href="' + href + '"]');
 
-  // mark it active
-  menuAnchor.tab('show');
-
-  // if it's got a parent navbar menu mark it active as well
-  menuAnchor.closest('li.dropdown').addClass('active');
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
 
   // Navbar adjustments
   var navHeight = $(".navbar").first().height() + 15;
@@ -173,8 +181,8 @@ $(document).ready(function () {
   border-radius: 4px;
 }
 
-.tabset-dropdown > .nav-tabs > li.active:before {
-  content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
   font-family: 'Glyphicons Halflings';
   display: inline-block;
   padding: 10px;
@@ -182,16 +190,9 @@ $(document).ready(function () {
 }
 
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-  content: "&#xe258;";
-  border: none;
-}
-
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-  content: "";
+  content: "\e258";
   font-family: 'Glyphicons Halflings';
-  display: inline-block;
-  padding: 10px;
-  border-right: 1px solid #ddd;
+  border: none;
 }
 
 .tabset-dropdown > .nav-tabs > li.active {
@@ -235,7 +236,7 @@ $(document).ready(function () {
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -245,7 +246,7 @@ $(document).ready(function () {
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="research.html">Research</a>
+  <a href="publications.html">Publications</a>
 </li>
 <li>
   <a href="software.html">Programming</a>
@@ -258,6 +259,9 @@ $(document).ready(function () {
 </li>
 <li>
   <a href="my_map.html">My map</a>
+</li>
+<li>
+  <a href="ZooSize.html">ZooSize</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -341,10 +345,19 @@ p {
 <!-- 
 <p class="big">
 In 2011, I took a course in Marine Biology at Napier University (Edinburgh, Scotland), where we learned about deep seas organisms (among other things). I found them fascinating (who wouldn't...). This is partly what made me choose my Master in Aquatic Ecology. During my first internship, I ended up working relatively far from the deap seas, as I worked on clams in a bay (Arcachon Bay, 10 m bsl). But things got out of control when I studied seasonal dynamics of high-altitude lake (Lake Anterne, 2,063 m asl) during my 2nd year. Of course, these internships were fascinating. While I will forever struggle with the gulf between everything I'd like to study and the average human life expectancy, my research interests now revolve around how systems are responding to local and global perturbations. This general thematic gets my interest because of the opportunities for both fundamental and applied research. -->
-<p>My research interests revolve around how aquatic ecosystems are responding to local and global perturbations. I work with a quantitative approach to identify and characterize major environmental drivers, to help managers take timely and appropriate management decisions. I work with a pluridisciplinary approach on lowland and high-altitude lakes, at different spatial (local, regional, global) and temporal (millennial to sub-hourly resolution) scales, and on different responses (physical, chemical, biological).</p>
+<p>My research interests revolve around how aquatic ecosystems are
+responding to local and global perturbations. I work with a quantitative
+approach to identify and characterize major environmental drivers, to
+help managers take timely and appropriate management decisions. I work
+with a pluridisciplinary approach on lowland and high-altitude lakes, at
+different spatial (local, regional, global) and temporal (millennial to
+sub-hourly resolution) scales, and on different responses (physical,
+chemical, biological).</p>
 <p><br></p>
 <head>
-<b>Publications</b> (last updated on août 12, 2021, see also my <a href="https://orcid.org/0000-0001-8351-7539" target="_blank">ORCID profile</a>):
+<b>Publications</b> (last updated on November 24, 2025, see also my
+<a href="https://orcid.org/0000-0001-8351-7539" target="_blank">ORCID
+profile</a>):
 </head>
 <ol reversed>
 <br>
@@ -352,36 +365,70 @@ In 2011, I took a course in Marine Biology at Napier University (Edinburgh, Scot
 <u>2021</u>
 </p>
 <li>
-Monchamp, M.-E., <b>Bruel, R.</b>, Frossard, V., McGowan, S., Lavrieux, M., Muschick, M., Perga, M.-E., Dubois, N., 2021. Paleoecological evidence for a multi-trophic regime shift in a perialpine lake (Lake Joux, Switzerland). <em>Anthropocene</em> <a href="https://www.sciencedirect.com/science/article/pii/S2213305421000242">DOI: 10.1016/j.ancene.2021.100301</a>
+Monchamp, M.-E., <b>Bruel, R.</b>, Frossard, V., McGowan, S., Lavrieux,
+M., Muschick, M., Perga, M.-E., Dubois, N., 2021. Paleoecological
+evidence for a multi-trophic regime shift in a perialpine lake (Lake
+Joux, Switzerland). <em>Anthropocene</em>
+<a href="https://www.sciencedirect.com/science/article/pii/S2213305421000242">DOI:
+10.1016/j.ancene.2021.100301</a>
 </li>
 <li>
-<b>Bruel, R.</b>, Marsden, J. E., Pientka, B., Staats, N., Mihuc, T., Stockwell, J. D., 2021. Rainbow smelt population responses to species invasions and change in environmental condition. <em>Journal of Great Lakes Research</em> <b>47<em>(4)</em></b>: 1171-1181. <a href="https://www.sciencedirect.com/science/article/pii/S0380133021000927">DOI: 10.1016/j.jglr.2021.04.008</a>
+<b>Bruel, R.</b>, Marsden, J. E., Pientka, B., Staats, N., Mihuc, T.,
+Stockwell, J. D., 2021. Rainbow smelt population responses to species
+invasions and change in environmental condition. <em>Journal of Great
+Lakes Research</em> <b>47<em>(4)</em></b>: 1171-1181.
+<a href="https://www.sciencedirect.com/science/article/pii/S0380133021000927">DOI:
+10.1016/j.jglr.2021.04.008</a>
 </li>
 <li>
-Rantala, M. V., <b>Bruel, R.</b>, Marchetto, A., Lami, A., Spangenberg, J., Perga, M.-E., 2021. Heterogeneous responses of lake CO2 to nutrients and warming in perialpine lakes imprinted in subfossil cladoceran δ13C values. <em>Science of the Total Environment</em> (in press).
+Rantala, M. V., <b>Bruel, R.</b>, Marchetto, A., Lami, A., Spangenberg,
+J., Perga, M.-E., 2021. Heterogeneous responses of lake CO2 to nutrients
+and warming in perialpine lakes imprinted in subfossil cladoceran δ13C
+values. <em>Science of the Total Environment</em> (in press).
 </li>
 <li>
-<b>Bruel, R.</b>, Girardclos, S., Marchetto, A., Kremer, K., Crouzet, C., Reyss, J.-L., Sabatier, P., Perga, M.-E., 2021. Reframing Lake Geneva ecological trajectory in a context of multiple but asynchronous pressures. <em>Journal of Paleolimnology</em>. <b>65<em>(3)</em></b>: 353-368 <a href="rdcu.be/cekeX ">DOI: 10.1007/s10933-021-00176-y</a>
+<b>Bruel, R.</b>, Girardclos, S., Marchetto, A., Kremer, K., Crouzet,
+C., Reyss, J.-L., Sabatier, P., Perga, M.-E., 2021. Reframing Lake
+Geneva ecological trajectory in a context of multiple but asynchronous
+pressures. <em>Journal of Paleolimnology</em>. <b>65<em>(3)</em></b>:
+353-368 <a href="rdcu.be/cekeX ">DOI: 10.1007/s10933-021-00176-y</a>
 </li>
 <li>
-<b>Bruel, R.</b>, White, E. R., 2021. Sampling requirements and approaches to detect ecosystem shifts. <em>Ecological Indicators</em>. <b>121</b>: 107096 <a href="https://authors.elsevier.com/sd/article/S1470-160X(20)31035-9">DOI: 10.1016/j.ecolind.2020.107096</a>
+<b>Bruel, R.</b>, White, E. R., 2021. Sampling requirements and
+approaches to detect ecosystem shifts. <em>Ecological Indicators</em>.
+<b>121</b>: 107096
+<a href="https://authors.elsevier.com/sd/article/S1470-160X(20)31035-9">DOI:
+10.1016/j.ecolind.2020.107096</a>
 </li>
 <br>
 <p class="second">
 <u>2020</u>
 </p>
 <li>
-<b>Bruel, R.</b>, Sabatier, P., 2020. serac: a R package for ShortlivEd RAdionuclide Chronology of recent sediment cores. <em>Journal of Environmental Radioactivity</em> <b>225</b>. <a href="https://www.sciencedirect.com/science/article/abs/pii/S0265931X20306950">DOI: 10.1016/j.jenvrad.2020.106449</a>
+<b>Bruel, R.</b>, Sabatier, P., 2020. serac: a R package for ShortlivEd
+RAdionuclide Chronology of recent sediment cores. <em>Journal of
+Environmental Radioactivity</em> <b>225</b>.
+<a href="https://www.sciencedirect.com/science/article/abs/pii/S0265931X20306950">DOI:
+10.1016/j.jenvrad.2020.106449</a>
 </li>
 <br>
 <p class="second">
 <u>2018</u>
 </p>
 <li>
-Perga, M.-E., <b>Bruel, R.</b>, Rodriguez, L., Guénand, Y., Bouffard, D., 2018. Storm impacts on alpine lakes: antecedent weather conditions matter more than the event intensity. <em>Global Change Biology</em> <b>24<em>(10)</em></b>: 5004-5016. <a href="https://doi.org/10.1111/gcb.14384"> DOI: 10.1111/gcb.14384</a>     
+Perga, M.-E., <b>Bruel, R.</b>, Rodriguez, L., Guénand, Y., Bouffard,
+D., 2018. Storm impacts on alpine lakes: antecedent weather conditions
+matter more than the event intensity. <em>Global Change Biology</em>
+<b>24<em>(10)</em></b>: 5004-5016.
+<a href="https://doi.org/10.1111/gcb.14384"> DOI: 10.1111/gcb.14384</a>
+    
 </li>
 <li>
-<b>Bruel, R.</b>, Marchetto, A., Bernard, A., Lami, A., Sabatier, P., Frossard, V., Perga, M.-E., 2018. Seeking alternative stable states in a deep lake. <em>Freshwater Biology</em> <b>63<em>(6)</em></b>: 553-568. <a href="https://doi.org/10.1111/fwb.13093">DOI: 10.1111/fwb.13093 </a><br>
+<b>Bruel, R.</b>, Marchetto, A., Bernard, A., Lami, A., Sabatier, P.,
+Frossard, V., Perga, M.-E., 2018. Seeking alternative stable states in a
+deep lake. <em>Freshwater Biology</em> <b>63<em>(6)</em></b>: 553-568.
+<a href="https://doi.org/10.1111/fwb.13093">DOI: 10.1111/fwb.13093
+</a><br>
 </li>
 </ol>
 <br>
@@ -391,16 +438,31 @@ Perga, M.-E., <b>Bruel, R.</b>, Rodriguez, L., Guénand, Y., Bouffard, D., 2018.
 <p>    </p>
 <ol reversed>
 <li>
-<b>*Bruel, R.</b>, Marsden, J. E., Pientka, B., Staats, N., Mihuc, T., Stockwell, J. D., 2020. Rainbow smelt population responses to species invasions and change in environmental condition. <em>bioRxiv</em>. <a href="https://www.biorxiv.org/content/10.1101/2020.10.08.332205v1">DOI: 10.1101/2020.10.08.332205</a>
+<b>*Bruel, R.</b>, Marsden, J. E., Pientka, B., Staats, N., Mihuc, T.,
+Stockwell, J. D., 2020. Rainbow smelt population responses to species
+invasions and change in environmental condition. <em>bioRxiv</em>.
+<a href="https://www.biorxiv.org/content/10.1101/2020.10.08.332205v1">DOI:
+10.1101/2020.10.08.332205</a>
 </li>
 <li>
-<b>*Bruel, R.</b>, White, E. R., 2020. Sampling requirements and approaches to detect ecosystem shifts. <em>bioRxiv</em>. <a href="https://www.biorxiv.org/content/10.1101/2020.04.07.030643v1">DOI: 10.1101/2020.04.07.030643 </a>
+<b>*Bruel, R.</b>, White, E. R., 2020. Sampling requirements and
+approaches to detect ecosystem shifts. <em>bioRxiv</em>.
+<a href="https://www.biorxiv.org/content/10.1101/2020.04.07.030643v1">DOI:
+10.1101/2020.04.07.030643 </a>
 </li>
 <li>
-<b>*Bruel, R.</b>, Sabatier, P., 2020. serac: a R package for ShortlivEd RAdionuclide Chronology of recent sediment cores. <em>earthaRxiv</em>. <a href="https://eartharxiv.org/repository/view/461/">DOI: 10.31223/osf.io/f4yma</a>
+<b>*Bruel, R.</b>, Sabatier, P., 2020. serac: a R package for ShortlivEd
+RAdionuclide Chronology of recent sediment cores. <em>earthaRxiv</em>.
+<a href="https://eartharxiv.org/repository/view/461/">DOI:
+10.31223/osf.io/f4yma</a>
 </li>
 <li>
-<b>*Bruel, R.</b>, Girardclos, S., Marchetto, A., Kremer, K., Crouzet, C., Reyss, J.-L., Sabatier, P., Perga, M.-E., 2019. Reframing Lake Geneva ecological trajectory in a context of multiple but asynchronous stressors <em>earthaRxiv</em>. <a href="https://eartharxiv.org/repository/view/510/ ">DOI: 10.31223/osf.io/j8up3</a>
+<b>*Bruel, R.</b>, Girardclos, S., Marchetto, A., Kremer, K., Crouzet,
+C., Reyss, J.-L., Sabatier, P., Perga, M.-E., 2019. Reframing Lake
+Geneva ecological trajectory in a context of multiple but asynchronous
+stressors <em>earthaRxiv</em>.
+<a href="https://eartharxiv.org/repository/view/510/ ">DOI:
+10.31223/osf.io/j8up3</a>
 </li>
 <p><br/></p>
 <hr />
@@ -408,7 +470,19 @@ Perga, M.-E., <b>Bruel, R.</b>, Rodriguez, L., Guénand, Y., Bouffard, D., 2018.
 <div id="colaborate" class="section level3">
 <h3>Colaborate!</h3>
 <hr />
-<p><b>Collaborate to the GLEON project <a href="https://gleon.org/research/projects/zoosize-crustacean-zooplankton-community-size-distributions-across-worldwide-set" target="_blank"> ZooSize</a>!</b> ZooSize aims to get well represented individual crustacean zooplankton body length measurements for freshwater lakes across global lake thermal regions to gain insights on the following fundamental research question: How do size distributions of crustacean zooplankton communities differ across the globe and how are they influenced by bottom-up and top-down processes? Read more about our question, the data requirements, and authors guidelines <a href="files/CollaborationGuidelines_ZooSize.pdf" target="_blank">here</a>. Access the data call form <a href="files/LakeName_ZooSize.xlsx" target="_blank">here</a>. Email me for an example on how to fill in the data call if necessary.</p>
+<p><b>Collaborate to the GLEON project
+<a href="https://gleon.org/research/projects/zoosize-crustacean-zooplankton-community-size-distributions-across-worldwide-set" target="_blank">
+ZooSize</a>!</b> ZooSize aims to get well represented individual
+crustacean zooplankton body length measurements for freshwater lakes
+across global lake thermal regions to gain insights on the following
+fundamental research question: How do size distributions of crustacean
+zooplankton communities differ across the globe and how are they
+influenced by bottom-up and top-down processes? Read more about our
+question, the data requirements, and authors guidelines
+<a href="files/CollaborationGuidelines_ZooSize.pdf" target="_blank">here</a>.
+Access the data call form
+<a href="files/LakeName_ZooSize.xlsx" target="_blank">here</a>. Email me
+for an example on how to fill in the data call if necessary.</p>
 <p><br/></p>
 <!-- My trajectory over the years in a nutshell ↓ -->
 <!-- <img src="images/research_interests.png" style="width:80%; margin-left: 10%; margin-right: 10%; margin-bottom: 20px; margin-top: 20px" align="center"> -->
