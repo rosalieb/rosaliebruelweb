@@ -640,7 +640,7 @@ See lakes currently in the database: <a href="ZooSize/ZooSize_map.html" title="S
     <tr>
     <td>2025-11-19 to 2025-11-22</td>
     <td>Workshop</td>
-    <td>IMAN call from the University Rey Juan Carlos - 3 days workshop in Mostoles, Spain.</td>
+    <td>IMAN call from the University Rey Juan Carlos -- 3 days workshop in Móstoles, Spain.</td>
   </tr>
 
 </table> 
