@@ -642,7 +642,11 @@ See lakes currently in the database: <a href="ZooSize/ZooSize_map.html" title="S
     <td>Workshop</td>
     <td>IMAN call from the University Rey Juan Carlos -- 3 days workshop in Móstoles, Spain.</td>
   </tr>
-
+  <tr>
+    <td>2026-08-30 to 2026-09-04</td>
+    <td>Conference</td>
+    <td>Rosalie will present a poster at GLEON 2026 All Hand's meeting. You can find the poster <a href="files/ZooSize_GLEON_2022.pdf" target="_blank" title="Download the ZooSize poster prepared for GLEON 2026">here</a>.</td>
+  </tr>
 </table> 
 
 </div>

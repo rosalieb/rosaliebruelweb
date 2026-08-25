@@ -87,9 +87,9 @@ a:active {
 <br>
 <p class="second"><u>2026</u></p>
 
-<li> Sentis, A., Leclerc, C., Sharaf, N., <b>Bruel, R.</b>, Reynaud, N., Frossard, V., 2026. Utiliser les réseaux trophiques comme indicateur fonctionnel du changement global. _Sciences Eaux \& Territoires_ **51** 10055–10055. <a href="https://doi.org/10.20870/Revue-SET.2026.51.10055" target="_blank">DOI: 10.20870/Revue-SET.2026.51.10055</a>
+<li> Figary, S.E., M.F. Meyer, R.M. Pilla, W.J. Currie, …, <b>Bruel, R.</b>, …, P. Znachor [143 co-authors total], 2026. The Zooplankton International Geospatial (ZIG) dataset: A global repository of spatiotemporal freshwater zooplankton community composition data to support ecological research. _Limnology and Oceanography Letters_ **11**(5) <a href="https://aslopubs.onlinelibrary.wiley.com/doi/10.1002/lol2.70152" target="_blank">DOI: 10.1002/lol2.70152</a>.
 
-<li> Figary, S.E., M.F. Meyer, R.M. Pilla, W.J. Currie, …, <b>Bruel, R.</b>, …, P. Znachor,2026. The Zooplankton International Geospatial (ZIG) dataset: A global repository of spatiotemporal freshwater zooplankton community composition data to support ecological research. \textit{Accepted in Limnology and Oceanography Letters}.
+<li> Sentis, A., Leclerc, C., Sharaf, N., <b>Bruel, R.</b>, Reynaud, N., Frossard, V., 2026. Utiliser les réseaux trophiques comme indicateur fonctionnel du changement global. _Sciences Eaux \& Territoires_ **51** 10055–10055. <a href="https://doi.org/10.20870/Revue-SET.2026.51.10055" target="_blank">DOI: 10.20870/Revue-SET.2026.51.10055</a>
 
 <li><b>Bruel, R.</b>, Sharaf, N., Desgue-Itier, O., Prats, J., Reynaud, N., Peroux, T., Tormos, T., Danis, P.-A., & Jenny, J.-P., 2026. Les évolutions thermiques des lacs français face au changement climatique: Surveillance et prédiction. _Sciences Eaux \& Territoires_ **51**, 10051–10051. <a href="https://doi.org/10.20870/Revue-SET.2026.51.10051" target="_blank">DOI: 10.20870/Revue-SET.2026.51.10051</a>
  
